@@ -1,9 +1,10 @@
-Template for the Read the Docs tutorial
-=======================================
+User Manual for **SCVanalysis** Web Server
+========================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
 
-Read the tutorial here:
+SCVanalysis: https://bio.liclab.net/scvanalysis/
 
-https://docs.readthedocs.io/en/stable/tutorial/
+A web analysis tool for integrating single-cell chromatin accessibility data with causal variant effects.
+
+.. image:: docs/img/SCVanalysis.png
+
