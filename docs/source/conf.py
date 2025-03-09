@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'SCVanalysis'
+copyright = '2025, Zhengmin Yu'
+author = 'Zhengmin Yu'
 
-release = '0.1'
-version = '0.1.0'
+release = '1.0.0'
+version = '1.0.0'
 
 # -- General configuration
 
@@ -20,8 +20,8 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+    'SCVanalysis': ('https://bio.liclab.net/scvanalysis/', None),
+    'GitHub': ('https://github.com/YuZhengM/scvanalysis-tutorial', None),
 }
 intersphinx_disabled_domains = ['std']
 
