@@ -1,10 +1,21 @@
-User Manual for **SCVanalysis** Web Server
-========================================
+.. role:: text_red
+   :class: red
+
+.. raw:: html
+
+   <style>
+   .red { color: red; }
+   </style>
+
+User Manual for SCVdb platform
+==============================
 
 
-SCVanalysis: https://bio.liclab.net/scvanalysis/
+SCVdb: https://bio.liclab.net/scvdb/
 
-A web analysis tool for integrating single-cell chromatin accessibility data with causal variant effects.
+A comprehensive platform for human **integrating**
+:text_red:`single-cell chromatin accessibility data` with
+:text_red:`causal variant effects`.
 
-.. image:: docs/img/SCVanalysis.png
+.. image:: docs/source/img/SCVdb.png
 

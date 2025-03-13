@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'SCVanalysis'
+project = 'SCVdb'
 copyright = '2025, Zhengmin Yu'
 author = 'Zhengmin Yu'
 
@@ -20,8 +20,8 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    'SCVanalysis': ('https://bio.liclab.net/scvanalysis/', None),
-    'GitHub': ('https://github.com/YuZhengM/scvanalysis-tutorial', None),
+    'SCVanalysis': ('https://bio.liclab.net/scvdb/', None),
+    'GitHub': ('https://github.com/YuZhengM/scvdb-tutorial', None),
 }
 intersphinx_disabled_domains = ['std']
 
@@ -33,3 +33,7 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+
+def setup(app):
+    app.add_stylesheet('css/style.css')
