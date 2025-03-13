@@ -1,3 +1,6 @@
+.. role:: text_red
+   :class: red
+
 Welcome to SCVdb's documentation!
 ==================================
 
@@ -14,7 +17,7 @@ variations at the single-cell level. However, they face limitations like less
 user-friendly analysis workflows, time-intensive, and reliance on high-performance
 computing. These challenges hinder biologists from widely investigating the
 single-cell genetic variations, urgently calling for a user-friendly online
-analysis tool. Thus, we developed :text_red:`SCVdb`, the first online and user-friendly
+analysis tool. Thus, we developed :text_red:`SCVdb <https://bio.liclab.net/scvdb/>`_, the first online and user-friendly
 server for variant-to-function mapping at single-cell resolution.
 
 
