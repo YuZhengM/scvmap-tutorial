@@ -24,4 +24,4 @@ The analysis results mainly include:
 #. Identifying TFs related to a trait or disease through HOMER.
 #. Regulating a network from a trait to a single-cell sample through TFs as a hub.
 
-.. image::img/structure/structure.png
+.. image:: img/structure/structure.png

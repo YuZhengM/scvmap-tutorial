@@ -5,7 +5,7 @@ Below, we will explain how to use the SCVdb platform based on
 the different functional levels on the navigation bar.
 
 
-.. topic::
+.. toctree::
 
     usage/home
     usage/dataBrowse

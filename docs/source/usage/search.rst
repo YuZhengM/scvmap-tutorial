@@ -2,7 +2,7 @@
 ================
 
 
-.. topic::
+.. toctree::
 
     search/trait
     search/sample

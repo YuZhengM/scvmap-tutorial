@@ -12,7 +12,7 @@ integrating scATAC-seq samples with causal variant data by using transcription
 factors as a hub.
 
 
-.. topic::
+.. toctree::
 
     analysis/mapping
     analysis/mappingWithGene
