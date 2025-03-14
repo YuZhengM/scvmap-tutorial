@@ -17,5 +17,5 @@ A comprehensive platform for human **integrating**
 :text_red:`single-cell chromatin accessibility data` with
 :text_red:`causal variant effects`.
 
-.. image:: docs/source/img/SCVdb.png
+.. image::docs/source/img/SCVdb.png
 
