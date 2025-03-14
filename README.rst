@@ -2,7 +2,6 @@
    :class: red
 
 .. raw:: html
-
    <style>
    .red { color: red; }
    </style>
@@ -11,7 +10,7 @@ User Manual for SCVdb platform
 ==============================
 
 
-SCVdb: https://bio.liclab.net/scvdb/
+ | SCVdb: https://bio.liclab.net/scvdb/
 
 A comprehensive platform for human **integrating**
 :text_red:`single-cell chromatin accessibility data` with

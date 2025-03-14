@@ -1,21 +1,16 @@
-Usage
-=====
+3. How to Use the SCVdb?
+=========================
 
-.. _installation:
-
-Installation
-------------
-
-To use Lumache, first install it using pip:
-
-.. code-block:: console
-
-   (.venv) $ pip install lumache
-
-Creating recipes
-----------------
+Below, we will explain how to use the SCVdb platform based on
+the different functional levels on the navigation bar.
 
 
 .. topic::
 
     usage/home
+    usage/dataBrowse
+    usage/search
+    usage/analysis
+    usage/statistics
+    usage/download
+    usage/contact
