@@ -32,6 +32,7 @@ Contents
 --------
 
 .. toctree::
+    :maxdepth: 3
 
    available
    structure
