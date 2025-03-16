@@ -24,7 +24,7 @@ When a user enters a **Trait or disease ID** (e.g., ``trait_id_1``),
 the system directs to the detailed page (`https://bio.liclab.net/scvdb/detail?traitId=trait_id_1 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_1>`_)
 of the corresponding causal variant effect data.
 
-.. image:: ../img/home/traitIdBySearch.png
+.. image:: ../img/home/traitById.png
 
 :Input Type 2:
 Upon entering a trait or disease name (e.g., ``Alzheimer’s disease``),
@@ -48,7 +48,7 @@ When a user enters a **Sample ID** (e.g., ``sample_id_1``),
 the system directs to the detailed page (`https://bio.liclab.net/scvdb/detail?detail?sampleId=sample_id_1 <https://bio.liclab.net/scvdb/detail?detail?sampleId=sample_id_1>`_)
 of the corresponding causal variant effect data.
 
-.. image:: ../img/home/traitIdBySearch.png
+.. image:: ../img/home/sampleById.png
 
 :Input Type 2:
 Upon entering a trait or disease name (e.g., ``PBMC``),
