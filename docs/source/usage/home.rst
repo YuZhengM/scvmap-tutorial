@@ -19,19 +19,11 @@ Search principle
 1. ``Traits or disease`` search:
 ***********************************
 
-:Input Type 1:
-When a user enters a **Trait or disease ID** (e.g., ``trait_id_1``),
-the system directs to the detailed page (`https://bio.liclab.net/scvdb/detail?traitId=trait_id_1 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_1>`_)
-of the corresponding causal variant effect data.
+:Input Type 1: When a user enters a **Trait or disease ID** (e.g., ``trait_id_1``), the system directs to the detailed page (`https://bio.liclab.net/scvdb/detail?traitId=trait_id_1 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_1>`_) of the corresponding causal variant effect data.
 
 .. image:: ../img/home/traitById.png
 
-:Input Type 2:
-Upon entering a trait or disease name (e.g., ``Alzheimer’s disease``),
-the user is presented with a table listing relevant
-results (`https://bio.liclab.net/scvdb/simple_search?title=trait&value=Alzheimer's+disease <https://bio.liclab.net/scvdb/simple_search?title=trait&value=Alzheimer's+disease>`_).
-This list is derived from a fuzzy search conducted on the input term using columns ``Trait abbreviation`` and ``Trait Description`` from
-the ``Trait or disease data`` tab on the `Data-Browse <https://bio.liclab.net/scvdb/data_browse>`_ page, ensuring comprehensive and relevant matches.
+:Input Type 2: Upon entering a trait or disease name (e.g., ``Alzheimer’s disease``), the user is presented with a table listing relevant results (`https://bio.liclab.net/scvdb/simple_search?title=trait&value=Alzheimer's+disease <https://bio.liclab.net/scvdb/simple_search?title=trait&value=Alzheimer's+disease>`_). This list is derived from a fuzzy search conducted on the input term using columns ``Trait abbreviation`` and ``Trait Description`` from the ``Trait or disease data`` tab on the `Data-Browse <https://bio.liclab.net/scvdb/data_browse>`_ page, ensuring comprehensive and relevant matches.
 
 .. image:: ../img/home/traitByAlzheimer.png
 
@@ -43,18 +35,10 @@ the ``Trait or disease data`` tab on the `Data-Browse <https://bio.liclab.net/sc
 2. ``Single cell sample`` search:
 ***********************************
 
-:Input Type 1:
-When a user enters a **Sample ID** (e.g., ``sample_id_1``),
-the system directs to the detailed page (`https://bio.liclab.net/scvdb/detail?detail?sampleId=sample_id_1 <https://bio.liclab.net/scvdb/detail?detail?sampleId=sample_id_1>`_)
-of the corresponding causal variant effect data.
+:Input Type 1: When a user enters a **Sample ID** (e.g., ``sample_id_1``), the system directs to the detailed page (`https://bio.liclab.net/scvdb/detail?detail?sampleId=sample_id_1 <https://bio.liclab.net/scvdb/detail?detail?sampleId=sample_id_1>`_) of the corresponding causal variant effect data.
 
 .. image:: ../img/home/sampleById.png
 
-:Input Type 2:
-Upon entering a trait or disease name (e.g., ``PBMC``),
-the user is presented with a table listing relevant
-results (`https://bio.liclab.net/scvdb/simple_search?title=sample&value=PBMC <https://bio.liclab.net/scvdb/simple_search?title=sample&value=PBMC>`_).
-This list is derived from a fuzzy search conducted on the input term using columns ``Tissue type`` and ``Health type Description`` from
-the ``Single cell chromatin accessibility data`` tab on the `Data-Browse <https://bio.liclab.net/scvdb/data_browse>`_ page, ensuring comprehensive and relevant matches.
+:Input Type 2: Upon entering a trait or disease name (e.g., ``PBMC``), the user is presented with a table listing relevant results (`https://bio.liclab.net/scvdb/simple_search?title=sample&value=PBMC <https://bio.liclab.net/scvdb/simple_search?title=sample&value=PBMC>`_). This list is derived from a fuzzy search conducted on the input term using columns ``Tissue type`` and ``Health type Description`` from the ``Single cell chromatin accessibility data`` tab on the `Data-Browse <https://bio.liclab.net/scvdb/data_browse>`_ page, ensuring comprehensive and relevant matches.
 
 .. image:: ../img/home/sampleByPBMC.png

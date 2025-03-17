@@ -1,7 +1,7 @@
-3. How to Use the SCVdb?
+3. How to use the SCVdb?
 =========================
 
-Below, we will explain how to use the SCVdb platform based on
+Below, we will explain how to use the `SCVdb <https://bio.liclab.net/scvdb/>`_ platform based on
 the different functional levels on the navigation bar.
 
 
