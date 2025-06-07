@@ -3,8 +3,8 @@
 # -- Project information
 
 project = 'SCVdb'
-copyright = '2025, Zhengmin Yu'
-author = 'Zhengmin Yu'
+copyright = '2025, Zheng-Min Yu'
+author = 'Zheng-Min Yu'
 
 release = '1.0.0'
 version = '1.0.0'
@@ -20,7 +20,7 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    'SCVanalysis': ('https://bio.liclab.net/scvdb/', None),
+    'SCVdb': ('https://bio.liclab.net/scvdb/', None),
     'GitHub': ('https://github.com/YuZhengM/scvdb-tutorial', None),
 }
 intersphinx_disabled_domains = ['std']

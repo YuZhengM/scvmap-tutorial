@@ -15,8 +15,3 @@ it to the corresponding position. The detailed overview is as follows:
 
 1. ``Enrichment heatmap``: Enrichment of multiple traits or diseases into cell types of interest.
 
-
-
-
-
-
