@@ -5,9 +5,9 @@ Welcome to SCVdb's documentation!
 ==================================
 
 
-A comprehensive platform for human **integrating** `single-cell chromatin accessibility data` with `causal variant effects`.
+A comprehensive platform for human **integrating** ``single-cell chromatin accessibility data`` with ``causal variant effects``.
 
-`SCVdb` database access link: `https://bio.liclab.net/scvdb/ <https://bio.liclab.net/scvdb/>`_
+**`SCV`**db database access link: `https://bio.liclab.net/scvdb/ <https://bio.liclab.net/scvdb/>`_
 
 .. image:: ./img/overview.png
 
