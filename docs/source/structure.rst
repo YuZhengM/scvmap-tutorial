@@ -23,25 +23,12 @@ their related annotation information. For more detailed statistical data, please
 The results page displays a summary table of relevant traits with key details. When selecting a specific trait,
 the detail information at the single cell level will be present, including the following contents:
 
-1. ``"Overview"``: For the single-cell sample detail page, it displays the detailed content of the sample,
-the cell type distribution chart. For the trait or disease detail page, it displays the detailed content of
-this fine-mapping result, including chromatin distribution maps and detailed causal variant information under
-different reference genome backgrounds.
-#. ``"Enriched Cells"``: It presents a table and corresponding visualization of enriched single-cell data.
-For this trait, scatter plots and a box plot illustrate the potential regulatory effect on various cell types.
-#. ``"Differential genes"``: It displays a data table of differentially expressed genes (based on gene
-activity score from scATAC-seq data) between cell types, along with bubble charts depicting pathway and GO
-term enrichment analysis results.
-#. ``"Genes associated with enriched trait"``: For the given traits, we performed MAGMA gene-level analysis,
-followed by pathway and GO enrichment analysis of significantly associated genes, with the results visualized
-using bubble plots.
-#. ``"Gene hub network"``: To systematically investigate the association mechanisms between target traits and
-specific cell types, we integrated data from two key dimensions: the genetic variation dimension
-(trait-SNP-effect gene association data) and the cell-type-specific dimension
-(sample-cell type-differential gene), to construct a trait-cell type association network. This network helps
-reveal the multi-level regulatory paths through which traits influence cell types and identifies core gene sets.
+1. ``"Overview"``: For the single-cell sample detail page, it displays the detailed content of the sample, the cell type distribution chart. For the trait or disease detail page, it displays the detailed content of this fine-mapping result, including chromatin distribution maps and detailed causal variant information under different reference genome backgrounds.
+#. ``"Enriched Cells"``: It presents a table and corresponding visualization of enriched single-cell data. For this trait, scatter plots and a box plot illustrate the potential regulatory effect on various cell types.
+#. ``"Differential genes"``: It displays a data table of differentially expressed genes (based on gene activity score from scATAC-seq data) between cell types, along with bubble charts depicting pathway and GO term enrichment analysis results.
+#. ``"Genes associated with enriched trait"``: For the given traits, we performed MAGMA gene-level analysis, followed by pathway and GO enrichment analysis of significantly associated genes, with the results visualized using bubble plots.
+#. ``"Gene hub network"``: To systematically investigate the association mechanisms between target traits and specific cell types, we integrated data from two key dimensions: the genetic variation dimension (trait-SNP-effect gene association data) and the cell-type-specific dimension (sample-cell type-differential gene), to construct a trait-cell type association network. This network helps reveal the multi-level regulatory paths through which traits influence cell types and identifies core gene sets.
 #. ``"Differential TFs"``: It displays a data table of differential TFs between cell types.
 #. ``"TFs associated with enriched trait"``: It displays the results of TF enrichment analysis for this trait using HOMER.
-#. ``"TF hub network"``: Similar to panel **"Gene hub network"**, this panel constructs a network graph from
-trait to cell type to identify key TFs involved in the regulatory process.
+#. ``"TF hub network"``: Similar to panel **"Gene hub network"**, this panel constructs a network graph from trait to cell type to identify key TFs involved in the regulatory process.
 #. ``"Enrichment heatmap"``: Enrichment heatmap of different cell types in traits or diseases in a single-cell sample.
