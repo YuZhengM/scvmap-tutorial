@@ -1,4 +1,4 @@
-3.5 Statistics
+3.6 Statistics
 ================
 
 

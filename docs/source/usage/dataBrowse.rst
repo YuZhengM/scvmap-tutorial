@@ -1,34 +1,36 @@
 3.2 Data-browse
 ================
 
-The "Data-browse" page of SCVdb provides users with options for single-cell samples and traits or diseases to access detailed data.
+The "Data-browse" page of `SCVdb <https://bio.liclab.net/scvdb/>`_ provides users with options for single-cell samples and traits or diseases to access detailed data.
 
 The displayed information content supports interactive tables, alphabetical sorting, and can be searched for the desired records using Search. After the user clicks on the "Sample ID" or "Trait ID" of interest, detailed information will be displayed on the new webpage.
+
+ | Link: https://bio.liclab.net/scvdb/data_browse
 
 .. note::
 
     We provide table downloads.
 
-3.2.1 Single cell chromatin accessibility data:
+3.2.1 Single cell chromatin accessibility data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Single cell datasets are further divided into **sample** or **cell type** based access data.
 
-3.2.1.1 Metadata: Sample ID:
+3.2.1.1 Metadata: Sample ID
 ******************************
 
 We provide filtering based on "Tissue type" and "Health type" using samples as the metadata.
 
 .. image:: ../img/dataBrowse/sc_sample_id.png
 
-3.2.1.2 Metadata: Cell type:
+3.2.1.2 Metadata: Cell type
 ******************************
 
 We provide filtering based on "Tissue type" and "cell type" using cell type as the metadata.
 
 .. image:: ../img/dataBrowse/sc_cell_type.png
 
-3.2.2 Trait or disease data:
+3.2.2 Trait or disease data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Similarly, fine mapping result data can be filtered using "Type", "Category (ICD-10)", "Subcategory (ICD-10)",and "Source cohort".

@@ -30,15 +30,16 @@ G:
 H:
  | SCVdb provides a comprehensive collection of downloadable data.
 
+------------
 
-Contents
---------
+The detailed manual is as follows:
 
 .. toctree::
 
     usage/home
     usage/dataBrowse
     usage/search
+    usage/detail
     usage/analysis
     usage/statistics
     usage/download
