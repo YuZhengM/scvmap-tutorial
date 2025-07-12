@@ -5,25 +5,25 @@
 
 Users can submit a TF of interest search to access scATAC-seq data and fine-mapping result data associated with this TF.
 
-.. image:: ../img/search/tf/tf.png
+.. image:: ../../img/search/tf/tf.png
 
 The results are divided into three parts, as follows:
 
 1. TF details and number of traits enriched by TFs under different reference genome backgrounds.
 
-.. image:: ../img/search/tf/tf_overview.png
+.. image:: ../../img/search/tf/tf_overview.png
 
 2. It shows the traits or diseases enriched in this TF by HOMER.
 
-.. image:: ../img/search/tf/tf_trait.png
+.. image:: ../../img/search/tf/tf_trait.png
 
 Click the 'View' button to see the details of a trait or disease associated with this TF.
 
-.. image:: ../img/search/tf/tf_trait_view.png
+.. image:: ../../img/search/tf/tf_trait_view.png
 
 Click the button on the link to get the result of HOMER motif enrichment running. (The first column in the table.)
 
-.. image:: ../img/search/tf/tf_trait_link.png
+.. image:: ../../img/search/tf/tf_trait_link.png
 
 .. note::
 
@@ -31,7 +31,7 @@ Click the button on the link to get the result of HOMER motif enrichment running
 
 3. Displays the samples containing TFs that are different from cell types in single cell samples.
 
-.. image:: ../img/search/tf/tf_sample.png
+.. image:: ../../img/search/tf/tf_sample.png
 
 .. note::
 

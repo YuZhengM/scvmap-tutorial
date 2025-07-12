@@ -8,7 +8,7 @@ We provide two strategies for searching fine-mapping result data, one is to sear
 3.3.1.1 ``Category`` strategy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: ../img/search/trait/trait_category.png
+.. image:: ../../img/search/trait/trait_category.png
 
 Click "Search" to access the fine-mapping result data based on the search criteria.
 
@@ -16,7 +16,7 @@ Click "Search" to access the fine-mapping result data based on the search criter
 
     The selection box supports input prompts, and on the right side, you can click the cross to clear the input content.
 
-.. image:: ../img/search/trait/trait_category_result.png
+.. image:: ../../img/search/trait/trait_category_result.png
 
 .. note::
 
@@ -28,8 +28,8 @@ Click "Search" to access the fine-mapping result data based on the search criter
 
 Click the switch button to switch strategies.
 
-.. image:: ../img/search/trait/trait_source.png
+.. image:: ../../img/search/trait/trait_source.png
 
 Click "Search" to access the fine-mapping result data based on the search criteria.
 
-.. image:: ../img/search/trait/trait_source_result.png
+.. image:: ../../img/search/trait/trait_source_result.png

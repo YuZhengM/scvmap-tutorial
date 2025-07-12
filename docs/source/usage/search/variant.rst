@@ -5,18 +5,18 @@
 
 Users can submit SNP (rsID) searches of interest to access trait or disease data related to this SNP, and the SNP-relevant regulatory network.
 
-.. image:: ../img/search/variant/variant.png
+.. image:: ../../img/search/variant/variant.png
 
 
 The results are divided into two parts, as follows:
 
 1. Data on all traits or diseases containing the SNP (causal variant).
 
-.. image:: ../img/search/variant/variant_trait.png
+.. image:: ../../img/search/variant/variant_trait.png
 
 2. Visualize the SNP-relevant regulatory network.
 
-.. image:: ../img/search/variant/variant_network.png
+.. image:: ../../img/search/variant/variant_network.png
 
 .. note::
 

@@ -5,9 +5,9 @@ On the homepage, we provide an intuitive and concise interface, and support **si
 
 .. image:: ../img/home/home.png
 
-
-Search principle
 --------------------
+
+Search principle:
 
  | Here, we provide five search contents corresponding to the five search functions on the "`Search <http://bio.liclab.net/search>`_" page.
 
