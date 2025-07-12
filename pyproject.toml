@@ -4,5 +4,5 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "SCVdb"
-authors = [{name = "Zhengmin Yu", email = "yuzmbio@163.com"}]
+authors = [{name = "Zheng-Min Yu", email = "yuzmbio@163.com"}]
 dynamic = ["version", "description"]

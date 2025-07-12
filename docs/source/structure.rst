@@ -1,34 +1,24 @@
-2. Analysis process and plat structure
-======================================
+1. Platform construction
+==============================================
 
-The current version of SCVdb accommodates over ``180`` scATAC-seq data and more than ``15,800`` fine-mapping result data.
-The scATAC-seq samples were organized and manually classified by scATAC-Ref, scBlood and others.
-By using a unified system environment and software for unified process preprocessing, causal variant
-data is collected from sources CAUSALdb, FinnGen, UKBB, and BBJ and processed and screened according
-to unified principles. Among these, the single-cell data collection includes 20 tissue types, over
-150 cell types, and a total of more than ``1,341,000`` single cells. The traits or disease types included
-in the fine-mapping result datasets are diverse and cover a wide range, encompassing `all 22 major
-disease categories` in the ICD-10 disease classification, with the II Neoplasms (C00-D48) being the
-most prevalent, totaling 630. There are over 350 subtypes of diseases under the 22 disease categories.
-Additionally, various indicators, treatments, compounds, drugs, occupation, and medical conditions are
-also included. In the result datasets, the number of valid trait- or disease-scATAC-seq data pairs
-exceeds ``1,923,000``, among which the number of trait- or disease-cell pairs is as high as ``15.9 billion``,
-providing valuable resources for exploring the functional localization of single-cell variations. SCVdb
-provides a user-friendly interface for analyzing, querying, browsing, and downloading pages, as well as
-their related annotation information. For more detailed statistical data, please refer to the
-"`Statistics <https://bio.liclab.net/scvdb/statistics>`_" page.
+`SCVdb <https://bio.liclab.net/scvdb/>`_ gathers and provides scATAC-seq datasets with
+established cell type labels (from scATAC-Ref, GreenleafLab and PlaqView) and cell type
+labels annotated by singleR (from scBlood), along with detailed fine-mapping data (from
+CAUSALdb2, FinnGen, UKBB and BBJ). SCVdb, by employing the SCAVENGE and g-chromVAR methods,
+assigns trait- or disease-related scores at single-cell resolution, uncovering biologically
+relevant cell types. Throughout this process, data undergoes standardization, unified
+processing and comprehensive analysis, including differential gene expression analysis,
+transcription factor activity profiling, pathway enrichment analysis, MAGMA gene enrichment
+analysis, HOMER motif association analysis and so on, to ensure data consistency across
+various sources. The database is structured into four modules, offering diverse search
+methods, analysis tools, and a user-friendly browser interface for data exploration and
+full downloads. These functionalities streamline the process of investigating single-cell
+genetic regulation, enabling users to effortlessly explore and interpret biological
+mechanisms within specific contexts.
 
-.. image:: img/structure/structure.png
+In conclusion, (SCVdb, https://bio.liclab.net/scvdb/) is a user-centric database that facilitates the exploration and
+interpretation of single-cell genetic data through structured displays and dynamic
+visualizations. It offers intuitive workflows, customizable parameters and comprehensive data accessibility.
 
-The results page displays a summary table of relevant traits with key details. When selecting a specific trait,
-the detail information at the single cell level will be present, including the following contents:
+.. image:: ./img/overview.png
 
-1. ``"Overview"``: For the single-cell sample detail page, it displays the detailed content of the sample, the cell type distribution chart. For the trait or disease detail page, it displays the detailed content of this fine-mapping result, including chromatin distribution maps and detailed causal variant information under different reference genome backgrounds.
-#. ``"Enriched Cells"``: It presents a table and corresponding visualization of enriched single-cell data. For this trait, scatter plots and a box plot illustrate the potential regulatory effect on various cell types.
-#. ``"Differential genes"``: It displays a data table of differentially expressed genes (based on gene activity score from scATAC-seq data) between cell types, along with bubble charts depicting pathway and GO term enrichment analysis results.
-#. ``"Genes associated with enriched trait"``: For the given traits, we performed MAGMA gene-level analysis, followed by pathway and GO enrichment analysis of significantly associated genes, with the results visualized using bubble plots.
-#. ``"Gene hub network"``: To systematically investigate the association mechanisms between target traits and specific cell types, we integrated data from two key dimensions: the genetic variation dimension (trait-SNP-effect gene association data) and the cell-type-specific dimension (sample-cell type-differential gene), to construct a trait-cell type association network. This network helps reveal the multi-level regulatory paths through which traits influence cell types and identifies core gene sets.
-#. ``"Differential TFs"``: It displays a data table of differential TFs between cell types.
-#. ``"TFs associated with enriched trait"``: It displays the results of TF enrichment analysis for this trait using HOMER.
-#. ``"TF hub network"``: Similar to panel **"Gene hub network"**, this panel constructs a network graph from trait to cell type to identify key TFs involved in the regulatory process.
-#. ``"Enrichment heatmap"``: Enrichment heatmap of different cell types in traits or diseases in a single-cell sample.

@@ -1,4 +1,4 @@
-4. Development environment
+3. Development environment
 ===========================
 
 The latest version of the SCVdb tool database operates on CentOS 7.7.1908.
@@ -17,7 +17,7 @@ mechanism. The frontend is developed using the `Vue <https://vuejs.org/>`_ 3.2.4
 a `Node.js <https://nodejs.org/en>`_ v16.13.0 environment. For frontend page development, `Axios <https://www.axiosdev.com.au>`_ 0.21.4
 is used for data interaction with the backend API, while `Bootstrap <https://getbootstrap.com/>`_ v5.1.3
 and `Element-UI <https://element-plus.org/en-US/>`_ (element-plus 2.2.0) provide page layout and style design
-tools. `Font Awesome <https://fontawesome.com/>`_ 6.1.1 provides icon style support, and `Echarts <https://echarts.apache.org/en/index.html>`_ 5.3.1,
+tools. `Font Awesome <https://fontawesome.com/>`_ 6.1.1 provides icon style support. `Echarts <https://echarts.apache.org/en/index.html>`_ 5.3.1,
 `Plotly <https://plotly.com/>`_ 2.23.0 and `CanvasXpress <https://canvasxpress.org/>`_ 38.4.1 are used for graph visualization.
 
 To ensure the smoothest browsing experience, it is recommended that users
