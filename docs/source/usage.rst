@@ -31,6 +31,9 @@ H:
  | SCVdb provides a comprehensive collection of downloadable data.
 
 
+Contents
+--------
+
 .. toctree::
 
     usage/home
