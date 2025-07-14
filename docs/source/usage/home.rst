@@ -3,6 +3,8 @@
 
 On the homepage, we provide an intuitive and concise interface, and support **simple** searches.
 
+ | Link: https://bio.liclab.net/scvdb/
+
 .. image:: ../img/home/home.png
 
 --------------------
