@@ -1,6 +1,8 @@
 3.8 Contact
 ================
 
+ | Link: https://bio.liclab.net/scvdb/contact
+
 Principal Investigator: ``Chunquan Li, Ph.D.``
 
 The First Affiliated Hospital, University of South China, Hengyang 421001, China

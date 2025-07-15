@@ -1,17 +1,20 @@
-3.4.1 Analyzing variant-to-function mapping
+3.5.1 Analyzing variant-to-function mapping
 ============================================
 
-The user submits a scATAC-seq sample, selects multiple causal variant
-data related to this single-cell sample, and chooses the method for
-integrating both. Upon initiating the analysis, the returned results
-consist of eight items.
+ | Link: https://bio.liclab.net/scvdb/analysis
 
-.. image::../../img/analysis.png
+The user submits a scATAC-seq sample, and selects multiple causal variant data related to this single-cell sample. Upon initiating the analysis, the returned results consist of eight items.
 
-The returned results consist of eight items, each corresponding to
-its own abbreviation. Clicking the abbreviation button will assign
-it to the corresponding position. The detailed overview is as follows:
+.. image:: ../../img/analysis/analysis.png
 
+The returned results consist of eight items, each corresponding to its own abbreviation. Clicking the abbreviation button will assign it to the corresponding position.
 
-1. ``Enrichment heatmap``: Enrichment of multiple traits or diseases into cell types of interest.
+``Enrichment heatmap``: Enrichment of multiple traits or diseases into cell types of interest.
 
+.. image:: ../../img/analysis/analysis_result_enrichment.png
+
+When clicking different traits or diseases, most of the following seven panels will change, which is the same as the content of the details page.
+
+You can view the help document of the details page: https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html#
+
+.. image:: ../../img/analysis/analysis_result.png
