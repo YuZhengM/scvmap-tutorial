@@ -15,6 +15,6 @@ The returned results consist of eight items, each corresponding to its own abbre
 
 When clicking different traits or diseases, most of the following seven panels will change, which is the same as the content of the details page.
 
-You can view the help document of the details page: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+Help document for users to view detail pages: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
 
 .. image:: ../../img/analysis/analysis_result.png

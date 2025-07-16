@@ -19,6 +19,6 @@ On the right is the trait or disease information contained in the strategy TFs i
 
 When clicking on different samples above, the following four panels also change accordingly, which is the same as the content of "Enriched cells", "Differential TFs", "TFs with enriched trait", and "TF hub network" on the detailed information page.
 
-You can view the help document of the details page: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+Help document for users to view detail pages: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
 
 .. image:: ../../img/analysis/analysis_tf_result.png

@@ -71,31 +71,45 @@ Visualize the enrichment of a trait or disease in a single-cell sample.
 2.4.3 Differential genes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+It displays a heatmap and a data table of differentially expressed genes between cell types (based on scATAC seq data for gene activity scoring), as well as a bubble plot describing pathway and GO enrichment analysis results.
+
 .. image:: ../img/detail/differential_genes.png
 
 2.4.4 Genes with enriched trait
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+For the given traits, we performed MAGMA gene-level analysis, followed by pathway and GO enrichment analysis of significantly associated genes, with the results visualized using bubble plots.
+
 .. image:: ../img/detail/magma.png
+
+After clicking the View button, users can see detailed variant information associated with this gene.
 
 .. image:: ../img/detail/magma_view.png
 
 2.4.5 Gene hub network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+To systematically investigate the association mechanisms between target traits and specific cell types, we integrated data from two key dimensions: the genetic variation dimension (trait-SNP-effect gene association data) and the cell-type-specific dimension (sample-cell type-differential gene), to construct a trait-cell type association network. This network helps reveal the multi-level regulatory paths through which traits influence cell types and identifies core gene sets.
+
 .. image:: ../img/detail/gene_hub_network.png
 
 2.4.6 Differential TFs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It displays a data table and heatmap of the differences TF between cell types.
 
 .. image:: ../img/detail/differential_tfs.png
 
 2.4.7 TFs with enriched trait
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+It displays the results of TF enrichment analysis for this trait using HOMER.
+
 .. image:: ../img/detail/homer.png
 
 2.4.8 TF hub network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Similar to panel ``Gene hub network``, this panel constructs a network graph from trait to cell type to identify key TFs involved in the regulatory process.
 
 .. image:: ../img/detail/tf_hub_network.png

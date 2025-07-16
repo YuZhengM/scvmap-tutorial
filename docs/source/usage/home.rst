@@ -24,6 +24,9 @@ Search principle:
 
 .. image:: ../img/home/traitByAlzheimer.png
 
+Clicking on the ``Trait ID`` will take you to the corresponding detail page to view detailed content.
+Help document for users to view detail pages: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+
 .. note::
 
     Here, if the fuzzy search encounters the word "disease", it will be ignored in the search. And it has a slightly different retrieval process from the corresponding function of "Search information by category or source cohort" on the "`Search <http://bio.liclab.net/search>`_" page, but the retrieval results are the same.
@@ -39,6 +42,9 @@ Search principle:
 
 .. image:: ../img/home/sampleByPBMC.png
 
+Clicking on the ``Sample ID`` will take you to the corresponding detail page to view detailed content.
+Help document for users to view detail pages: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+
 .. note::
 
     It has a slightly different retrieval process from the corresponding function of "Search for information by tissue type or cell type" on the "`Search <http://bio.liclab.net/search>`_" page, but the retrieval results are the same.
@@ -49,6 +55,8 @@ Search principle:
 When a user enters a **gene** (e.g., ``RCC2``), the system directs to the detailed page (`http://bio.liclab.net/gene_detail?gene=RCC2 <http://bio.liclab.net/gene_detail?gene=RCC2>`_) of the gene.
 
 .. image:: ../img/home/gene.png
+
+Help document for users to view gene details page: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/search/gene.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/search/gene.html>`_
 
 .. note::
 
@@ -61,6 +69,8 @@ When a user enters a **TF** (e.g., ``HIF1A``), the system directs to the detaile
 
 .. image:: ../img/home/tf.png
 
+Help document for users to view TF details page: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/search/tf.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/search/tf.html>`_
+
 .. note::
 
     It is completely consistent with the retrieval process and results of the "Search information by TF" function on the "`Search <http://bio.liclab.net/search>`_" page.
@@ -71,6 +81,8 @@ When a user enters a **TF** (e.g., ``HIF1A``), the system directs to the detaile
 When a user enters a **rsID** (e.g., ``rs57142672``), the system directs to the detailed page (`http://bio.liclab.net/variant_detail?variant=rs57142672 <http://bio.liclab.net/variant_detail?variant=rs57142672>`_) of the causal variant.
 
 .. image:: ../img/home/variant.png
+
+Help document for users to view variant details page: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/search/variant.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/search/variant.html>`_
 
 .. note::
 
