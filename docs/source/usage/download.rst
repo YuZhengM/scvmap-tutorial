@@ -11,13 +11,13 @@ We have integrated the following comprehensive datasets:
 (iv) Results of gene and TF related analysis;
 (v) Gene regulation annotation data.
 
-2.7.1 Download trait- or disease-relevant cell score (TRS) data for each sample
+2.7.1 Download TRS data for each sample
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../img/download/overview.png
 
 2.7.1.1 Overview of scATAC-seq data: ``txt`` file
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ==== =========================== ==================================================================================================
 #    Column name                 Description
@@ -51,7 +51,7 @@ We have integrated the following comprehensive datasets:
 
 
 2.7.1.2 scATC-seq data: ``H5AD`` file
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Read the information of ``sample_id_1``.
 
@@ -103,7 +103,7 @@ Read the information of ``sample_id_1``.
 
 
 2.7.1.3 The result data of method g-ChromVAR: ``H5AD`` file
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Read the information of ``sample_id_1``.
 
@@ -169,7 +169,7 @@ Read the information of ``sample_id_1``.
               0.20382107,  0.89792407]])
 
 2.7.1.4 The result data of method SCAVENGE: ``H5AD`` file
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Read the information of ``sample_id_1``.
 
@@ -210,7 +210,7 @@ Read the information of ``sample_id_1``.
 .. image:: ../img/download/trait.png
 
 2.7.2.1 Overview of fine-mapping result data: ``xlsx`` file
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ==== ==================== ============================================================================================================================================================
 #    Column name          Description
@@ -250,7 +250,7 @@ Read the information of ``sample_id_1``.
 ==== ==================== ============================================================================================================================================================
 
 2.7.2.2 Fine-mapping result data
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 1. ``txt`` file (``Download`` field)
 
@@ -308,7 +308,7 @@ SCVdb provides variant coordinates under different reference genomes.
 .. image:: ../img/download/other_data.png
 
 2.7.3.1 Fine-mapping result data: ``tar.gz`` file
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Here is the complete download for Part ``2.7.2 Download fine-mapping result data for each sample``.
 
@@ -316,7 +316,7 @@ Here is the complete download for Part ``2.7.2 Download fine-mapping result data
  | 	Fine-mapping result data (hg19/hg38): ``bed`` file (``Download (LiftOver)`` field)
 
 2.7.3.2 Differential gene data: ``txt`` file
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 This file contains differential gene data for all cell types of single-cell samples. Of course, it is after passing the threshold.
 
@@ -414,7 +414,7 @@ Example: `sample_id_1 <https://bio.liclab.net/scvdb/detail?sampleId=sample_id_1>
 
 
 2.7.3.3 Differential TF data: ``txt`` file
-*******************************************************************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 This file contains differential TF data for all cell types of single-cell samples. Of course, it is after passing the threshold.
 
@@ -424,7 +424,7 @@ This file contains differential TF data for all cell types of single-cell sample
 1    f_sample_id          unique identifier of scATAC-seq sample
 2    f_cell_type          cell type
 3    f_tf                 transcription factor name
-4    f_tf_id              rsID identifier
+4    f_tf_id              unique identifier of transcription factor
 5    f_p_value            P-value
 6    f_adjusted_p_value   adjusted p value
 7    f_log2_fold_change   Log2(Fold change)
@@ -486,21 +486,395 @@ Example: `sample_id_1 <https://bio.liclab.net/scvdb/detail?sampleId=sample_id_1>
             2.66768124e-01, 7.84328678e-02, 4.08885306e-07]])
     >>>
 
-2.7.3.4 The result data of enriched genes for traits or diseases through MAGMA: ``txt`` file
-*******************************************************************************************************
+2.7.3.4 MAGMA result data: ``tar.gz`` file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+The result data of enriched genes for traits or diseases through MAGMA.
+
+ | MAGMA result data (Annotation) (hg19/hg38): ``Annotation``
+ | MAGMA result data (Analysis) (hg19/hg38): ``Gene analysis -raw data``
+
+2.7.3.4.1 ``Annotation``: ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ==================== ====================================================================================================
+#    Column name          Description
+==== ==================== ====================================================================================================
+1    trait_id             unique identifier of trait or disease
+2    gene_id              unique identifier of gene
+3    gene                 gene name
+4    rsId                 rsID identifier
+==== ==================== ====================================================================================================
+
+.. note::
+
+    The user needs to obtain the ``genes.annot`` file after MAGMA runs and needs to enter the details page to obtain it.
+
+Example: `trait_id_894 <http://172.20.13.54:81/detail?traitId=trait_id_894>`_
+
+.. image:: ../img/download/magma_annotation.png
+
+Click ``View``
+
+.. image:: ../img/download/magma_annotation_view.png
 
 
+2.7.3.4.1 ``Gene analysis -raw data``: ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ==================== ====================================================================================================
+#    Column name          Description
+==== ==================== ====================================================================================================
+1    trait_id             unique identifier of trait or disease
+2    gene_id              unique identifier of gene
+3    gene                 gene name
+4    chr                  chromosome code
+5    start                starting boundary of gene annotation on chromosomes
+6    end                  ending boundary of gene annotation on chromosomes
+7    n_snps               The number of SNPs not annotated to this gene based on previous SNP QC exclusion.
+8    z_score              z-value
+9    p_value              p-value
+==== ==================== ====================================================================================================
+
+.. note::
+
+    The user needs to obtain the ``genes.out`` file after MAGMA runs and needs to enter the details page to obtain it.
+
+Example: `trait_id_894 <http://172.20.13.54:81/detail?traitId=trait_id_894>`_
+
+.. image:: ../img/download/magma_analysis.png
 
 
+2.7.3.5 HOMER result data: ``tar.gz`` file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-2.7.3.1 Gene regulation annotation data: ``txt`` file
-*******************************************************************
+ | HOMER result data (hg19/hg38): ``txt`` file (After decompression)
+
+==== ==================== ====================================================================================================
+#    Column name          Description
+==== ==================== ====================================================================================================
+1    f_trait_id           unique identifier of trait or disease
+2    f_motif_name         unique identifier of gene
+3    f_tf                 TF name
+4    f_consensus          consensus
+5    f_p_value            p-value
+6    f_q_value            q-value
+==== ==================== ====================================================================================================
+
+.. note::
+
+    Users need to download complete data without threshold filtering and enter the details page to download the file.
+
+Example: `trait_id_894 <http://172.20.13.54:81/detail?traitId=trait_id_894>`_
+
+.. image:: ../img/download/homer.png
+
+Click on the link symbol button.
+
+.. image:: ../img/download/homer_link.png
 
 
+2.7.3.6 Gene enrichment analysis results: ``tar.gz`` file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+ | Gene enrichment for differential genes: ``txt`` file (After decompression)
+ | Gene enrichment results of traits (hg19/hg38): ``txt`` file (After decompression)
+
+2.7.3.6.1 Gene enrichment for differential genes
+*********************************************************************************
+
+File name: ``{Sample ID}_gene_enrichment_data.txt``
+
+==== ==================== ====================================================================================================
+#    Column name          Description
+==== ==================== ====================================================================================================
+1    f_gene_set           Gene set (GO_Biological_Process_2023, GO_Cellular_Component_2023, GO_Molecular_Function_2023 and GWAS_Catalog_2023)
+2    f_term               gene enrichment term
+3    f_overlap            percentage of gene set overlap
+4    f_p_value            p-value
+5    f_adjusted_p_value   adjusted p-value
+6    f_odds_ratio         odds ratio
+7    f_combined_score     combined score
+8    f_gene               overlap genes
+9    f_count              count of overlapping genes
+10   f_cell_type          cell type
+==== ==================== ====================================================================================================
+
+2.7.3.6.2 Gene enrichment results of traits (hg19/hg38)
+*********************************************************************************
+
+File name: ``{Trait label}_gene_enrichment_trait_data.txt``
+
+==== ======================= ====================================================================================================
+#    Column name             Description
+==== ======================= ====================================================================================================
+1    trait_id                unique identifier of trait or disease
+2    Gene_set                Gene set (GO_Biological_Process_2023, GO_Cellular_Component_2023, GO_Molecular_Function_2023 and GWAS_Catalog_2023)
+3    Term                    gene enrichment term
+4    Overlap                 percentage of gene set overlap
+5    P-value                 p-value
+6    Adjusted P-value        adjusted p-value
+7    Old P-value             old p-value
+8    Old Adjusted P-value    old adjusted p-value
+9    Odds Ratio              odds ratio
+10   Combined Score          combined score
+11   Genes                   overlap genes
+==== ======================= ====================================================================================================
+
+.. note::
+
+    A very small number of traits or diseases contain too few fine-mapped variants, resulting in a lack of gene enrichment results.
+
+2.7.3.7 Gene regulation annotation data: ``tar.gz`` file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+SCVdb provides gene regulation annotation data for five types of epigenome data.
+
+2.7.3.7.1 Common SNP: ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ================== ====================================================================================================
+#    Column name        Description
+==== ================== ====================================================================================================
+1    chr                chromosome
+2    position           position
+3    rsId               rsID identifier
+4    ref                reference allele in the reference genome coordinate of the source cohort
+5    alt                alternative allele in the reference genome coordinate of the source cohort. (This allele is the effect allele.)
+==== ================== ====================================================================================================
 
 
+.. code-block:: shell
+    :linenos:
+
+    $ head dbsnp_common_snp_hg38.txt
+    chr     position        rsId    ref     alt
+    chr1    10177   rs367896724     A       AC
+    chr1    10352   rs555500075     T       TA
+    chr1    10616   rs376342519     CCGCCGTTGCAAAGGCGCGCCG  C
+    chr1    11012   rs544419019     C       G
+    chr1    11063   rs561109771     T       G
+    chr1    13110   rs540538026     G       A
+    chr1    13116   rs62635286      T       G
+    chr1    13118   rs62028691      A       G
+    chr1    13273   rs531730856     G       C
 
 
+2.7.3.7.2 eQTL: ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ================== ====================================================================================================
+#    Column name        Description
+==== ================== ====================================================================================================
+1    chr                chromosome
+2    position           position
+3    ref                reference allele in the reference genome coordinate of the source cohort
+4    alt                alternative allele in the reference genome coordinate of the source cohort. (This allele is the effect allele.)
+5    gene_name          gene name
+6    tss_distance       The distance between SNP and gene transcription start site (TSS).
+7    af                 allele frequency of alternative allele (alt)
+8    pval_nominal       p-value
+9    tissue_type        tissue type
+==== ================== ====================================================================================================
 
 
+.. code-block:: shell
+    :linenos:
 
+    $ head gtex_v10_eqtl_hg38.txt
+    chr     position        ref     alt     gene_name       tss_distance    af      pval_nominal    tissue_type
+    chr1    766455  T       C       LINC01409       -12292  0.047058824     1.7230692640469627e-10  Vagina
+    chr1    766938  C       T       LINC01409       -11809  0.047058824     7.331238896267609e-10   Vagina
+    chr1    771358  T       G       LINC01409       -7389   0.047058824     3.298544072962652e-12   Vagina
+    chr1    771398  G       A       LINC01409       -7349   0.67058825      2.133429762259741e-05   Vagina
+    chr1    775571  G       T       LINC01409       -3176   0.047058824     3.298544072962652e-12   Vagina
+    chr1    777550  T       C       LINC01409       -1197   0.05    9.539419071495843e-12   Vagina
+    chr1    777751  A       AT      LINC01409       -996    0.05    9.539419071495843e-12   Vagina
+    chr1    778534  A       G       LINC01409       -213    0.05    9.539419071495843e-12   Vagina
+    chr1    778639  A       G       LINC01409       -108    0.08235294      2.6823764300049156e-08  Vagina
+
+2.7.3.7.3 Risk SNP: ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ================== ====================================================================================================
+#    Column name        Description
+==== ================== ====================================================================================================
+1    chr                chromosome
+2    pos                position
+3    rsId               rsID identifier
+4    ref                reference allele in the reference genome coordinate of the source cohort
+5    alt                alternative allele in the reference genome coordinate of the source cohort. (This allele is the effect allele.)
+6    p                  p-value
+7    Trait              trait
+8    Population         population
+9    PMID               PMID
+==== ================== ====================================================================================================
+
+.. code-block:: shell
+    :linenos:
+
+    $ head gwasatlas_v20191115_risk_snp_hg38.txt
+    chr     pos     rsID    ref     alt     p       Trait   Population      PMID
+    chr1    43718521        rs11420276      G       GT      6.452e-13       Attention deficit hyperactivity disorder        EUR     30478444
+    chr1    96136884        rs1222063       A       G       3.068e-08       Attention deficit hyperactivity disorder        EUR     30478444
+    chr3    20627579        rs4858241       G       T       8.172e-09       Attention deficit hyperactivity disorder        EUR     30478444
+    chr4    31149834        rs28411770      C       T       1.152e-08       Attention deficit hyperactivity disorder        EUR     30478444
+    chr5    88558577        rs4916723       A       C       1.807e-08       Attention deficit hyperactivity disorder        EUR     30478444
+    chr5    88919777        rs304132        A       G       3.047e-08       Attention deficit hyperactivity disorder        EUR     30478444
+    chr7    114418676       rs34291892      C       CA      1.585e-08       Attention deficit hyperactivity disorder        EUR     30478444
+    chr8    34495092        rs74760947      A       G       1.393e-08       Attention deficit hyperactivity disorder        EUR     30478444
+    chr10   104987596       rs11591402      A       T       1.76e-08        Attention deficit hyperactivity disorder        EUR     30478444
+
+2.7.3.7.4 Enhancer (SEA v3): ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ===================== ====================================================================================================
+#    Column name           Description
+==== ===================== ====================================================================================================
+1    chr                   chromosome
+2    start                 start position of enhancer
+3    end                   end position of enhancer
+4    associated_gene       reference allele in the reference genome coordinate of the source cohort
+5    cell_tissue_type      cell type/tissue type
+6    recognition_factor    recognition factor (eg. h3k27ac)
+7    sequence_region       sequence region (coding or noncoding)
+8    se_id                 SE ID of SEA
+==== ===================== ====================================================================================================
+
+.. code-block:: shell
+    :linenos:
+
+    $ head sea_v3_enhancer_hg38.txt
+    chr     start   end     associated_gene cell_tissue_type        recognition_factor      sequence_region se_id
+    chr10   88384139        88389120        RNLS    22Rv1   h3k27ac coding  442
+    chr13   20117533        20129315        LINC01072       22Rv1   h3k27ac noncoding       443
+    chr11   9056277 9061918 SCUBE2  22Rv1   h3k27ac coding  444
+    chr5    44537047        44541439        LINC02224       22Rv1   h3k27ac noncoding       445
+    chr9    112327808       112339994       PTBP3   22Rv1   h3k27ac coding  446
+    chr4    138896634       138913955       LOC105377448    22Rv1   h3k27ac noncoding       447
+    chr2    180254341       180260431       CWC22   22Rv1   h3k27ac coding  448
+    chrX    66898375        66921461        EDA2R   22Rv1   h3k27ac coding  449
+    chr7    12709011        12717389        ARL4A   22Rv1   h3k27ac coding  450
+
+2.7.3.7.5 Enhancer (SEdb v2): ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ===================== ====================================================================================================
+#    Column name           Description
+==== ===================== ====================================================================================================
+1    chr                   chromosome
+2    start                 start position of enhancer
+3    end                   end position of enhancer
+4    sample_id             sample ID of SEdb
+5    se_id                 SE ID of SEdb
+6    cell_source           source
+7    cell_type             cell type
+8    tissue_type           tissue type
+9    cell_state            cell state
+==== ===================== ====================================================================================================
+
+.. code-block:: shell
+    :linenos:
+
+    $ head sedb_v2_enhancer_hg38.txt
+    chr     start   end     sample_id       se_id   cell_source     cell_type       tissue_type     cell_state
+    chr6    32968553        32969528        SE_00_0001      TE_00_000100001 Roadmap Tissue  Adipose adipose-tissue
+    chr19   3404076 3405134 SE_00_0001      TE_00_000100002 Roadmap Tissue  Adipose adipose-tissue
+    chr22   17638273        17639305        SE_00_0001      TE_00_000100003 Roadmap Tissue  Adipose adipose-tissue
+    chr7    100428402       100429667       SE_00_0001      TE_00_000100004 Roadmap Tissue  Adipose adipose-tissue
+    chr19   6273122 6274837 SE_00_0001      TE_00_000100005 Roadmap Tissue  Adipose adipose-tissue
+    chr17   77128730        77140351        SE_00_0001      TE_00_000100006 Roadmap Tissue  Adipose adipose-tissue
+    chr6    33313122        33314294        SE_00_0001      TE_00_000100007 Roadmap Tissue  Adipose adipose-tissue
+    chr7    5555574 5556788 SE_00_0001      TE_00_000100008 Roadmap Tissue  Adipose adipose-tissue
+    chr7    143380426       143381762       SE_00_0001      TE_00_000100009 Roadmap Tissue  Adipose adipose-tissue
+
+2.7.3.7.6 Super enhancer (dbSUPER): ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ===================== ====================================================================================================
+#    Column name           Description
+==== ===================== ====================================================================================================
+1    chr                   chromosome
+2    start                 start position of enhancer
+3    end                   end position of enhancer
+4    se_id                 SE ID of SEdb
+5    cell_type_type        cell type/tissue type
+==== ===================== ====================================================================================================
+
+.. code-block:: shell
+    :linenos:
+
+    $ head dbsuper_super_enhancer_hg38.txt
+    chr     start   end     se_id   cell_type_type
+    chr6    32580146        32643038        SE_10156        CD19 Primary
+    chr14   105557581       105606092       SE_10157        CD19 Primary
+    chr14   105677864       105749363       SE_10158        CD19 Primary
+    chr6    167078442       167154502       SE_10159        CD19 Primary
+    chr21   44137096        44181452        SE_10160        CD19 Primary
+    chr5    150398244       150436858       SE_10161        CD19 Primary
+    chr2    88831594        88886476        SE_10162        CD19 Primary
+    chr6    33006818        33032650        SE_10163        CD19 Primary
+    chr2    136114080       136141217       SE_10164        CD19 Primary
+
+2.7.3.7.7 Super enhancer (SEA v3): ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ===================== ====================================================================================================
+#    Column name           Description
+==== ===================== ====================================================================================================
+1    chr                   chromosome
+2    start                 start position of enhancer
+3    end                   end position of enhancer
+4    associated_gene       reference allele in the reference genome coordinate of the source cohort
+5    cell_tissue_type      cell type/tissue type
+6    recognition_factor    recognition factor (eg. h3k27ac)
+7    sequence_region       sequence region (coding or noncoding)
+8    se_id                 SE ID
+==== ===================== ====================================================================================================
+
+.. code-block:: shell
+    :linenos:
+
+    $ head sea_v3_super_enhancer_hg38.txt
+    chr     start   end     associated_gene cell_tissue_type        recognition_factor      sequence_region se_id
+    chr6    110617715       110700931       CDK19   22Rv1   h3k27ac coding  1
+    chr7    92030110        92091121        AKAP9   22Rv1   h3k27ac coding  2
+    chr11   59005426        59074536        LOC283194       22Rv1   h3k27ac noncoding       3
+    chr5    71599725        71707973        MCCC2   22Rv1   h3k27ac coding  4
+    chr21   6360657 6375827 CBS     22Rv1   h3k27ac coding  5
+    chr12   101602935       101625047       MYBPC1  22Rv1   h3k27ac coding  6
+    chr10   37145277        37199659        ANKRD30A        22Rv1   h3k27ac coding  7
+    chr6    138221168       138289554       ARFGEF3 22Rv1   h3k27ac coding  8
+    chr16   52550656        52582081        CASC16  22Rv1   h3k27ac noncoding       9
+
+2.7.3.7.8 Super enhancer (SEdb v2): ``txt`` file (After decompression)
+*********************************************************************************
+
+==== ===================== ====================================================================================================
+#    Column name           Description
+==== ===================== ====================================================================================================
+1    chr                   chromosome
+2    start                 start position of enhancer
+3    end                   end position of enhancer
+4    sample_id             sample ID of SEdb
+5    se_id                 SE ID of SEdb
+6    cell_source           source
+7    cell_type             cell type
+8    tissue_type           tissue type
+9    cell_state            cell state
+==== ===================== ====================================================================================================
+
+.. code-block:: shell
+    :linenos:
+
+    $ head sedb_v2_super_enhancer_hg38.txt
+    chr     start   end     sample_id       se_id   cell_source     cell_type       tissue_type     cell_state
+    chr1    100008001       100081709       SE_02_1036      SE_02_103600569 NCBI GEO/SRA    Cell line       Mammary gland   HCC70_XY018
+    chr1    100015493       100079709       SE_02_1429      SE_02_142900169 NCBI GEO/SRA    Cell line       Blood   GM12878_WT
+    chr1    1000160 1006599 SE_02_0988      SE_02_098800774 NCBI GEO/SRA    Cell line       Blood   K562_EPZ
+    chr1    1000180 1006408 SE_02_1080      SE_02_108000734 NCBI GEO/SRA    Cell line       Muscle  JR1 shCtrl
+    chr1    100026929       100040607       SE_00_0009      SE_00_000900816 Roadmap Primary cell    Blood   CD8-positive-alpha-beta-T-cell
+    chr1    100027783       100040448       SE_00_0027      SE_00_002700801 Roadmap Primary cell    Blood   natural-killer-cell
+    chr1    100028493       100040305       SE_02_0707      SE_02_070700751 NCBI GEO/SRA    Cell line       Pancreas        BxPC3 WT
+    chr1    100028934       100040097       SE_02_0022      SE_02_002200606 NCBI GEO/SRA    Primary cell    Blood   CD8donorA
+    chr1    100033978       100061969       SE_02_1468      SE_02_146800857 NCBI GEO/SRA    Cell line       Blood   HUDEP-2_WT
