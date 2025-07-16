@@ -1,4 +1,4 @@
-3.4 Detail
+2.4 Detail
 ================
 
 Access to the details page through the "`Data-browse <https://bio.liclab.net/scvdb/data_browse>`_" page or search results page, etc.
@@ -8,12 +8,12 @@ Access to the details page through the "`Data-browse <https://bio.liclab.net/scv
 
 We provide eight content panels for users to analyze data. You can quickly locate the designated panel by clicking on the button of the corresponding module.
 
-3.4.1 Overview
+2.4.1 Overview
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Described the basic information content of the sample, as well as the basic statistical information.
 
-3.4.1.1 scATAC-seq
+2.4.1.1 scATAC-seq
 *******************************
 
 The basic information of the scATAC-seq sample is displayed on the left. The "Sample ID" is a unique identifier. "Sample label" is a unique identifier that contains sample information.
@@ -24,7 +24,7 @@ We provide scATAC-seq data samples for download as H5ad files processed by `Snap
 
 .. image:: ../img/detail/sample_overview.png
 
-3.4.1.2 Fine-mapping result
+2.4.1.2 Fine-mapping result
 *******************************
 
 The left side displays basic information about the trait or disease. The "Trait ID" is a unique identifier. The "Trait label" is a unique identifier that contains trait or disease information.
@@ -39,7 +39,7 @@ We provide the download of this fine-mapping result.
 
     Among these, six fields (`Type`, `ICD-10`, `Category`, `Subcategory`, `Three category`) were manually added. There is a very small probability of misclassification. If you find any, please inform us at yuzmbio@163.com. Thank you very much for your contribution.
 
-3.4.2 Enriched cells
+2.4.2 Enriched cells
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We provide two parts, the first part is to display the information of sample enrichment, and the second part is to select a certain enriched sample and visualize the enrichment effect.
@@ -48,7 +48,7 @@ We provide two parts, the first part is to display the information of sample enr
 
     The first part will display different data types (scATAC-seq samples or fine-mapping results). The second part shows the exact same situation. Regardless of whether the user is viewing the detailed page of the scATAC-seq sample or the fine-mapping result, the six panels at the back display the same process content.
 
-3.4.1.1 The first part
+2.4.1.1 The first part
 *******************************
 
 scATAC-seq sample:
@@ -61,41 +61,41 @@ Fine-mapping result:
 
 .. image:: ../img/detail/trait_enrichment.png
 
-3.4.1.2 The second part
+2.4.1.2 The second part
 *******************************
 
 Visualize the enrichment of a trait or disease in a single-cell sample.
 
 .. image:: ../img/detail/trs.png
 
-3.4.3 Differential genes
+2.4.3 Differential genes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../img/detail/differential_genes.png
 
-3.4.4 Genes with enriched trait
+2.4.4 Genes with enriched trait
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../img/detail/magma.png
 
 .. image:: ../img/detail/magma_view.png
 
-3.4.5 Gene hub network
+2.4.5 Gene hub network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../img/detail/gene_hub_network.png
 
-3.4.6 Differential TFs
+2.4.6 Differential TFs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../img/detail/differential_tfs.png
 
-3.4.7 TFs with enriched trait
+2.4.7 TFs with enriched trait
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../img/detail/homer.png
 
-3.4.8 TF hub network
+2.4.8 TF hub network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../img/detail/tf_hub_network.png

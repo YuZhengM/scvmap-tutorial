@@ -1,4 +1,4 @@
-3.3.5 Search information by SNP
+2.3.5 Search information by SNP
 ===============================
 
  | Link: https://bio.liclab.net/scvdb/search

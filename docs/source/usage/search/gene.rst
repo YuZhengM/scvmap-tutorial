@@ -1,4 +1,4 @@
-3.3.3  Search information by gene
+2.3.3  Search information by gene
 =================================
 
  | Link: https://bio.liclab.net/scvdb/search
