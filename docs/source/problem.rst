@@ -19,11 +19,12 @@ Therefore, you need to ``clear the cache and access it again``.
 4.2 Publicize front-end and back-end code
 ----------------------------------------------
 
-We have released the full stack development code for the SCVdb database, which is very useful for bioinformatics database development. Users can directly download and use the development bioinformatics database website.
-
  | SCVdb front-end: https://github.com/YuZhengM/scvdb_web
 
  | SCVdb back-end: https://github.com/YuZhengM/scvdb
+
+We have released the full stack development code for the SCVdb database, which is very useful for bioinformatics database development.
+Users can directly download and use them to develop bioinformatics database websites..
 
 .. note::
 
