@@ -1,6 +1,14 @@
 3. Development environment
 ===========================
 
+> SCVdb: https://bio.liclab.net/scvdb/
+
+> SCVdb tutorial: https://scvdb-tutorial.readthedocs.io/en/latest/index.html
+
+> SCVdb front-end: https://github.com/YuZhengM/scvdb_web
+
+> SCVdb back-end: https://github.com/YuZhengM/scvdb
+
 The latest version of the SCVdb tool database operates on CentOS 7.7.1908.
 We deploy and release the project to the remote server via a Dockerfile
 within the `IntelliJ IDEA <https://www.jetbrains.com.cn/en-us/idea/>`_ 2021.3 integrated development environment.
@@ -23,15 +31,4 @@ tools. `Font Awesome <https://fontawesome.com/>`_ 6.1.1 provides icon style supp
 To ensure the smoothest browsing experience, it is recommended that users
 access the website with modern web browsers that support HTML5 standard,
 such as **Firefox**, Google Chrome and Edge.
-
-
-
-
-
-
-
-
-
-
-
 

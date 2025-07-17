@@ -1,6 +1,14 @@
 1. Platform construction
 ==============================================
 
+> SCVdb: https://bio.liclab.net/scvdb/
+
+> SCVdb tutorial: https://scvdb-tutorial.readthedocs.io/en/latest/index.html
+
+> SCVdb front-end: https://github.com/YuZhengM/scvdb_web
+
+> SCVdb back-end: https://github.com/YuZhengM/scvdb
+
 `SCVdb <https://bio.liclab.net/scvdb/>`_ gathers and provides scATAC-seq datasets with
 established cell type labels (from scATAC-Ref, GreenleafLab and PlaqView) and cell type
 labels annotated by singleR (from scBlood), along with detailed fine-mapping data (from
