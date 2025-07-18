@@ -510,7 +510,7 @@ The result data of enriched genes for traits or diseases through MAGMA.
 
     The user needs to obtain the ``genes.annot`` file after MAGMA runs and needs to enter the details page to obtain it.
 
-Example: `trait_id_894 <http://172.20.13.54:81/detail?traitId=trait_id_894>`_
+Example: `trait_id_894 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_894>`_
 
 .. image:: ../img/download/magma_annotation.png
 
@@ -540,7 +540,7 @@ Click ``View``
 
     The user needs to obtain the ``genes.out`` file after MAGMA runs and needs to enter the details page to obtain it.
 
-Example: `trait_id_894 <http://172.20.13.54:81/detail?traitId=trait_id_894>`_
+Example: `trait_id_894 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_894>`_
 
 .. image:: ../img/download/magma_analysis.png
 
@@ -565,7 +565,7 @@ Example: `trait_id_894 <http://172.20.13.54:81/detail?traitId=trait_id_894>`_
 
     Users need to download complete data without threshold filtering and enter the details page to download the file.
 
-Example: `trait_id_894 <http://172.20.13.54:81/detail?traitId=trait_id_894>`_
+Example: `trait_id_894 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_894>`_
 
 .. image:: ../img/download/homer.png
 

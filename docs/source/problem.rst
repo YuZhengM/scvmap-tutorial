@@ -2,9 +2,9 @@
 ===========================
 
 Here we will answer common questions.
+
 If you have any other questions that need to be answered, you can send an email to ``yuzmbio@163.com``.
 Alternatively, you can ask questions on Github `scvdb-tutorial <https://github.com/YuZhengM/scvdb-tutorial>`_.
-Thank you for your contribution.
 
 4.1 There is a problem accessing the website
 ----------------------------------------------
@@ -28,4 +28,4 @@ Users can directly download and use them to develop bioinformatics database webs
 
 .. note::
 
-    If you discover any unmodified privacy content, please contact us promptly. We greatly appreciate your kindness.
+    If you discover any unmodified privacy content, please contact us. We greatly appreciate your kindness.
