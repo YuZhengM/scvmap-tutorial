@@ -75,6 +75,11 @@ It displays a heatmap and a data table of differentially expressed genes between
 
 .. image:: ../img/detail/differential_genes.png
 
+Click the ``Top count`` option to set to ``5``, then click ``Example``, and finally click the ``Plot`` button.
+After running, we can see the differential gene expression heatmap of BCC case in the article.
+
+.. image:: ../img/detail/differential_genes_article.png
+
 2.4.4 Genes with enriched trait
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
