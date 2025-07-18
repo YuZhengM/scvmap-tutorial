@@ -6,29 +6,21 @@ the different functional levels on the navigation bar.
 
 .. image:: ./img/database_content.png
 
-A:
- | An interface for efficient browsing of both scATAC-seq data and fine-mapping results.
+:A: An interface for efficient browsing of both scATAC-seq data and fine-mapping results.
 
-B:
- | Five search modes are provided.
+:B: Five search modes are provided.
 
-C:
- | Retrieve result information through panel "Search information by category or source cohort".
+:C: Retrieve result information through panel "Search information by category or source cohort".
 
-D:
- | Retrieve result information through panel "Search information by gene".
+:D: Retrieve result information through panel "Search information by gene".
 
-E:
- | Three online analysis tools are provided.
+:E: Three online analysis tools are provided.
 
-F:
- | The result information obtained through the "Analyzing variant-to-function mapping" analysis tool.
+:F: The result information obtained through the "Analyzing variant-to-function mapping" analysis tool.
 
-G:
- | Statistical information.
+:G: Statistical information.
 
-H:
- | SCVdb provides a comprehensive collection of downloadable data.
+:H: SCVdb provides a comprehensive collection of downloadable data.
 
 ------------
 

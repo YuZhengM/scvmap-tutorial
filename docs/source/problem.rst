@@ -20,11 +20,12 @@ Therefore, you need to ``clear the cache and access it again``.
 ----------------------------------------------
 
  | SCVdb front-end: https://github.com/YuZhengM/scvdb_web
-
  | SCVdb back-end: https://github.com/YuZhengM/scvdb
 
 We have released the full stack development code for the SCVdb database, which is very useful for bioinformatics database development.
-Users can directly download and use them to develop bioinformatics database websites..
+Users can directly download and use them to develop bioinformatics database websites.
+
+At least mastering ``Vue`` and ``Spring Boot`` frameworks is necessary to start practical application.
 
 .. note::
 
