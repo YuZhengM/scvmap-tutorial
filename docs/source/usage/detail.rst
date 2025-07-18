@@ -24,6 +24,10 @@ We provide scATAC-seq data samples for download as H5ad files processed by `Snap
 
 .. image:: ../img/detail/sample_overview.png
 
+.. note::
+
+    The ``Source`` field provides a link to the original source of the data, and the page redirected by this link may not be accessible.
+
 2.4.1.2 Fine-mapping result
 *******************************
 
@@ -34,6 +38,14 @@ The right side displays the proportion of chromosomes and detailed causal varian
 We provide the download of this fine-mapping result.
 
 .. image:: ../img/detail/trait_overview.png
+
+Click on the ``Source ID`` field value, and the page will pop up displaying detailed information about the source of the collected data.
+
+.. image:: ../img/detail/trait_overview_source.png
+
+.. note::
+
+    The ``Source name`` field provides a link to the original source of the data, and the page redirected by this link may not be accessible.
 
 .. note::
 
@@ -68,6 +80,11 @@ Visualize the enrichment of a trait or disease in a single-cell sample.
 
 .. image:: ../img/detail/trs.png
 
+.. note::
+
+    Users can select different numbers of cells for visualization. When the number of cells is too high, especially when the computer memory used by the user is relatively small, the browser may experience lag or even crash when loading data. It is suggested that 40% or 50% could potentially represent the trend of all cells.
+
+
 2.4.3 Differential genes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -97,6 +114,10 @@ After clicking the View button, users can see detailed variant information assoc
 To systematically investigate the association mechanisms between target traits and specific cell types, we integrated data from two key dimensions: the genetic variation dimension (trait-SNP-effect gene association data) and the cell-type-specific dimension (sample-cell type-differential gene), to construct a trait-cell type association network. This network helps reveal the multi-level regulatory paths through which traits influence cell types and identifies core gene sets.
 
 .. image:: ../img/detail/gene_hub_network.png
+
+.. note::
+
+    If the user selects too many ``Top count`` and switches the button to ``All``, the browser may experience data loading lag or even crash, especially when the user's computer memory is low.
 
 2.4.6 Differential TFs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
