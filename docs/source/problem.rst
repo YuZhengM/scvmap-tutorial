@@ -16,6 +16,10 @@ Therefore, you need to ``clear the cache and access it again``.
 
     The probability of this happening is relatively low. If clearing the cache does not solve the problem after it occurs, please contact us in a timely manner. Thank you for your contribution.
 
+.. tip::
+
+    If you have accessed the SCVdb database link before July 19, 2025, it is recommended to clear the cache and access again.
+
 4.2 Publicize front-end and back-end code
 ----------------------------------------------
 
