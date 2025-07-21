@@ -4,5 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "SCVdb"
+version = "1.0.0"
+description = "A comprehensive platform for human integrating single-cell chromatin accessibility data with causal variant effects"
 authors = [{name = "Zheng-Min Yu", email = "yuzmbio@163.com"}]
 dynamic = ["version", "description"]
