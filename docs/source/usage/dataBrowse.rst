@@ -45,4 +45,4 @@ Similarly, fine mapping result data can be filtered using "Type", "Category (ICD
 
 .. note::
 
-    The preferred search criteria above are to select the column that need to be retrieved, and then add the search content. This is a precise match and does not support fuzzy matching, but supports ignoring case. Click button ``Refresh`` to obtain the original table without any retrieved information.
+    The first step is to select the column that needs to be searched, then you can choose the search mode, add the search content, and click the ``Search`` button to get the search results. Click button ``Refresh`` to obtain the original table without any retrieved information.
