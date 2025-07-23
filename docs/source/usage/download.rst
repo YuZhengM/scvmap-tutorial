@@ -292,9 +292,9 @@ SCVdb provides variant coordinates under different reference genomes.
 ==== ==================== ====================================================================================================
 #    Column name          Description
 ==== ==================== ====================================================================================================
-1    None                 chromosome in the reference genome coordinate of the source cohort
-2    None                 position of variant in the reference genome coordinate of the source cohort
-3    None                 position of variant in the reference genome coordinate of the source cohort (Same as the second column)
+1    None                 chromosome in hg19/hg38 coordinates
+2    None                 (start) position of variant in hg19/hg38 coordinates
+3    None                 (end) position of variant in hg19/hg38 coordinates
 4    None                 rsID identifier
 5    None                 posterior probability of association from fine-mapping (FINEMAP)
 6    None                 abbreviation for the trait
