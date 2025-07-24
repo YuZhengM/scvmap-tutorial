@@ -50,7 +50,7 @@ We have integrated the following comprehensive datasets:
 .. image:: ../img/download/txt_download.png
 
 
-2.7.1.2 scATC-seq data: ``H5AD`` file
+2.7.1.2 scATAC-seq data: ``H5AD`` file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Read the information of ``sample_id_1``.
