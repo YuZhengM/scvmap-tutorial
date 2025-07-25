@@ -301,6 +301,9 @@ SCVdb provides variant coordinates under different reference genomes.
 7    None                 Unique index identifiers based on trait or disease variants are meaningless and can be used to identify the uniqueness of variants.
 ==== ==================== ====================================================================================================
 
+.. note::
+
+    This format of data is suitable for performing overlay operations with enhancer data, etc.
 
 2.7.3 Download other data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -312,8 +315,50 @@ SCVdb provides variant coordinates under different reference genomes.
 
 Here is the complete download for Part ``2.7.2 Download fine-mapping result data for each sample``.
 
- | 	Fine-mapping result data (source): ``txt`` file (``Download`` field)
- | 	Fine-mapping result data (hg19/hg38): ``bed`` file (``Download (LiftOver)`` field)
+ | Fine-mapping result data (source): ``txt`` file (``Download`` field)
+
+ | Repeat display once:
+
+==== ==================== ====================================================================================================
+#    Column name          Description
+==== ==================== ====================================================================================================
+1    trait_code           unique identifier of the trait, used as the file name for the file processing procedure
+2    chr                  chromosome in the reference genome coordinate of the source cohort
+3    position             position of variant in the reference genome coordinate of the source cohort
+4    variant              unique variant identifier
+5    rsId                 rsID identifier
+6    allele1              reference allele in the reference genome coordinate of the source cohort
+7    allele2              alternative allele in the reference genome coordinate of the source cohort. (This allele is the effect allele.)
+8    maf                  allele frequency of the minor allele in cohort
+9    af                   allele frequency of allele2 (alt)
+10   beta                 marginal association effect size from linear mixed model/effect size GWAS
+11   se                   standard error on marginal association effect size from linear mixed model/standard error GWAS
+12   p_value              p-value GWAS
+13   chisq                test statistic for marginal association
+14   z_score              original z-score
+15   pp                   posterior probability of association from fine-mapping (FINEMAP)
+16   beta_posterior       posterior expectation of true effect size
+17   sd_posterior         posterior standard deviation of true effect size
+18   trait_abbr           abbreviation for the trait
+19   trait                detailed information for the trait
+20   index                Unique index identifiers based on trait or disease variants are meaningless and can be used to identify the uniqueness of variants.
+==== ==================== ====================================================================================================
+
+ | Fine-mapping result data (hg19/hg38): ``bed`` file (``Download (LiftOver)`` field)
+
+ | Repeat display once:
+
+==== ==================== ====================================================================================================
+#    Column name          Description
+==== ==================== ====================================================================================================
+1    None                 chromosome in hg19/hg38 coordinates
+2    None                 (start) position of variant in hg19/hg38 coordinates
+3    None                 (end) position of variant in hg19/hg38 coordinates
+4    None                 rsID identifier
+5    None                 posterior probability of association from fine-mapping (FINEMAP)
+6    None                 abbreviation for the trait
+7    None                 Unique index identifiers based on trait or disease variants are meaningless and can be used to identify the uniqueness of variants.
+==== ==================== ====================================================================================================
 
 2.7.3.2 Differential gene data: ``txt`` file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
