@@ -62,5 +62,7 @@ The ``Search`` module is designed for professionals who are familiar with diseas
 .. tip::
 
     Recommended Workflow:
-    :(1): Initiate a Broad Search: On the homepage, click the search button without entering any criteria. This will retrieve all available data listings.
-    :(2): Apply Custom Filters: Once the full dataset is displayed, you can then narrow down the results by applying custom search conditions based on the columns that interest you.
+
+    (1): Initiate a Broad Search: On the homepage, click the search button without entering any criteria. This will retrieve all available data listings.
+
+    (2): Apply Custom Filters: Once the full dataset is displayed, you can then narrow down the results by applying custom search conditions based on the columns that interest you.
