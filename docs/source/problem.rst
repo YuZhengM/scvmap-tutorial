@@ -29,7 +29,7 @@ Therefore, you need to ``clear the cache and access it again``.
 
 .. tip::
 
-    If you have accessed the SCVdb database link before July 19, 2025, it is recommended to clear the cache and access again.
+    If you have accessed the SCVdb database link before August 1, 2025, it is recommended to clear the cache and access again.
 
 4.3 Publicize front-end and back-end code
 ----------------------------------------------
