@@ -51,9 +51,9 @@ At least mastering ``Vue`` and ``Spring Boot`` frameworks is necessary to start 
 
 Here, we mainly have three modules that provide search functionality:
 
-    (1). ``Home`` search module
-    (2). ``Data-browse`` search module
-    (3). ``Search`` search module
+    (1): ``Home`` search module,
+    (2): ``Data-browse`` search module,
+    (3): ``Search`` search module
 
 The data returned by **Home** module contains significantly more columns than the data from **Data-browse** module.
 
@@ -65,4 +65,4 @@ The **Search** module is designed for professionals who are familiar with diseas
 
 .. tip::
 
-    Recommended user search workflow:: On the homepage, click the search button with an empty query to view all available data. Then, use custom filters on the columns of your choice to narrow down the results.
+    **Recommended user search workflow**: On the `homepage <https://bio.liclab.net/scvdb/>`_, click the search button with an empty query to view all available data. Then, use custom filters on the columns of your choice to narrow down the results.
