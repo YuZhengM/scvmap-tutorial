@@ -113,6 +113,8 @@ After clicking the View button, users can see detailed variant information assoc
 
 To systematically investigate the association mechanisms between target traits and specific cell types, we integrated data from two key dimensions: the genetic variation dimension (trait-SNP-effect gene association data) and the cell-type-specific dimension (sample-cell type-differential gene), to construct a trait-cell type association network. This network helps reveal the multi-level regulatory paths through which traits influence cell types and identifies core gene sets.
 
+
+
 .. image:: ../img/detail/gene_hub_network.png
 
 .. note::

@@ -27,6 +27,10 @@ Search principle:
 Clicking on the ``Trait ID`` will take you to the corresponding detail page to view detailed content.
 Help document for users to view detail pages: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
 
+.. tip::
+
+    When the search field is empty, clicking the search button will return data for all traits and diseases.
+
 .. note::
 
     Here, if the fuzzy search encounters the word "disease", it will be ignored in the search. And it has a slightly different retrieval process from the corresponding function of "Search information by category or source cohort" on the "`Search <http://bio.liclab.net/search>`_" page, but the retrieval results are the same.
@@ -44,6 +48,10 @@ Help document for users to view detail pages: `https://scvdb-tutorial.readthedoc
 
 Clicking on the ``Sample ID`` will take you to the corresponding detail page to view detailed content.
 Help document for users to view detail pages: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+
+.. tip::
+
+    When the search field is empty, clicking the search button will return data for all scATAC-seq samples.
 
 .. note::
 
