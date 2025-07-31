@@ -66,3 +66,7 @@ The **Search** module is designed for professionals who are familiar with diseas
 .. tip::
 
     **Recommended user search workflow**: On the `homepage <https://bio.liclab.net/scvdb/>`_, click the search button with an empty query to view all available data. Then, use custom filters on the columns of your choice to narrow down the results.
+
+.. image:: ./img/faq/trait_home.png
+
+.. image:: ./img/faq/trait_search.png
