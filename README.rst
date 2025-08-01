@@ -6,6 +6,6 @@ User Manual for SCVdb platform
  | SCVdb front-end: https://github.com/YuZhengM/scvdb_web
  | SCVdb back-end: https://github.com/YuZhengM/scvdb
 
-A comprehensive platform for human **integrating** ``single-cell chromatin accessibility data`` with ``causal variant effects``.
+A comprehensive platform for human **integrating** ``single-cell chromatin accessibility data`` with ``causal variants``.
 
 .. image:: docs/source/img/overview.png
