@@ -51,7 +51,7 @@ Click on the ``Source ID`` field value, and the page will pop up displaying deta
 
     Among these, six fields (`Type`, `ICD-10`, `Category`, `Subcategory`, `Three category`) were manually added. There is a very small probability of misclassification. If you find any, please inform us at yuzmbio@163.com. Thank you very much for your contribution.
 
-2.4.2 Enriched cells
+2.4.2 TRS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We provide two parts, the first part is to display the information of sample enrichment, and the second part is to select a certain enriched sample and visualize the enrichment effect.
@@ -97,7 +97,7 @@ After running, we can see the differential gene expression heatmap of BCC case i
 
 .. image:: ../img/detail/differential_genes_article.png
 
-2.4.4 Genes with enriched trait
+2.4.4 Trait-relevant genes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For the given traits, we performed MAGMA gene-level analysis, followed by pathway and GO enrichment analysis of significantly associated genes, with the results visualized using bubble plots.
@@ -128,7 +128,7 @@ It displays a data table and heatmap of the differences TF between cell types.
 
 .. image:: ../img/detail/differential_tfs.png
 
-2.4.7 TFs with enriched trait
+2.4.7 Trait-relevant TFs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It displays the results of TF enrichment analysis for this trait using HOMER.

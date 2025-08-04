@@ -16,9 +16,9 @@ and impacts of genetic variations at the single-cell level. With the accumulatio
 association studies (GWAS) and single-cell genomic data, there is an urgent need for comprehensive
 analysis and efficient exploration of these data to uncover the underlying biological processes.
 For this purpose, we designed SCVdb (https://bio.liclab.net/scvdb/), a comprehensive user-friendly,
-large-scale database that is designed to explore populations of interest for relevant traits or diseases
+large-scale database that is designed to provide cell populations of interest for relevant traits or diseases
 at the cellular level or at the level of cell types, and to provide them with comprehensive annotation
-and enrichment analyses. The current version of SCVdb supports ``~180`` scATAC-seq datasets and ``~15,800`` fine-mapping
+and enrichment analysis. The current version of SCVdb supports ``~180`` scATAC-seq datasets and ``over 15,800`` fine-mapping
 result datasets. The number of valid trait- or disease-scATAC-seq data pairs exceeds ``1,923,500``, among
 which the number of trait- or disease-cell pairs is as high as ``15.95 billion``, providing valuable
 resources for exploring the functional localization of single-cell variations. In addition, we

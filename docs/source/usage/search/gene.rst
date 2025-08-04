@@ -23,6 +23,8 @@ Click the 'View' button to see the details of a trait or disease associated with
 
 .. image:: ../../img/search/gene/gene_trait_view2.png
 
+.. image:: ../../img/search/gene/gene_trait_view3.png
+
 3. Display the content of the gene annotation and ten annotation topics by overlapping.
 
 .. image:: ../../img/search/gene/gene_regulation.png
