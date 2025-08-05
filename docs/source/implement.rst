@@ -1,10 +1,11 @@
-3. Development environment
+4. Development environment
 ===========================
 
  | SCVdb: https://bio.liclab.net/scvdb/
  | SCVdb tutorial: https://scvdb-tutorial.readthedocs.io/en/latest/index.html
  | SCVdb front-end: https://github.com/YuZhengM/scvdb_web
  | SCVdb back-end: https://github.com/YuZhengM/scvdb
+ | SCVdb API: https://bio.liclab.net/scvdb_service/swagger-ui/index.html
 
 The latest version of the SCVdb tool database operates on CentOS 7.7.1908.
 We deploy and release the project to the remote server via a Dockerfile

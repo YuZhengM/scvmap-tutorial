@@ -35,5 +35,6 @@ Contents
 
    structure
    usage
+   api
    implement
    problem

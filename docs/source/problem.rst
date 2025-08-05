@@ -1,4 +1,4 @@
-4. FAQ (Frequently Asked Questions)
+5. FAQ (Frequently Asked Questions)
 ===========================
 
 Here we will answer common questions.
@@ -6,7 +6,7 @@ Here we will answer common questions.
 If you have any other questions that need to be answered, you can send an email to ``yuzmbio@163.com``.
 Alternatively, you can ask questions on Github `scvdb-tutorial <https://github.com/YuZhengM/scvdb-tutorial>`_.
 
-4.1 Discovering issues on the website
+5.1 Discovering issues on the website
 ----------------------------------------------
 
 We have diligently completed the process of improving the website.
@@ -17,7 +17,7 @@ If you discover any issues or areas that need improvement, please contact us pro
 
     If you find any minor issues that are inconvenient to disturb us, you can leave a message on `GitHub <https://github.com/YuZhengM/scvdb-tutorial>`_. Thank you for your effort and time.
 
-4.2 There is a problem accessing the website
+5.2 There is a problem accessing the website
 ----------------------------------------------
 
 Occasionally, we update information on the website, which may be due to conflicts between the previously cached data and newly published content.
@@ -31,7 +31,7 @@ Therefore, you need to ``clear the cache and access it again``.
 
     If you have accessed the SCVdb database link before August 5, 2025, it is recommended to clear the cache and access again.
 
-4.3 Publicize front-end and back-end code
+5.3 Publicize front-end and back-end code
 ----------------------------------------------
 
  | SCVdb front-end: https://github.com/YuZhengM/scvdb_web
@@ -46,7 +46,7 @@ At least mastering ``Vue`` and ``Spring Boot`` frameworks is necessary to start 
 
     If you discover any unmodified privacy content, please contact us. We greatly appreciate your kindness.
 
-4.4 Difficulties encountered in searching for trait or disease data
+5.4 Difficulties encountered in searching for trait or disease data
 --------------------------------------------------------------------
 
 Here, we mainly have three modules that provide search functionality:
