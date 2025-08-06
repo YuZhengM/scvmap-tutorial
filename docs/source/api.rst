@@ -4,13 +4,20 @@
  | SCVdb API: https://bio.liclab.net/scvdb_service/swagger-ui/index.html
 
 `SCVdb <https://bio.liclab.net/scvdb/>`_ provides backend API interface information,
-and researchers in need can obtain data directly through API interfaces without using crawler strategies.
-The interface specifications follow `RESTful <http://www.restfulapi.nl/>`_ API standards, and all returned data is in `JSON <https://www.w3schools.com/js/js_json_intro.asp>`_ format.
+and researchers in need can obtain data directly through API interfaces.
+The interface specifications follow `RESTful <http://www.restfulapi.nl/>`_ API standards,
+and all returned data is in `JSON <https://www.w3schools.com/js/js_json_intro.asp>`_ format.
 
 
 .. note::
 
-    This API method is actually suitable for situations where you need to retrieve data related to a specific sample. For obtaining all the data, it is strongly not recommended to use API operations; instead, it is advised to download the data from the `Download <https://bio.liclab.net/scvdb/download>`_ page.
+    This API method is actually suitable for situations where you need to retrieve data related to a specific sample.
+    For obtaining all the data, it is strongly not recommended to use API operations;
+    instead, it is advised to download the data from the `Download <https://bio.liclab.net/scvdb/download>`_ page.
+
+.. tip::
+
+    Other websites or applications that embed SCVdb API development are most suitable.
 
 .. image:: ./img/api/api.png
 
