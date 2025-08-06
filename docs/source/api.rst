@@ -31,6 +31,7 @@ We provide Python code to retrieve data from API interfaces.
 
     import time
 
+    import pandas as pd
     import requests
     from requests import Response
 
@@ -38,7 +39,7 @@ We provide Python code to retrieve data from API interfaces.
     def get_result_data(resp: Response):
         json_data = resp.json()
 
-        if bool(json_data["status"]):
+        if json_data["status"]:
             return json_data["data"]
 
         raise ValueError(json_data["message"])
@@ -56,8 +57,9 @@ We provide Python code to retrieve data from API interfaces.
         print(get_result_data(response))
 
         time.sleep(3)
+        print("----------------------------------------------------------------------------------")
 
-        # Variant information
+        # Variant information https://bio.liclab.net/scvdb_service/swagger-ui/index.html#/Detail-API/listTraitInfoData
         response = requests.post(
             f"{base_url}/detail/trait_info/{trait_id}/{genome}",
             json={
@@ -71,27 +73,68 @@ We provide Python code to retrieve data from API interfaces.
                 "symbol": 1
             }
         )
-        print(get_result_data(response))
-
-        time.sleep(3)
-
-        # Difference gene
+        total_size = get_result_data(response)["total"]
         response = requests.post(
-            f"{base_url}/detail/difference_gene/heatmap",
+            f"{base_url}/detail/trait_info/{trait_id}/{genome}",
             json={
-                "sampleId": "sample_id_1",
-                "topCount": 20,
-                "log2FoldChange": 1,
-                "names": "GLI1,RCC2"
+                "page": 1,
+                "size": total_size,
+                "field": "",
+                "order": 0,
+                "searchField": "",
+                "content": "",
+                "type": 1,
+                "symbol": 1
             }
         )
-        print(get_result_data(response))
+        variant_data = get_result_data(response)
+        variant_df = pd.DataFrame(variant_data["data"])
+        print(variant_df)
 
         time.sleep(3)
+        print("----------------------------------------------------------------------------------")
 
-        # MAGMA
+        # MAGMA https://bio.liclab.net/scvdb_service/swagger-ui/index.html#/Detail-API/listMagmaGeneByTraitId
         response = requests.get(f"{base_url}/detail/magma_gene/{trait_id}/{genome}")
-        print(get_result_data(response))
+        magma_data = get_result_data(response)
+        magma_df = pd.DataFrame(magma_data)
+        print(magma_df)
+
+
+.. code-block:: console
+    :linenos:
+
+    Connection test successful!
+    ----------------------------------------------------------------------------------
+               traitId     sourceId   chr  ... findex       pvalue              zscore
+    0     trait_id_894  source_id_1  chr1  ...   1553  3.71279e-40  13.264584871821922
+    1     trait_id_894  source_id_1  chr1  ...   1569  1.27087e-41  13.515227089114475
+    2     trait_id_894  source_id_1  chr1  ...   1566  1.59038e-41  13.498714449933749
+    3     trait_id_894  source_id_1  chr1  ...   1567   7.1796e-42  13.557193629064104
+    4     trait_id_894  source_id_1  chr1  ...   1559  6.38263e-42  13.565799634934008
+    ...            ...          ...   ...  ...    ...          ...                 ...
+    2195  trait_id_894  source_id_1  chr9  ...    876  6.75943e-10   6.171597123541317
+    2196  trait_id_894  source_id_1  chr9  ...    904  6.74388e-10   6.171967446066399
+    2197  trait_id_894  source_id_1  chr9  ...    836  3.41044e-10   6.278847312864843
+    2198  trait_id_894  source_id_1  chr9  ...    869  2.58988e-09   5.955671300308524
+    2199  trait_id_894  source_id_1  chr9  ...    916  2.99909e-09   5.931628007804032
+
+    [2200 rows x 19 columns]
+    ----------------------------------------------------------------------------------
+              traitId        gene chr  ...      pvalue  nsnps  zvalue
+    0    trait_id_894       AAMDC  11  ...  3.2869e-07     32  4.9736
+    1    trait_id_894     AFG3L1P  16  ...       5e-10      2  6.1094
+    2    trait_id_894      ALOX12  17  ...  7.7875e-09      1  5.6551
+    3    trait_id_894  ALOX12-AS1  17  ...  7.8535e-09      2  5.6537
+    4    trait_id_894    ALOX12P2  17  ...  2.8279e-09      1  5.8266
+    ..            ...         ...  ..  ...         ...    ...     ...
+    180  trait_id_894   ZFHX4-AS1   8  ...  3.5305e-14     28  7.4867
+    181  trait_id_894       ZFPM1  16  ...  1.0679e-12      9  7.0253
+    182  trait_id_894      ZNF276  16  ...  8.5389e-17      1  8.2410
+    183  trait_id_894      ZNF469  16  ...  4.9616e-07      1  4.8932
+    184  trait_id_894      ZSWIM4  19  ...  1.9492e-08      2  5.4954
+
+    [185 rows x 8 columns]
 
 
 .. note::
