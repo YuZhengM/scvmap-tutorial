@@ -25,7 +25,7 @@ Search principle:
 .. image:: ../img/home/traitByAlzheimer.png
 
 Clicking on the ``Trait ID`` will take you to the corresponding detail page to view detailed content.
-Help document for users to view detail pages: `https://scvmap-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvmap-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+Help document for users to view detail pages: `https://scvmap.readthedocs.io/en/latest/usage/detail.html <https://scvmap.readthedocs.io/en/latest/usage/detail.html>`_
 
 .. tip::
 
@@ -47,7 +47,7 @@ Help document for users to view detail pages: `https://scvmap-tutorial.readthedo
 .. image:: ../img/home/sampleByPBMC.png
 
 Clicking on the ``Sample ID`` will take you to the corresponding detail page to view detailed content.
-Help document for users to view detail pages: `https://scvmap-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvmap-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+Help document for users to view detail pages: `https://scvmap.readthedocs.io/en/latest/usage/detail.html <https://scvmap.readthedocs.io/en/latest/usage/detail.html>`_
 
 .. tip::
 
@@ -64,7 +64,7 @@ When a user enters a **gene** (e.g., ``RCC2``), the system directs to the detail
 
 .. image:: ../img/home/gene.png
 
-Help document for users to view gene details page: `https://scvmap-tutorial.readthedocs.io/en/latest/usage/search/gene.html <https://scvmap-tutorial.readthedocs.io/en/latest/usage/search/gene.html>`_
+Help document for users to view gene details page: `https://scvmap.readthedocs.io/en/latest/usage/search/gene.html <https://scvmap.readthedocs.io/en/latest/usage/search/gene.html>`_
 
 .. note::
 
@@ -77,7 +77,7 @@ When a user enters a **TF** (e.g., ``HIF1A``), the system directs to the detaile
 
 .. image:: ../img/home/tf.png
 
-Help document for users to view TF details page: `https://scvmap-tutorial.readthedocs.io/en/latest/usage/search/tf.html <https://scvmap-tutorial.readthedocs.io/en/latest/usage/search/tf.html>`_
+Help document for users to view TF details page: `https://scvmap.readthedocs.io/en/latest/usage/search/tf.html <https://scvmap.readthedocs.io/en/latest/usage/search/tf.html>`_
 
 .. note::
 
@@ -90,7 +90,7 @@ When a user enters a **rsID** (e.g., ``rs57142672``), the system directs to the 
 
 .. image:: ../img/home/variant.png
 
-Help document for users to view variant details page: `https://scvmap-tutorial.readthedocs.io/en/latest/usage/search/variant.html <https://scvmap-tutorial.readthedocs.io/en/latest/usage/search/variant.html>`_
+Help document for users to view variant details page: `https://scvmap.readthedocs.io/en/latest/usage/search/variant.html <https://scvmap.readthedocs.io/en/latest/usage/search/variant.html>`_
 
 .. note::
 
