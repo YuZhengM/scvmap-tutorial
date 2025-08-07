@@ -1,13 +1,13 @@
 4. Development environment
 ===========================
 
- | SCVdb: https://bio.liclab.net/scvdb/
- | SCVdb tutorial: https://scvdb-tutorial.readthedocs.io/en/latest/index.html
- | SCVdb front-end: https://github.com/YuZhengM/scvdb_web
- | SCVdb back-end: https://github.com/YuZhengM/scvdb
- | SCVdb API: https://bio.liclab.net/scvdb_service/swagger-ui/index.html
+ | scVMAP: https://bio.liclab.net/scvmap/
+ | scVMAP tutorial: https://scvmap-tutorial.readthedocs.io/en/latest/index.html
+ | scVMAP front-end: https://github.com/YuZhengM/scvmap_web
+ | scVMAP back-end: https://github.com/YuZhengM/scvmap
+ | scVMAP API: https://bio.liclab.net/scvmap_service/swagger-ui/index.html
 
-The latest version of the SCVdb tool database operates on CentOS 7.7.1908.
+The latest version of the scVMAP tool database operates on CentOS 7.7.1908.
 We deploy and release the project to the remote server via a Dockerfile
 within the `IntelliJ IDEA <https://www.jetbrains.com.cn/en-us/idea/>`_ 2021.3 integrated development environment.
 The remote server has pre-installed `Docker <https://www.docker.com>`_ 19.03.5, and the backend

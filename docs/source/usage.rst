@@ -1,7 +1,7 @@
-2.	SCVdb usage
+2.	scVMAP usage
 =========================
 
-Below, we will explain how to use the `SCVdb <https://bio.liclab.net/scvdb/>`_ (https://bio.liclab.net/scvdb/) platform based on
+Below, we will explain how to use the `scVMAP <https://bio.liclab.net/scvmap/>`_ (https://bio.liclab.net/scvmap/) platform based on
 the different functional levels on the navigation bar.
 
 .. image:: ./img/database_content.png
@@ -20,7 +20,7 @@ the different functional levels on the navigation bar.
 
 :G: Statistical information.
 
-:H: SCVdb provides a comprehensive collection of downloadable data.
+:H: scVMAP provides a comprehensive collection of downloadable data.
 
 ------------
 

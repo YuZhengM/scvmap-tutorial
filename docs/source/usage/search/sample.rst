@@ -1,7 +1,7 @@
 2.3.2  Search information by tissue type or cell type
 =====================================================
 
- | Link: https://bio.liclab.net/scvdb/search
+ | Link: https://bio.liclab.net/scvmap/search
 
 We provide two strategies for searching scATAC seq result data, namely searching sample data by tissue type and cell type. On the right side, a pie chart displaying different types of proportions based on different strategies is presented.
 
@@ -21,7 +21,7 @@ Click "Search" to access the scATAC-seq result data based on the search criteria
 
 .. note::
 
-    The table displaying the result information is much richer than page `Data-browse <https://bio.liclab.net/scvdb/data_browse>`_.
+    The table displaying the result information is much richer than page `Data-browse <https://bio.liclab.net/scvmap/data_browse>`_.
 
 
 2.3.2.2 ``Cell type`` strategy

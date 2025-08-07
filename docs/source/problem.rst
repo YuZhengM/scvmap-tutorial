@@ -4,7 +4,7 @@
 Here we will answer common questions.
 
 If you have any other questions that need to be answered, you can send an email to ``yuzmbio@163.com``.
-Alternatively, you can ask questions on Github `scvdb-tutorial <https://github.com/YuZhengM/scvdb-tutorial>`_.
+Alternatively, you can ask questions on Github `scvmap-tutorial <https://github.com/YuZhengM/scvmap-tutorial>`_.
 
 5.1 Discovering issues on the website
 ----------------------------------------------
@@ -15,7 +15,7 @@ If you discover any issues or areas that need improvement, please contact us pro
 
 .. note::
 
-    If you find any minor issues that are inconvenient to disturb us, you can leave a message on `GitHub <https://github.com/YuZhengM/scvdb-tutorial>`_. Thank you for your effort and time.
+    If you find any minor issues that are inconvenient to disturb us, you can leave a message on `GitHub <https://github.com/YuZhengM/scvmap-tutorial>`_. Thank you for your effort and time.
 
 5.2 There is a problem accessing the website
 ----------------------------------------------
@@ -29,15 +29,15 @@ Therefore, you need to ``clear the cache and access it again``.
 
 .. tip::
 
-    If you have accessed the SCVdb database link before August 5, 2025, it is recommended to clear the cache and access again.
+    If you have accessed the scVMAP database link before August 5, 2025, it is recommended to clear the cache and access again.
 
 5.3 Publicize front-end and back-end code
 ----------------------------------------------
 
- | SCVdb front-end: https://github.com/YuZhengM/scvdb_web
- | SCVdb back-end: https://github.com/YuZhengM/scvdb
+ | scVMAP front-end: https://github.com/YuZhengM/scvmap_web
+ | scVMAP back-end: https://github.com/YuZhengM/scvmap
 
-We have released the full stack development code for the SCVdb database, which is very useful for bioinformatics database development.
+We have released the full stack development code for the scVMAP database, which is very useful for bioinformatics database development.
 Users can directly download and use them to develop bioinformatics database websites.
 
 At least mastering ``Vue`` and ``Spring Boot`` frameworks is necessary to start practical application.
@@ -65,7 +65,7 @@ The **Search** module is designed for professionals who are familiar with diseas
 
 .. tip::
 
-    **Recommended user search workflow**: On the `homepage <https://bio.liclab.net/scvdb/>`_, click the search button with an empty query to view all available data. Then, use custom filters on the columns of your choice to narrow down the results.
+    **Recommended user search workflow**: On the `homepage <https://bio.liclab.net/scvmap/>`_, click the search button with an empty query to view all available data. Then, use custom filters on the columns of your choice to narrow down the results.
 
 .. image:: ./img/faq/trait_home.png
 

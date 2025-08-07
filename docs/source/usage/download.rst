@@ -1,7 +1,7 @@
 2.7 Download
 ================
 
- | Link: https://bio.liclab.net/scvdb/download
+ | Link: https://bio.liclab.net/scvmap/download
 
 All downloadable data provides users with a centralized access portal aimed at facilitating their access to research resources.
 We have integrated the following comprehensive datasets:
@@ -287,7 +287,7 @@ This file was formed through uniform processing after the original download.
 
 2. ``bed`` file (``Download (LiftOver)`` field)
 
-SCVdb provides variant coordinates under different reference genomes.
+scVMAP provides variant coordinates under different reference genomes.
 
 ==== ==================== ====================================================================================================
 #    Column name          Description
@@ -381,7 +381,7 @@ This file contains differential gene data for all cell types of single-cell samp
 
     You need to download the complete data without threshold filtering, and enter the details page of the sample to download the ``H5AD`` file.
 
-Example: `sample_id_1 <https://bio.liclab.net/scvdb/detail?sampleId=sample_id_1>`_
+Example: `sample_id_1 <https://bio.liclab.net/scvmap/detail?sampleId=sample_id_1>`_
 
 .. image:: ../img/download/difference_gene_h5ad.png
 
@@ -479,7 +479,7 @@ This file contains differential TF data for all cell types of single-cell sample
 
     You need to download the complete data without threshold filtering, and enter the details page of the sample to download the ``H5AD`` file.
 
-Example: `sample_id_1 <https://bio.liclab.net/scvdb/detail?sampleId=sample_id_1>`_
+Example: `sample_id_1 <https://bio.liclab.net/scvmap/detail?sampleId=sample_id_1>`_
 
 .. image:: ../img/download/difference_tf_h5ad.png
 
@@ -555,7 +555,7 @@ The result data of enriched genes for traits or diseases through MAGMA.
 
     The user needs to obtain the ``genes.annot`` file after MAGMA runs and needs to enter the details page to obtain it.
 
-Example: `trait_id_894 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_894>`_
+Example: `trait_id_894 <https://bio.liclab.net/scvmap/detail?traitId=trait_id_894>`_
 
 .. image:: ../img/download/magma_annotation.png
 
@@ -585,7 +585,7 @@ Click ``View``
 
     The user needs to obtain the ``genes.out`` file after MAGMA runs and needs to enter the details page to obtain it.
 
-Example: `trait_id_894 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_894>`_
+Example: `trait_id_894 <https://bio.liclab.net/scvmap/detail?traitId=trait_id_894>`_
 
 .. image:: ../img/download/magma_analysis.png
 
@@ -610,7 +610,7 @@ Example: `trait_id_894 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_894
 
     Users need to download complete data without threshold filtering and enter the details page to download the file.
 
-Example: `trait_id_894 <https://bio.liclab.net/scvdb/detail?traitId=trait_id_894>`_
+Example: `trait_id_894 <https://bio.liclab.net/scvmap/detail?traitId=trait_id_894>`_
 
 .. image:: ../img/download/homer.png
 
@@ -673,7 +673,7 @@ File name: ``{Trait label}_gene_enrichment_trait_data.txt``
 2.7.3.7 Gene regulation annotation data: ``tar.gz`` file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-SCVdb provides gene regulation annotation data for five types of epigenome data.
+scVMAP provides gene regulation annotation data for five types of epigenome data.
 
 2.7.3.7.1 Common SNP: ``txt`` file (After decompression)
 *********************************************************************************

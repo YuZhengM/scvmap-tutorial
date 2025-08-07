@@ -1,7 +1,7 @@
 2.3.4 Search information by TF
 ==============================
 
- | Link: https://bio.liclab.net/scvdb/search
+ | Link: https://bio.liclab.net/scvmap/search
 
 Users can submit a TF of interest search to access scATAC-seq data and fine-mapping result data associated with this TF.
 

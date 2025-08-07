@@ -1,10 +1,10 @@
 2.4 Detail
 ================
 
-Access to the details page through the "`Data-browse <https://bio.liclab.net/scvdb/data_browse>`_" page or search results page, etc.
+Access to the details page through the "`Data-browse <https://bio.liclab.net/scvmap/data_browse>`_" page or search results page, etc.
 
- | For a trait or disease example, consider basal cell carcinoma (BCC): https://bio.liclab.net/scvdb/detail?traitId=trait_id_894
- | For a scATAC-seq example: https://bio.liclab.net/scvdb/detail?sampleId=sample_id_1
+ | For a trait or disease example, consider basal cell carcinoma (BCC): https://bio.liclab.net/scvmap/detail?traitId=trait_id_894
+ | For a scATAC-seq example: https://bio.liclab.net/scvmap/detail?sampleId=sample_id_1
 
 We provide eight content panels for users to analyze data. You can quickly locate the designated panel by clicking on the button of the corresponding module.
 

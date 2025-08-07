@@ -1,7 +1,7 @@
 2.5.1 Analyzing variant-to-function mapping
 ============================================
 
- | Link: https://bio.liclab.net/scvdb/analysis
+ | Link: https://bio.liclab.net/scvmap/analysis
 
 The user submits a scATAC-seq sample, and selects multiple causal variant data related to this single-cell sample. Upon initiating the analysis, the returned results consist of eight items.
 
@@ -15,6 +15,6 @@ The returned results consist of eight items, each corresponding to its own abbre
 
 When clicking different traits or diseases, most of the following seven panels will change, which is the same as the content of the details page.
 
-Help document for users to view detail pages: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+Help document for users to view detail pages: `https://scvmap-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvmap-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
 
 .. image:: ../../img/analysis/analysis_result.png

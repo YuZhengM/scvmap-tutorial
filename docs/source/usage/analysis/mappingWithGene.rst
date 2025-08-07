@@ -1,7 +1,7 @@
 2.5.2 Analyzing variant-to-function mapping with genes
 =======================================================
 
- | Link: https://bio.liclab.net/scvdb/analysis
+ | Link: https://bio.liclab.net/scvmap/analysis
 
 Users submit genes of interest and set thresholds related to differential genes in scATAC-seq samples, as well as thresholds for traits or diseases enriched in genes through MAGMA.
 
@@ -19,6 +19,6 @@ On the right is the trait or disease information contained in the strategy genes
 
 When clicking on different samples above, the following four panels also change accordingly, which is the same as the content of "Enriched cells", "Differential genes", "Genes with enriched trait", and "Gene hub network" on the detailed information page.
 
-Help document for users to view detail pages: `https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvdb-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
+Help document for users to view detail pages: `https://scvmap-tutorial.readthedocs.io/en/latest/usage/detail.html <https://scvmap-tutorial.readthedocs.io/en/latest/usage/detail.html>`_
 
 .. image:: ../../img/analysis/analysis_gene_result.png

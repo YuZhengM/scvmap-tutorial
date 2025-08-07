@@ -1,11 +1,11 @@
-User Manual for SCVdb platform
+User Manual for scVMAP platform
 ==============================
 
- | SCVdb: https://bio.liclab.net/scvdb/
- | SCVdb tutorial: https://scvdb-tutorial.readthedocs.io/en/latest/index.html
- | SCVdb front-end: https://github.com/YuZhengM/scvdb_web
- | SCVdb back-end: https://github.com/YuZhengM/scvdb
- | SCVdb API: https://bio.liclab.net/scvdb_service/swagger-ui/index.html
+ | scVMAP: https://bio.liclab.net/scvmap/
+ | scVMAP tutorial: https://scvmap-tutorial.readthedocs.io/en/latest/index.html
+ | scVMAP front-end: https://github.com/YuZhengM/scvmap_web
+ | scVMAP back-end: https://github.com/YuZhengM/scvmap
+ | scVMAP API: https://bio.liclab.net/scvmap_service/swagger-ui/index.html
 
 A comprehensive platform for human **integrating** ``single-cell chromatin accessibility data`` with ``causal variants``.
 

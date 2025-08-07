@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'SCVdb'
+project = 'scVMAP'
 copyright = '2025, Zheng-Min Yu'
 author = 'Zheng-Min Yu'
 
@@ -20,8 +20,8 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    'SCVdb': ('https://bio.liclab.net/scvdb/', None),
-    'GitHub': ('https://github.com/YuZhengM/scvdb-tutorial', None),
+    'scVMAP': ('https://bio.liclab.net/scvmap/', None),
+    'GitHub': ('https://github.com/YuZhengM/scvmap-tutorial', None),
 }
 intersphinx_disabled_domains = ['std']
 

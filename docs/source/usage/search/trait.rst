@@ -1,7 +1,7 @@
 2.3.1 Search information by category or source cohort
 =====================================================
 
- | Link: https://bio.liclab.net/scvdb/search
+ | Link: https://bio.liclab.net/scvmap/search
 
 We provide two strategies for searching fine-mapping result data, one is to search by category, and the other is to search by data source, which can be switched between the "Source cohort" and "Category buttons". The pie chart on the right will display the corresponding distribution information of the selected strategy.
 
@@ -20,7 +20,7 @@ Click "Search" to access the fine-mapping result data based on the search criter
 
 .. note::
 
-    The table displaying the result information is much richer than page `Data-browse <https://bio.liclab.net/scvdb/data_browse>`_.
+    The table displaying the result information is much richer than page `Data-browse <https://bio.liclab.net/scvmap/data_browse>`_.
 
 
 2.3.1.2 ``Source cohort`` strategy

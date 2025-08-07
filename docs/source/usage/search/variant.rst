@@ -1,7 +1,7 @@
 2.3.5 Search information by SNP
 ===============================
 
- | Link: https://bio.liclab.net/scvdb/search
+ | Link: https://bio.liclab.net/scvmap/search
 
 Users can submit SNP (rsID) searches of interest to access trait or disease data related to this SNP, and the SNP-relevant regulatory network.
 

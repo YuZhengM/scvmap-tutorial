@@ -1,7 +1,7 @@
 2.3.3  Search information by gene
 =================================
 
- | Link: https://bio.liclab.net/scvdb/search
+ | Link: https://bio.liclab.net/scvmap/search
 
 Users can submit a gene of interest search to access scATAC-seq data and fine-mapping result data associated with this gene.
 

@@ -1,9 +1,9 @@
 2.3 Search
 ================
 
- | Link: https://bio.liclab.net/scvdb/search
+ | Link: https://bio.liclab.net/scvmap/search
 
-`SCVdb <https://bio.liclab.net/scvdb/>`_ provides users with five search criteria from different perspectives, which can meet different user needs.
+`scVMAP <https://bio.liclab.net/scvmap/>`_ provides users with five search criteria from different perspectives, which can meet different user needs.
 
 It is mainly divided into three categories, the first category is sample search, the second category is regulatory search, the second category is regulatory search, and the third category belongs to SNP level search.
 

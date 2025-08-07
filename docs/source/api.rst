@@ -1,9 +1,9 @@
-3. API
+3. scVMAP API
 ===========================
 
- | SCVdb API: https://bio.liclab.net/scvdb_service/swagger-ui/index.html
+ | scVMAP API: https://bio.liclab.net/scvmap_service/swagger-ui/index.html
 
-`SCVdb <https://bio.liclab.net/scvdb/>`_ provides backend API interface information,
+`scVMAP <https://bio.liclab.net/scvmap/>`_ provides backend API interface information,
 and researchers in need can obtain data directly through API interfaces.
 The interface specifications follow `RESTful <http://www.restfulapi.nl/>`_ API standards,
 and all returned data is in `JSON <https://www.w3schools.com/js/js_json_intro.asp>`_ format.
@@ -13,11 +13,11 @@ and all returned data is in `JSON <https://www.w3schools.com/js/js_json_intro.as
 
     This API method is actually suitable for situations where you need to retrieve data related to a specific sample.
     For obtaining all the data, it is strongly not recommended to use API operations;
-    instead, it is advised to download the data from the `Download <https://bio.liclab.net/scvdb/download>`_ page.
+    instead, it is advised to download the data from the `Download <https://bio.liclab.net/scvmap/download>`_ page.
 
 .. tip::
 
-    Other websites or applications that embed SCVdb API development are most suitable.
+    Other websites or applications that embed scVMAP API development are most suitable.
 
 .. image:: ./img/api/api.png
 
@@ -47,7 +47,7 @@ We provide Python code to retrieve data from API interfaces.
 
     if __name__ == '__main__':
 
-        base_url: str = "https://bio.liclab.net/scvdb_service/"
+        base_url: str = "https://bio.liclab.net/scvmap_service/"
         sample_id: str = "sample_id_1"
         trait_id: str = "trait_id_894"
         genome: str = "hg19"
@@ -59,7 +59,7 @@ We provide Python code to retrieve data from API interfaces.
         time.sleep(3)
         print("----------------------------------------------------------------------------------")
 
-        # Variant information https://bio.liclab.net/scvdb_service/swagger-ui/index.html#/Detail-API/listTraitInfoData
+        # Variant information https://bio.liclab.net/scvmap_service/swagger-ui/index.html#/Detail-API/listTraitInfoData
         response = requests.post(
             f"{base_url}/detail/trait_info/{trait_id}/{genome}",
             json={
@@ -94,7 +94,7 @@ We provide Python code to retrieve data from API interfaces.
         time.sleep(3)
         print("----------------------------------------------------------------------------------")
 
-        # MAGMA https://bio.liclab.net/scvdb_service/swagger-ui/index.html#/Detail-API/listMagmaGeneByTraitId
+        # MAGMA https://bio.liclab.net/scvmap_service/swagger-ui/index.html#/Detail-API/listMagmaGeneByTraitId
         response = requests.get(f"{base_url}/detail/magma_gene/{trait_id}/{genome}")
         magma_data = get_result_data(response)
         magma_df = pd.DataFrame(magma_data)

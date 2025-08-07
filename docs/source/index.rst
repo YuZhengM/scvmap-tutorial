@@ -1,12 +1,12 @@
 .. role:: text_red
    :class: red
 
-Welcome to SCVdb's documentation!
+Welcome to scVMAP's documentation!
 ==================================
 
 A comprehensive platform for human **integrating** ``single-cell chromatin accessibility data`` with ``causal variants``.
 
-**SCVdb** database access link: `https://bio.liclab.net/scvdb/ <https://bio.liclab.net/scvdb/>`_
+**scVMAP** database access link: `https://bio.liclab.net/scvmap/ <https://bio.liclab.net/scvmap/>`_
 
 Investigating how genetic variations associated with complex phenotypes or diseases affect biological
 processes at the single-cell level is essential for understanding their underlying mechanisms.
@@ -15,10 +15,10 @@ with high-throughput sequencing (scATAC-seq) enables a more effective elucidatio
 and impacts of genetic variations at the single-cell level. With the accumulation of genome-wide
 association studies (GWAS) and single-cell genomic data, there is an urgent need for comprehensive
 analysis and efficient exploration of these data to uncover the underlying biological processes.
-For this purpose, we designed SCVdb (https://bio.liclab.net/scvdb/), a comprehensive user-friendly,
+For this purpose, we designed scVMAP (https://bio.liclab.net/scvmap/), a comprehensive user-friendly,
 large-scale database that is designed to provide cell populations of interest for relevant traits or diseases
 at the cellular level or at the level of cell types, and to provide them with comprehensive annotation
-and enrichment analysis. The current version of SCVdb supports ``~180`` scATAC-seq datasets and ``over 15,800`` fine-mapping
+and enrichment analysis. The current version of scVMAP supports ``~180`` scATAC-seq datasets and ``over 15,800`` fine-mapping
 result datasets. The number of valid trait- or disease-scATAC-seq data pairs exceeds ``1,923,500``, among
 which the number of trait- or disease-cell pairs is as high as ``15.95 billion``, providing valuable
 resources for exploring the functional localization of single-cell variations. In addition, we

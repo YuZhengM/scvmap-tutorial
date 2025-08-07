@@ -1,7 +1,7 @@
 2.5 Analysis
 ================
 
- | Link: https://bio.liclab.net/scvdb/analysis
+ | Link: https://bio.liclab.net/scvmap/analysis
 
 Different analysis functions correspond to different analytical perspectives,
 meeting the needs of various analysis users. The first analysis approaches

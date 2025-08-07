@@ -1,9 +1,9 @@
 2.2 Data-browse
 ================
 
- | Link: https://bio.liclab.net/scvdb/data_browse
+ | Link: https://bio.liclab.net/scvmap/data_browse
 
-The "Data-browse" page of `SCVdb <https://bio.liclab.net/scvdb/>`_ provides users with options for single-cell samples and traits or diseases to access detailed data.
+The "Data-browse" page of `scVMAP <https://bio.liclab.net/scvmap/>`_ provides users with options for single-cell samples and traits or diseases to access detailed data.
 
 The displayed information content supports interactive tables, alphabetical sorting, and can be searched for the desired records using Search. After the user clicks on the "Sample ID" or "Trait ID" of interest, detailed information will be displayed on the new webpage.
 

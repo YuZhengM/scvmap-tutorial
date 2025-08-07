@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "SCVdb"
+name = "scVMAP"
 version = "1.0.0"
 description = "A comprehensive platform for human integrating single-cell chromatin accessibility data with causal variants"
 authors = [{name = "Zheng-Min Yu", email = "yuzmbio@163.com"}]
