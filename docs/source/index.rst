@@ -4,28 +4,26 @@
 Welcome to scVMAP's documentation!
 ==================================
 
-A comprehensive platform for human **integrating** ``single-cell chromatin accessibility data`` with ``causal variants``.
+A comprehensive platform for **integrating** ``single-cell chromatin accessibility regions`` with ``causal variants``.
 
 **scVMAP** database access link: `https://bio.liclab.net/scvmap/ <https://bio.liclab.net/scvmap/>`_
 
-Investigating how genetic variations associated with complex phenotypes or diseases affect biological
-processes at the single-cell level is essential for understanding their underlying mechanisms.
-Integrating causal variant effects with single-cell assay for transposase-accessible chromatin
-with high-throughput sequencing (scATAC-seq) enables a more effective elucidation of the roles
-and impacts of genetic variations at the single-cell level. With the accumulation of genome-wide
-association studies (GWAS) and single-cell genomic data, there is an urgent need for comprehensive
-analysis and efficient exploration of these data to uncover the underlying biological processes.
-For this purpose, we designed scVMAP (https://bio.liclab.net/scvmap/), a comprehensive user-friendly,
-large-scale database that is designed to provide cell populations of interest for relevant traits or diseases
-at the cellular level or at the level of cell types, and to provide them with comprehensive annotation
-and enrichment analysis. The current version of scVMAP supports ``~180`` scATAC-seq datasets and ``over 15,800`` fine-mapping
-result datasets. The number of valid trait- or disease-scATAC-seq data pairs exceeds ``1,923,500``, among
-which the number of trait- or disease-cell pairs is as high as ``15.95 billion``, providing valuable
-resources for exploring the functional localization of single-cell variations. In addition, we
-use genes or transcription factors (TFs) as hubs to visualize and reveal the potential regulatory
-relationships involved in the process of mapping phenotypic or disease associations to single-cell data.
-
 .. image:: ./img/graphical_abstract.png
+
+scVMAP is a user-centric database that offers intuitive workflows, customizable parameters, and comprehensive data accessibility, featuring:
+
+1. Integrates causal variants and chromatin accessibility regions at single-cell resolution.
+#. Accommodates 183 scATAC-seq samples and 15,805 fine-mapping datasets.
+#. Records over 1,923,500 effective trait-sample pairs, over 13,060,000 effective trait-cell type pairs, and over 15,950,000,000 effective trait-cell pairs.
+#. Provides enrichment for traits and cells or cell types.
+#. Identifies relevant genes and transcription factors (TFs), as well as pathway enrichment functions of genes for the samples (including single-cell samples and traits).
+#. Constructs the gene and TF hub regulatory network from traits to samples.
+#. Provides epigenomic regulatory annotations related to genes, as well as a gene-relevant SNP regulatory network for specific traits.
+#. Establishes an SNP-associated regulatory network.
+#. Offers comprehensive download resources.
+#. Publishes full-stack development code.
+#. Provides API interfaces for data access.
+
 
 Contents
 --------
