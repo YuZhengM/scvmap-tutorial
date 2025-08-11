@@ -15,6 +15,10 @@ On the left is the scATAC-seq sample information contained in the strategy genes
 
 On the right is the trait or disease information contained in the strategy genes in the enriched genes.
 
+.. note::
+
+    All traits or disease data related to data genes may not necessarily have an enrichment relationship with the selected single-cell sample on the left. The **MetaData** option allows users to check if an enriched trait table exists.
+
 .. image:: ../../img/analysis/analysis_gene_result_sample_trait.png
 
 When clicking on different samples above, the following four panels also change accordingly, which is the same as the content of "Enriched cells", "Differential genes", "Genes with enriched trait", and "Gene hub network" on the detailed information page.
