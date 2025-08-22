@@ -1,6 +1,3 @@
-.. role:: text_red
-   :class: red
-
 Welcome to scVMAP's documentation!
 ==================================
 
@@ -24,6 +21,9 @@ scVMAP is a user-centric database that offers intuitive workflows, customizable 
 #. Publishes full-stack development code.
 #. Provides API interfaces for data access.
 
+ .. raw:: html
+
+    <a href="https://clustrmaps.com/site/1c7pv" title="ClustrMaps" style="display: none;"><img src="//www.clustrmaps.com/map_v2.png?d=EqWjmVzNO9lgg7zykSfB6ZyHjqxPChENOWmh4l7MYWQ&cl=ffffff" /></a>
 
 Contents
 --------
