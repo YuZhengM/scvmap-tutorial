@@ -1,5 +1,5 @@
 5. FAQ (Frequently Asked Questions)
-===========================
+===================================
 
 Here we will answer common questions.
 
@@ -29,7 +29,7 @@ Therefore, you need to ``clear the cache and access it again``.
 
 .. tip::
 
-    If you have accessed the scVMAP database link before August 11, 2025, it is recommended to clear the cache and access again.
+    If you have accessed the scVMAP database link before September 29, 2025, it is recommended to clear the cache and access again.
 
 5.3 Publicize front-end and back-end code
 ----------------------------------------------
