@@ -2,6 +2,7 @@
 ==============================================
 
  | scVMAP: https://bio.liclab.net/scvmap/
+ | scVMAP reproducibility:: https://github.com/YuZhengM/scvmap_reproducibility
  | scVMAP tutorial: https://scvmap.readthedocs.io/en/latest/
  | scVMAP front-end: https://github.com/YuZhengM/scvmap_web
  | scVMAP back-end: https://github.com/YuZhengM/scvmap

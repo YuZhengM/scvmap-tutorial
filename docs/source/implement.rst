@@ -2,7 +2,6 @@
 ===========================
 
  | scVMAP: https://bio.liclab.net/scvmap/
- | scVMAP tutorial: https://scvmap.readthedocs.io/en/latest/
  | scVMAP front-end: https://github.com/YuZhengM/scvmap_web
  | scVMAP back-end: https://github.com/YuZhengM/scvmap
  | scVMAP API: https://bio.liclab.net/scvmap_service/swagger-ui/index.html
@@ -29,4 +28,3 @@ tools. `Font Awesome <https://fontawesome.com/>`_ 6.1.1 provides icon style supp
 To ensure the smoothest browsing experience, it is recommended that users
 access the website with modern web browsers that support HTML5 standard,
 such as **Firefox**, Google Chrome and Edge.
-

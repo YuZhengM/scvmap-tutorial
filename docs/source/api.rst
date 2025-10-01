@@ -51,6 +51,7 @@ We provide Python code to retrieve data from API interfaces.
         sample_id: str = "sample_id_1"
         trait_id: str = "trait_id_894"
         genome: str = "hg19"
+        fine_mapping_method: str = "finemap"
 
         # Test
         response = requests.get(f"{base_url}/test")
@@ -61,7 +62,7 @@ We provide Python code to retrieve data from API interfaces.
 
         # Variant information https://bio.liclab.net/scvmap_service/swagger-ui/index.html#/Detail-API/listTraitInfoData
         response = requests.post(
-            f"{base_url}/detail/trait_info/{trait_id}/{genome}",
+            f"{base_url}/detail/trait_info/{trait_id}/{genome}/{fine_mapping_method}",
             json={
                 "page": 1,
                 "size": 10,
@@ -75,7 +76,7 @@ We provide Python code to retrieve data from API interfaces.
         )
         total_size = get_result_data(response)["total"]
         response = requests.post(
-            f"{base_url}/detail/trait_info/{trait_id}/{genome}",
+            f"{base_url}/detail/trait_info/{trait_id}/{genome}/{fine_mapping_method}",
             json={
                 "page": 1,
                 "size": total_size,

@@ -9,17 +9,16 @@ A comprehensive platform for **integrating** ``single-cell chromatin accessibili
 
 scVMAP is a user-centric database that offers intuitive workflows, customizable parameters, and comprehensive data accessibility, featuring:
 
-1. Integrates causal variants and chromatin accessibility regions at single-cell resolution.
-#. Accommodates 183 scATAC-seq samples and 15,805 fine-mapping datasets.
-#. Records over 1,923,500 effective trait-sample pairs, over 13,060,000 effective trait-cell type pairs, and over 15,950,000,000 effective trait-cell pairs.
-#. Provides enrichment for traits and cells or cell types.
-#. Identifies relevant genes and transcription factors (TFs), as well as pathway enrichment functions of genes for the samples (including single-cell samples and traits).
-#. Constructs the gene and TF hub regulatory network from traits to samples.
-#. Provides epigenomic regulatory annotations related to genes, as well as a gene-relevant SNP regulatory network for specific traits.
-#. Establishes an SNP-associated regulatory network.
-#. Offers comprehensive download resources.
-#. Publishes full-stack development code.
-#. Provides API interfaces for data access.
+1. Integrates causal variants with chromatin accessibility regions at single-cell resolution.
+2. Includes data from 183 scATAC-seq samples and 15,884 fine-mapping datasets.
+3. Encompasses over 1.9 million effective trait-sample pairs, 13.1 million trait-cell type pairs, and 16.05 billion trait-cell pairs.
+4. Performs enrichment analysis for traits across specific cells or cell types.
+5. Identifies relevant genes and transcription factors (TFs), and performs pathway enrichment analysis for these genes in the context of specific samples and traits.
+6. Constructs an integrated regulatory network (variant-TF-gene) linking traits to samples.
+7. Offers comprehensive resources for data download.
+8. Makes the code for reproducing the database workflow publicly available.
+9. Publishes the full-stack development code for the web application.
+10. Provides API interfaces for programmatic data access.
 
  .. raw:: html
 

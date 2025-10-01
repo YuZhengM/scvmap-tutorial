@@ -4,7 +4,7 @@
 Here we will answer common questions.
 
 If you have any other questions that need to be answered, you can send an email to ``yuzmbio@163.com``.
-Alternatively, you can ask questions on Github `scvmap-tutorial <https://github.com/YuZhengM/scvmap-tutorial>`_.
+Alternatively, you can ask questions on Github `scVMAP-reproducibility <https://github.com/YuZhengM/scvmap_reproducibility>`_.
 
 5.1 Discovering issues on the website
 ----------------------------------------------
