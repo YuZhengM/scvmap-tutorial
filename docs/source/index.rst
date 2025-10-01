@@ -11,7 +11,7 @@ scVMAP is a user-centric database that offers intuitive workflows, customizable 
 
 1. Integrates causal variants with chromatin accessibility regions at single-cell resolution.
 2. Includes data from 183 scATAC-seq samples and 15,884 fine-mapping datasets.
-3. Encompasses over 1.9 million effective trait-sample pairs, 13.1 million trait-cell type pairs, and 16.05 billion trait-cell pairs.
+3. Encompasses over 3,876,800 effective trait-sample pairs, 26.3 million trait-cell type pairs, and 32.1 billion trait-cell pairs.
 4. Performs enrichment analysis for traits across specific cells or cell types.
 5. Identifies relevant genes and transcription factors (TFs), and performs pathway enrichment analysis for these genes in the context of specific samples and traits.
 6. Constructs an integrated regulatory network (variant-TF-gene) linking traits to samples.
