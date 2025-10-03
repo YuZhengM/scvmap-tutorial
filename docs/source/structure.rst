@@ -66,7 +66,7 @@ A total of ``183`` single-cell sample data were collected, with detailed informa
 
 .. note::
 
-    When preprocessing scATAC-seq data through SnapATAC2, only the ``min_tsse`` parameter varies for different samples. (Excluding input files and reference genome information.)
+    When preprocessing scATAC-seq data through `SnapATAC2 <https://scverse.org/SnapATAC2/>`_, only the ``min_tsse`` parameter varies for different samples. (Excluding input files and reference genome information.)
 
 1.1.1.1 ``scATAC-Ref``:
 """"""""""""""""""""""""""
@@ -77,10 +77,11 @@ We downloaded human data from scATAC-Ref and retained a total of 28 scATAC-seq d
 We integrated all GSM samples from GSE195460 in scATAC-Ref to create the dataset "sample_id_30 (GSE195460_diabetic_kidney)".
 
 Detailed processing steps:
+
 1. Download the RDS files.
 #. Standardize the filenames to the format: ``<sample_label>_ATAC.rds``.
-#. Generate the metadata files, namely: ``barcodes.tsv``, ``matrix.mtx``, and ``peaks.bed``.
-#. Create the ``<sample_label>_fragments.tsv.gz`` file.
+#. Generate the metadata files: ``barcodes.tsv``, ``matrix.mtx``, and ``peaks.bed``.
+#. Generate the ``<sample_label>_fragments.tsv.gz`` file.
 #. Perform preprocessing using the SnapATAC2 software with the following specific parameters:
 
 .. code-block:: python
