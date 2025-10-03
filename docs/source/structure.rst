@@ -20,25 +20,22 @@ It uses widely recognized methods to provide reference for key variants, TFs, an
 
 Throughout the process, data undergoes standardization, unified processing, and comprehensive analysis. The main contents are as follows:
 
-1. Single-cell samples:
++ Single-cell samples:
+    * Differential gene activity analysis of cell types
+    * Differential TF activity analysis of cell types
+    * High-scoring gene pathway enrichment analysis of cell types
 
-1.1 Differential gene activity analysis of cell types
-1.2 Differential TF activity analysis of cell types
-1.3 High-scoring gene pathway enrichment analysis of cell types
++ Traits or diseases:
+    * LD-based MAGMA analysis (Trait-relevant genes)
+    * HOMER motif enrichment analysis (Trait-relevant TFs)
+    * MAGMA-based trait-relevant gene pathway enrichment analysis
 
-2. Traits or diseases:
-
-2.2 LD-based MAGMA analysis (Trait-relevant genes)
-2.3 HOMER motif enrichment analysis (Trait-relevant TFs)
-2.4 MAGMA-based trait-relevant gene pathway enrichment analysis
-
-3. Integrated analysis:
-
-3.1 ATAC-based Cicero analysis (Trait-relevant genes)
-3.2 ATAC-based GimmeMotifs analysis (Trait-relevant genes)
-3.4 Gene hub regulatory network analysis
-3.5 TF hub regulatory network analysis
-3.6 Integrated regulatory network analysis
++ Integrated analysis:
+    * ATAC-based Cicero analysis (Trait-relevant genes)
+    * ATAC-based GimmeMotifs analysis (Trait-relevant genes)
+    * Gene hub regulatory network analysis
+    * TF hub regulatory network analysis
+    * Integrated regulatory network analysis
 
 The `scVMAP <https://bio.liclab.net/scvmap/>`_ database primarily provides the following functions: ``Data-browse``, ``Search``, ``Analysis``, ``Statistics``, ``Download``, ``Contact``, and ``Online analysis``.
 These functionalities streamline the process of studying single-cell genetic regulation, enabling users to easily explore and interpret biological mechanisms in specific contexts.
@@ -163,7 +160,6 @@ Here are the specific parameter settings for ``min_tsse``.
 Sample ID         min_tsse
 ================= ===============
 sample_id_1-30    8
-================= ===============
 sample_id_31-183  5
 ================= ===============
 
