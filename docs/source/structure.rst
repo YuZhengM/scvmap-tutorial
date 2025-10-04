@@ -21,21 +21,21 @@ It uses widely recognized methods to provide reference for key variants, TFs, an
 Throughout the process, data undergoes standardization, unified processing, and comprehensive analysis. The main contents are as follows:
 
 + Single-cell samples:
-    * Differential gene activity analysis of cell types
-    * Differential TF activity analysis of cell types
-    * High-scoring gene pathway enrichment analysis of cell types
+  * Differential gene activity analysis of cell types
+  * Differential TF activity analysis of cell types
+  * High-scoring gene pathway enrichment analysis of cell types
 
 + Traits or diseases:
-    * LD-based MAGMA analysis (Trait-relevant genes)
-    * HOMER motif enrichment analysis (Trait-relevant TFs)
-    * MAGMA-based trait-relevant gene pathway enrichment analysis
+  * LD-based MAGMA analysis (Trait-relevant genes)
+  * HOMER motif enrichment analysis (Trait-relevant TFs)
+  * MAGMA-based trait-relevant gene pathway enrichment analysis
 
 + Integrated analysis:
-    * ATAC-based Cicero analysis (Trait-relevant genes)
-    * ATAC-based GimmeMotifs analysis (Trait-relevant genes)
-    * Gene hub regulatory network analysis
-    * TF hub regulatory network analysis
-    * Integrated regulatory network analysis
+  * ATAC-based Cicero analysis (Trait-relevant genes)
+  * ATAC-based GimmeMotifs analysis (Trait-relevant genes)
+  * Gene hub regulatory network analysis
+  * TF hub regulatory network analysis
+  * Integrated regulatory network analysis
 
 The `scVMAP <https://bio.liclab.net/scvmap/>`_ database primarily provides the following functions: ``Data-browse``, ``Search``, ``Analysis``, ``Statistics``, ``Download``, ``Contact``, and ``Online analysis``.
 These functionalities streamline the process of studying single-cell genetic regulation, enabling users to easily explore and interpret biological mechanisms in specific contexts.
@@ -68,7 +68,7 @@ A total of ``183`` single-cell sample data were collected, with detailed informa
 
     When preprocessing scATAC-seq data through `SnapATAC2 <https://scverse.org/SnapATAC2/>`_, only the ``min_tsse`` parameter varies for different samples. (Excluding input files and reference genome information.)
 
-1.1.1.1 ``scATAC-Ref``:
+1.1.1.1 scATAC-Ref
 """"""""""""""""""""""""""
 
  | Source url: `https://bio.liclab.net/scATAC-Ref/ <https://bio.liclab.net/scATAC-Ref/>`_
@@ -121,7 +121,7 @@ Please see `scVMAP-reproducibility-SnapATAC2 <https://github.com/YuZhengM/scvmap
 For all single-cell samples except "sample_id_20" (Alzheimer’s Disease (AD)), we utilized the uniform manifold approximation and projection (UMAP) coordinates from their original collection sources for clustering. Due to the poor clustering performance of the original UMAP coordinates for "sample_id_20", we processed the binarized sparse counts matrix using SnapATAC2, converted it to a term frequency-inverse document frequency (TF-IDF) matrix, and subsequently extracted representative low-dimensional features through latent semantic indexing (LSI). Finally, we performed UMAP on this low-dimensional feature matrix to obtain the coordinates for "sample_id_20".
 
 
-1.1.1.2 ``scBlood``:
+1.1.1.2 scBlood
 """"""""""""""""""""""""""
 
  | Source url: `https://bio.liclab.net/scBlood/ <https://bio.liclab.net/scBlood/>`_
@@ -134,7 +134,7 @@ The processing pipeline is identical to that of scATAC-Ref.
 
     The cell type labels were annotated with SingleR. Their reliability should be treated as indicative.
 
-1.1.1.3 ``GreenleafLab``:
+1.1.1.3 GreenleafLab
 """"""""""""""""""""""""""
 
  | Source url: `https://github.com/GreenleafLab/MPAL-Single-Cell-2019 <https://github.com/GreenleafLab/MPAL-Single-Cell-2019>`_
@@ -143,7 +143,7 @@ We downloaded a scATAC-seq dataset for PBMC.
 
 The processing pipeline is identical to that of scATAC-Ref.
 
-1.1.1.4 ``PlaqView``:
+1.1.1.4 PlaqView
 """"""""""""""""""""""""""
 
  | Source url: `https://www.plaqview.com/ <https://www.plaqview.com/>`_
