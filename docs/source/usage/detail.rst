@@ -55,11 +55,11 @@ We provide the download of this fine-mapping result.
 
 For example: `https://bio.liclab.net/scvmap/detail?traitId=trait_id_55 <https://bio.liclab.net/scvmap/detail?traitId=trait_id_55>`_
 
- | FINEMAP
+``FINEMAP``
 
 .. image:: ../img/detail/trait_overview_mono.png
 
- | SuSiE: The red box highlights the differences from the FINEMAP method.
+``SuSiE``: The red box highlights the differences from the FINEMAP method.
 
 .. image:: ../img/detail/trait_overview_mono_susie.png
 
