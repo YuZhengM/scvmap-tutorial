@@ -50,8 +50,8 @@ In conclusion, (scVMAP, https://bio.liclab.net/scvmap/) is a user-centric databa
     This section provides a comprehensive explanation of the entire pipeline for the scVMAP platform, encompassing the stages of data acquisition, curation, analysis, and the ultimate platform realization.
 
 
-1.1 Data Collection
-----------------------
+1.1 Data collection and curation
+--------------------------------
 
 The scVMAP platform collects scATAC seq data and fine mapping result data.
 
@@ -174,10 +174,39 @@ It can be viewed via the `browser <https://bio.liclab.net/scvmap/data_browse>`_ 
 1.1.2 Collection of trait data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The collected fine-mapping result data comes from ``CAUSALdb2``, ``UKBB``, ``FinnGen``, and ``BJJ`` sources.
-
-A total of ``15884`` trait data were collected, with detailed information as follows:
-
  | FINEMAP fine-mapping result download url (15805): `trait_info.xlsx <https://bio.liclab.net/scvmap_static/download/overview/trait_info.xlsx>`_
  | SuSiE fine-mapping result download url (79): `trait_info_susie.xlsx <https://bio.liclab.net/scvmap_static/download/overview/trait_info_susie.xlsx>`_
 
+1.1.2.1 FINEMAP
+""""""""""""""""""""""""""
+
+The collected FINEMAP fine-mapping result data comes from ``CAUSALdb2``, ``UKBB``, ``FinnGen``, and ``BJJ`` sources.
+
+===========  ===========  ========================= =============================  ========  =============  ===========  ============  =============================================================================================================================  ================
+Source ID    Source name  Source author, year       Source description             PMID      Source genome  Trait count  Filter count  Source link                                                                                                                    Source version
+===========  ===========  ========================= =============================  ========  =============  ===========  ============  =============================================================================================================================  ================
+source_id_1  CAUSALdb     Jianhua Wang et al., 2024 CAUSALdb fine-mapping results  31691819  hg19           15038        14417         `http://www.mulinlab.org/causaldb/index.html <http://www.mulinlab.org/causaldb/index.html>`_                                   Release 2.1
+source_id_2  UKBB         Wang, Q.S. et al., 2021   UKBB fine-mapping results      -         hg19           94           94            `https://www.finucanelab.org/data <https://www.finucanelab.org/data>`_                                                         Release 1.1
+source_id_3  FinnGen      Kurki, M.I. et al., 2023  FinnGen fine-mapping results   36653562  hg38           1234         1215          `https://www.finngen.fi/en/access_results <https://www.finngen.fi/en/access_results>`_                                         R11
+source_id_4  BBJ          Kanai, M. et al., 2021    BBJ fine-mapping results       -         hg19           79           79            `https://humandbs.dbcls.jp/en/hum0197-v18#hum0197.v5.gwas.v1 <https://humandbs.dbcls.jp/en/hum0197-v18#hum0197.v5.gwas.v1>`_   -
+===========  ===========  ========================= =============================  ========  =============  ===========  ============  ============================================================================================================================   ================
+
+For each trait, we retained the variants with a causal variant ``probability value (PP) > 0.001`` calculated by FINEMAP. As a result, we retained ``15,805`` traits from the initial ``16,445`` traits and used them for subsequent analysis.
+
+1.1.2.2 SuSiE
+""""""""""""""""""""""""""
+
+The collected 79 SuSiE fine-mapping results (PP > 0.001) come from ``BJJ`` source.
+
+1.1.2.3 Summary
+""""""""""""""""""""""""""
+
+The trait data is obtained through `download <https://bio.liclab.net/scvmap/download>`_ page.
+
+To harmonize genomic coordinates between variants and scATAC-seq data, we performed LiftOver to convert variant positions to match the reference genome version used in single-cell analysis.
+Next, we manually categorized them into a broad array of classifications, including diseases, indicators, drugs, chemical compounds, health care, treatments, therapies and symptoms.
+For the disease category, we annotated diseases according to ICD-10, encompassing all ``22`` major disease categories, and further subclassifying them into more than ``250`` specific subcategories to provide an intuitive and convenient reference.
+
+Please see `scVMAP-reproducibility-Trait <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/variant>`_ for the detailed workflow code.
+
+It can be viewed via the `browser <https://bio.liclab.net/scvmap/data_browse>`_ page.
