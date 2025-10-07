@@ -183,7 +183,7 @@ It can be viewed via the `browser <https://bio.liclab.net/scvmap/data_browse>`_ 
 The collected FINEMAP fine-mapping result data comes from ``CAUSALdb2``, ``UKBB``, ``FinnGen``, and ``BJJ`` sources.
 
 ============ ============ ========================== ============================== ========= ============== ============ ============= ============================================================ ================
-Source ID    Source name  Source author, year        Source description             PMID      Source genome  Trait count  Filter count Source link                                                   Source version
+Source ID    Source name  Source author, year        Source description             PMID      Source genome  Trait count  Filter count  Source link                                                  Source version
 ============ ============ ========================== ============================== ========= ============== ============ ============= ============================================================ ================
 source_id_1  CAUSALdb     Jianhua Wang et al., 2024  CAUSALdb fine-mapping results  31691819  hg19           15038        14417         http://www.mulinlab.org/causaldb/index.html                  Release 2.1
 source_id_2  UKBB         Wang, Q.S. et al., 2021    UKBB fine-mapping results      -         hg19           94           94            https://www.finucanelab.org/data                             Release 1.1
