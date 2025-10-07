@@ -16,10 +16,10 @@ The displayed information content supports interactive tables, alphabetical sort
 
 Single cell datasets are further divided into **sample** or **cell type** based access data. Click on the ``Sample ID`` to enter the sample detail page.
 
-2.2.1.1 Metadata: Sample ID
+2.2.1.1 Granularity: Sample ID
 ******************************
 
-We provide filtering based on "Tissue type" and "Health type" using samples as the metadata.
+We provide filtering based on "Tissue type", "Health type" and "Metadata" using samples as the metadata.
 
 .. image:: ../img/dataBrowse/sc_sample_id.png
 
@@ -29,7 +29,7 @@ We provide filtering based on "Tissue type" and "Health type" using samples as t
 
 .. image:: ../img/dataBrowse/txt_download.png
 
-2.2.1.2 Metadata: Cell type
+2.2.1.2 Granularity: Cell type
 ******************************
 
 We provide filtering based on "Tissue type" and "cell type" using cell type as the metadata.
@@ -39,9 +39,21 @@ We provide filtering based on "Tissue type" and "cell type" using cell type as t
 2.2.2 Trait or disease data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Similarly, fine mapping result data can be filtered using "Type", "Category (ICD-10)", "Subcategory (ICD-10)",and "Source cohort". Click on the ``Trait ID`` to enter the trait or disease detail page.
+Trait or disease data is further divided into **FINEMAP** or **SuSiE** based access data. Click on the ``Trait ID`` to enter the trait or disease detail page.
 
-.. image:: ../img/dataBrowse/fine_mapping.png
+2.2.2.1 FINEMAP
+******************
+
+The FINEMAP fine-mapping result data can be filtered by "Type", "Category (ICD-10)", "Subcategory (ICD-10)", and "Source cohort".
+
+.. image:: ../img/dataBrowse/fine_mapping_finemap.png
+
+2.2.2.2 SuSiE
+******************
+
+The SuSiE fine-mapping result data can be filtered by "Type", "Category (ICD-10)", and "Subcategory (ICD-10)".
+
+.. image:: ../img/dataBrowse/fine_mapping_susie.png
 
 .. note::
 
