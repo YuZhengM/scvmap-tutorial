@@ -104,21 +104,21 @@ scATAC-seq sample:
 
 For example:
 
- | Default (trait_id_1 + FINEMAP)
+Default (trait_id_1 + FINEMAP)
 
 .. image:: ../img/detail/sample_enrichment_default.png
 
- | Click SuSiE
+Click SuSiE
 
 .. image:: ../img/detail/sample_enrichment_default_susie.png
 
- | Select trait_id_894
+Select trait_id_894
 
 .. image:: ../img/detail/sample_enrichment_bcc.png
 
 For example: `https://bio.liclab.net/scvmap/detail?sampleId=sample_id_20 <https://bio.liclab.net/scvmap/detail?sampleId=sample_id_20>`_
 
- | Select trait_id_14530
+Select trait_id_14530
 
 .. image:: ../img/detail/sample_enrichment_ad.png
 
@@ -190,11 +190,11 @@ For example: AD (sample_id_20 + trait_id_14530)
 Click the ``Top count`` option and set it to ``5``, select ``Log2(Fold change)`` to be ``≥ 0.9``, then input ``APOE, NECTIN2, APOC1, TOMM40``, and finally click the ``Plot`` button.
 Once the process is complete, a differentially active gene heatmap for the AD case will be generated, replicating the analysis from the article.
 
- | Value: Score
+Value: ``Score``
 
 .. image:: ../img/detail/differential_genes_ad_article.png
 
- | Value: Log2(Fold change)
+Value: ``Log2(Fold change)``
 
 .. image:: ../img/detail/differential_genes_ad_article_log2_fold_change.png
 
