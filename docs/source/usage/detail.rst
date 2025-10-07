@@ -213,15 +213,21 @@ For example: AD (sample_id_20 + trait_id_14530)
 2.4.4 Trait-relevant genes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the given traits, we performed MAGMA gene-level analysis, followed by pathway and GO enrichment analysis of significantly associated genes, with the results visualized using bubble plots.
+For a selected trait, scVMAP displays:
+
+1. ``MAGMA``: A table of gene-level analysis results from LD-based MAGMA and a bubble plot showing the results of the gene pathway enrichment analysis for the genes associated with the LD-based MAGMA analysis.
+#. ``Cicero``: A table of gene-level analysis results from ATAC-based Cicero.
 
 For example: BCC (sample_id_1 + trait_id_894)
 
-.. image:: ../img/detail/magma.png
+.. image:: ../img/detail/trait_relevant_gene.png
 
-After clicking the View button, users can see detailed variant information associated with this gene.
+Enter ``RCC2``, then click the ``View`` button to see detailed variant information associated with this gene.
 
 .. image:: ../img/detail/magma_view.png
+
+
+
 
 2.4.5 Gene hub network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
