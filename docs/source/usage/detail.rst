@@ -112,6 +112,7 @@ For example:
 
     When a trait with SuSiE methods (trait_id_1-79) is selected, results from both methods are available for display. However, when SuSiE is selected, only the results from the TRS module can be displayed.
 
+
  | SuSiE
 
 .. image:: ../img/detail/sample_enrichment_default_susie.png
@@ -131,8 +132,8 @@ Here, users can select ``metadata`` for cell annotation and choose different int
 
 These two options affect different scopes.
 
-1. The Metadata option affects the ``TRS``, ``Differential genes``, ``Trait-relevant genes``, and ``Gene hub network`` modules. Selecting different metadata (cell type, age, sex, or drug resistance) allows for the exploration of V2G differences under the corresponding metadata.
-#. The Method option affects only the ``TRS`` module.
+1. The ``Metadata`` option affects the ``TRS``, ``Differential genes``, ``Trait-relevant genes``, and ``Gene hub network`` modules. Selecting different metadata (cell type, age, sex, or drug resistance) allows for the exploration of V2G differences under the corresponding metadata.
+#. The ``Method`` option affects only the ``TRS`` module.
 
 .. note::
 
@@ -170,14 +171,39 @@ For example: AD (sample_id_20 + trait_id_14530)
 2.4.3 Differential genes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It displays a heatmap and a data table of differentially expressed genes between cell types (based on scATAC seq data for gene activity scoring), as well as a bubble plot describing pathway and GO enrichment analysis results.
+The content displayed in this module will vary depending on the selected metadata.
 
-.. image:: ../img/detail/differential_genes.png
+1. Cell type:
 
-Click the ``Top count`` option to set to ``5``, then click ``Example``, and finally click the ``Plot`` button.
-After running, we can see the differential gene expression heatmap of BCC case in the article.
+It displays a heatmap and a data table of differentially active genes between cell types, as well as a bubble plot showing the results of the gene pathway enrichment analysis.
 
-.. image:: ../img/detail/differential_genes_article.png
+For example: BCC (sample_id_1 + trait_id_894)
+
+.. image:: ../img/detail/differential_genes_bcc.png
+
+Click the ``Top count`` option and set it to ``5``, select ``Log2(Fold change)`` to be ``≥ 6``, then click ``Example``, and finally click the ``Plot`` button.
+Once the process is complete, a differentially active gene heatmap for the BCC case will be generated, replicating the analysis from the article.
+
+.. image:: ../img/detail/differential_genes_bcc_article.png
+
+For example: AD (sample_id_20 + trait_id_14530)
+
+Click the ``Top count`` option and set it to ``5``, select ``Log2(Fold change)`` to be ``≥ 0.9``, then input ``APOE, NECTIN2, APOC1, TOMM40``, and finally click the ``Plot`` button.
+Once the process is complete, a differentially active gene heatmap for the AD case will be generated, replicating the analysis from the article.
+
+.. image:: ../img/detail/differential_genes_ad_article.png
+
+2. Other metadata:
+
+It displays a heatmap and a data table of differentially active genes between cell types.
+
+For example: AD (sample_id_20 + trait_id_14530)
+
+.. image:: ../img/detail/differential_genes_ad_age.png
+
+.. note::
+
+    Gene pathway enrichment analysis is not supported for metadata other than cell type.
 
 2.4.4 Trait-relevant genes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
