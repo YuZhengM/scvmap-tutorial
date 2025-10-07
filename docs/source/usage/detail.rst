@@ -108,12 +108,7 @@ For example:
 
 .. image:: ../img/detail/sample_enrichment_default.png
 
-.. note::
-
-    When a trait with SuSiE methods (trait_id_1-79) is selected, results from both methods are available for display. However, when SuSiE is selected, only the results from the TRS module can be displayed.
-
-
- | SuSiE
+ | Click SuSiE
 
 .. image:: ../img/detail/sample_enrichment_default_susie.png
 
@@ -126,6 +121,10 @@ For example: `https://bio.liclab.net/scvmap/detail?sampleId=sample_id_20 <https:
  | Select trait_id_14530
 
 .. image:: ../img/detail/sample_enrichment_ad.png
+
+.. note::
+
+    When a trait with SuSiE methods (trait_id_1-79) is selected, results from both methods are available for display. However, when SuSiE is selected, only the results from the TRS module can be displayed.
 
 
 Here, users can select ``metadata`` for cell annotation and choose different integration ``methods``.
@@ -191,7 +190,13 @@ For example: AD (sample_id_20 + trait_id_14530)
 Click the ``Top count`` option and set it to ``5``, select ``Log2(Fold change)`` to be ``≥ 0.9``, then input ``APOE, NECTIN2, APOC1, TOMM40``, and finally click the ``Plot`` button.
 Once the process is complete, a differentially active gene heatmap for the AD case will be generated, replicating the analysis from the article.
 
+ | Value: Score
+
 .. image:: ../img/detail/differential_genes_ad_article.png
+
+ | Value: Log2(Fold change)
+
+.. image:: ../img/detail/differential_genes_ad_article_log2_fold_change.png
 
 2. Other metadata:
 
@@ -209,6 +214,8 @@ For example: AD (sample_id_20 + trait_id_14530)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For the given traits, we performed MAGMA gene-level analysis, followed by pathway and GO enrichment analysis of significantly associated genes, with the results visualized using bubble plots.
+
+For example: BCC (sample_id_1 + trait_id_894)
 
 .. image:: ../img/detail/magma.png
 
