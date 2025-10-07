@@ -13,10 +13,10 @@ Search principle:
 
  | Here, we provide five search contents corresponding to the five search functions on the "`Search <https://bio.liclab.net/scvmap/search>`_" page.
 
-2.1.1 ``Trait or disease`` search
+2.1.1 Trait or disease search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:Input Type 1: When a user enters a **Trait or disease ID** (e.g., ``trait_id_894``), the system directs to the detailed page (`https://bio.liclab.net/scvmap/detail?traitId=trait_id_1 <https://bio.liclab.net/scvmap/detail?traitId=trait_id_1>`_) of the corresponding causal variant effect data.
+:Input Type 1: When a user enters a **Trait or disease ID** (e.g., ``trait_id_894``), the system directs to the detailed page (`https://bio.liclab.net/scvmap/detail?traitId=trait_id_894 <https://bio.liclab.net/scvmap/detail?traitId=trait_id_894>`_) of the corresponding causal variant effect data.
 
 .. image:: ../img/home/traitById.png
 
@@ -35,7 +35,7 @@ Help document for users to view detail pages: `https://scvmap.readthedocs.io/en/
 
     Here, if the fuzzy search encounters the word "disease", it will be ignored in the search. And it has a slightly different retrieval process from the corresponding function of "Search information by category or source cohort" on the "`Search <http://bio.liclab.net/scvmap/search>`_" page, but the retrieval results are the same.
 
-2.1.2 ``Single cell sample`` search
+2.1.2 Single cell sample search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :Input Type 1: When a user enters a **Sample ID** (e.g., ``sample_id_1``), the system directs to the detailed page (`https://bio.liclab.net/scvmap/detail?detail?sampleId=sample_id_1 <https://bio.liclab.net/scvmap/detail?detail?sampleId=sample_id_1>`_) of the corresponding causal variant effect data.
@@ -57,7 +57,7 @@ Help document for users to view detail pages: `https://scvmap.readthedocs.io/en/
 
     It has a slightly different retrieval process from the corresponding function of "Search for information by tissue type or cell type" on the "`Search <http://bio.liclab.net/scvmap/search>`_" page, but the retrieval results are the same.
 
-2.1.3 ``Gene`` search
+2.1.3 Gene search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a user enters a **gene** (e.g., ``RCC2``), the system directs to the detailed page (`http://bio.liclab.net/scvmap/gene_detail?gene=RCC2 <http://bio.liclab.net/scvmap/gene_detail?gene=RCC2>`_) of the gene.
@@ -70,7 +70,7 @@ Help document for users to view gene details page: `https://scvmap.readthedocs.i
 
     It is completely consistent with the retrieval process and results of the "Search information by gene" function on the "`Search <http://bio.liclab.net/scvmap/search>`_" page.
 
-2.1.4 ``TF`` search
+2.1.4 TF search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a user enters a **TF** (e.g., ``HIF1A``), the system directs to the detailed page (`http://bio.liclab.net/scvmap/tf_detail?tf=HIF1A <http://bio.liclab.net/scvmap/tf_detail?tf=HIF1A>`_) of the TF.
@@ -83,7 +83,7 @@ Help document for users to view TF details page: `https://scvmap.readthedocs.io/
 
     It is completely consistent with the retrieval process and results of the "Search information by TF" function on the "`Search <http://bio.liclab.net/scvmap/search>`_" page.
 
-2.1.5 ``Variant`` search
+2.1.5 Variant search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a user enters a **rsID** (e.g., ``rs57142672``), the system directs to the detailed page (`http://bio.liclab.net/scvmap/variant_detail?variant=rs57142672 <http://bio.liclab.net/scvmap/variant_detail?variant=rs57142672>`_) of the causal variant.
