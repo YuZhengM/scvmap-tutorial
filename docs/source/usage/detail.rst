@@ -286,7 +286,8 @@ The ``Gene hub network`` result of the BCC case can be reproduced with the follo
 2.4.6 Differential TFs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It displays a data table and heatmap of the differences TF between cell types.
+1. ``SnapATAC2``: It displays a data table and heatmap of the differences TF between cell types.
+#. ``chromVAR``: It displays a data table of the differences TF between cell types.
 
 For example: BCC (sample_id_1 + trait_id_894)
 
@@ -297,7 +298,7 @@ For example: BCC (sample_id_1 + trait_id_894)
 
 It displays the results of TF enrichment analysis for this trait using HOMER.
 
-.. image:: ../img/detail/homer.png
+.. image:: ../img/detail/trait_relevant_tfs.png
 
 2.4.8 TF hub network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
