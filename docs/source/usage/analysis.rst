@@ -25,3 +25,4 @@ The detailed analysis is as follows:
     analysis/mapping
     analysis/mappingWithGene
     analysis/mappingWithTf
+    analysis/comparative
