@@ -296,7 +296,7 @@ For example: BCC (sample_id_1 + trait_id_894)
 2.4.7 Trait-relevant TFs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It displays the results of TF enrichment analysis for this trait using HOMER.
+This module provides tables of trait-relevant TFs predicted by GimmeMotifs and HOMER.
 
 .. image:: ../img/detail/trait_relevant_tfs.png
 
