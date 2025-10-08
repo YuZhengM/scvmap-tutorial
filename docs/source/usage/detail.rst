@@ -213,6 +213,11 @@ For example: AD (sample_id_20 + trait_id_14530)
 2.4.4 Trait-relevant genes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Users can select either the trait-relevant gene results or the V2G annotation information.
+
+2.4.4.1 Type: Trait-relevant genes
+""""""""""""""""""""""""""""""""""""
+
 For a selected trait, scVMAP displays:
 
 1. ``MAGMA``: A table of gene-level analysis results from LD-based MAGMA and a bubble plot showing the results of the gene pathway enrichment analysis for the genes associated with the LD-based MAGMA analysis.
@@ -222,11 +227,32 @@ For example: BCC (sample_id_1 + trait_id_894)
 
 .. image:: ../img/detail/trait_relevant_gene.png
 
+In gene set enrichment analysis, setting the ``P value`` to ``≤ 1.0E-6`` allows for the reproduction of the results for the BCC case study presented in the paper.
+
+.. image:: ../img/detail/trait_relevant_gene_gsea.png
+
 Enter ``RCC2``, then click the ``View`` button to see detailed variant information associated with this gene.
 
 .. image:: ../img/detail/magma_view.png
 
+For example: AD (sample_id_20 + trait_id_14530)
 
+Clicking the "View overlap" button displays the overlap between the gene sets derived from the selected trait (e.g. trait_id_14530) through ATAC-based Cicero and LD-MAGMA analyses. (The reproduction of the results for the AD case study presented in the paper.)
+
+.. image:: ../img/detail/trait_relevant_gene_overlap.png
+
+1. Gene overlap information: The overlap of gene sets identified by the two methods.
+#. Overlapping gene-relevant SNPs network: This network consists solely of SNPs associated with overlapping genes. Here, the ``SNP (Both)`` refers to the intersection of the SNP sets associated with overlapping genes that were identified by both methods.
+#. Number of overlapping SNP-relevant genes in overlapping gene contexts: The plot shows overlapping SNPs annotated by the number of overlapping genes. The x-axis represents the overlapping SNPs, and the y-axis represents the number of overlapping genes associated with each SNP.
+
+2.4.4.2 Type: V2G annotation
+""""""""""""""""""""""""""""""""
+
+For a selected trait, any variant within the trait is annotated if it is present in eQTL, MPRA, and 3D chromatin interaction data.
+
+For example: AD (sample_id_20 + trait_id_14530)
+
+.. image:: ../img/detail/trait_relevant_gene_v2g_annotation.png
 
 
 2.4.5 Gene hub network
@@ -234,6 +260,21 @@ Enter ``RCC2``, then click the ``View`` button to see detailed variant informati
 
 To systematically investigate the association mechanisms between target traits and specific cell types, we integrated data from two key dimensions: the genetic variation dimension (trait-SNP-effect gene association data) and the cell-type-specific dimension (sample-cell type-differential gene), to construct a trait-cell type association network. This network helps reveal the multi-level regulatory paths through which traits influence cell types and identifies core gene sets.
 
+For example: BCC (sample_id_1 + trait_id_894)
+
+The ``Gene hub network`` result of the BCC case can be reproduced with the following parameter settings:
+
+ | Cell type: ``Tumor 3``
+ | Top count: ``All``
+ | ``Core``
+ | Gene (MAGMA): ``MAGMA``
+ |     Number of SNPs: ``4``
+ |     P value: ``≤ 1.0E-5``
+ | Gene (Difference):
+ |     Score: ``≥ 55``
+ |     P value: ``≤ 1.0E-2``
+ |     Adjusted p value: ``≤ 1.0E-2``
+ |     Log2(Fold change): ``≥ 1``
 
 
 .. image:: ../img/detail/gene_hub_network.png
@@ -246,6 +287,8 @@ To systematically investigate the association mechanisms between target traits a
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It displays a data table and heatmap of the differences TF between cell types.
+
+For example: BCC (sample_id_1 + trait_id_894)
 
 .. image:: ../img/detail/differential_tfs.png
 
@@ -261,4 +304,47 @@ It displays the results of TF enrichment analysis for this trait using HOMER.
 
 Similar to panel ``Gene hub network``, this panel constructs a network graph from trait to cell type to identify key TFs involved in the regulatory process.
 
+The ``TF hub network`` result of the BCC case can be reproduced with the following parameter settings:
+
+ | Cell type: ``Tumor 3``
+ | ``All``
+ | Trait-relevant TFs: ``HOMER``
+ |     P value: ``≤ 0.05``
+ |     Q value: ``≤ 0.05``
+ | TF (Difference): ``SnapATAC2``
+ |     P value: ``≤ 0.05``
+ |     Adjusted p value: ``≤ 0.05``
+ |     Log2(Fold change): ``≥ 0.6``
+
 .. image:: ../img/detail/tf_hub_network.png
+
+2.4.9 Integrated network
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This module visualizes the integrated network composed of traits, variants, TFs, genes and cell types.
+
+To facilitate understanding of how traits influence biological functions and disease susceptibility through specific cell types, we constructed a trait-cell type association network linked by genes and TFs, termed the gene-TF co-regulatory network. This integrative network leverages open chromatin as a bridge to capture the interaction links among genes, TFs, and variants, thereby establishing the core architecture of the regulatory landscape. In this three-way relationship, V2G and V2TF are obtained from the aforementioned the trait-relevant genes and TFs process. The TF-to-gene (TF2G) linking strategy is established based on peak co-accessibility associations, utilizing the BEDTools tool. Furthermore, numerous susceptibility-associated variant sites have been documented for traits or diseases, thereby establishing a trait-variant association network. Meanwhile, in single-cell samples, cell type-specific differentially active genes and TFs form gene and TF-cell type association networks. Thus, a comprehensive regulatory landscape network connecting traits to cell types is formed. Genes and transcription factors that lie along the trait-to-cell-type pathways are defined as key genes and key transcription factors.
+
+For example: AD (sample_id_20 + trait_id_14530)
+
+The ``Integrated network`` result of the AD case can be reproduced with the following parameter settings:
+
+ | Cell type: ``MG``
+ | ``Coordinates``
+ | TF (GimmeMotifs):
+ |     Co-score: ``≥ 0.2``
+ |     Mean score: ``≥ 12``
+ |     Count: ``≥ 1``
+ | TF (Difference): ``SnapATAC2``
+ |     P value: ``≤ 1.0E-2``
+ |     Adjusted p value: ``≤ 1.0E-2``
+ |     Log2(Fold change): ``≥ 0.7``
+ | Gene (Cicero): ``Cicero``
+ |     Co-score: ``≥ 0.3``
+ | Gene (Difference): ``SnapATAC2``
+ |     Score: ``≥ 3``
+ |     P value: ``≤ 1.0E-125``
+ |     Adjusted p value: ``≤ 1.0E-125``
+ |     Log2(Fold change): ``≥ 0.6``
+
+.. image:: ../img/detail/integrated_network.png
