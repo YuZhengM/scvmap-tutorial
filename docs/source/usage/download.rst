@@ -699,7 +699,7 @@ File name: ``{Trait label}_gene_enrichment_trait_data.txt``
 
     A very small number of traits or diseases contain too few fine-mapped variants, resulting in a lack of gene enrichment results.
 
-2.7.3.7 Gene regulation annotation data: ``tar.gz`` file
+2.7.3.7 Gene regulation/V2G annotation data:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 scVMAP provides gene regulation annotation data for five types of epigenome data.

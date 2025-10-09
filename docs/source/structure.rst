@@ -21,16 +21,19 @@ It uses widely recognized methods to provide reference for key variants, TFs, an
 Throughout the process, data undergoes standardization, unified processing, and comprehensive analysis. The main contents are as follows:
 
 + Single-cell samples:
+
   * Differential gene activity analysis of cell types
   * Differential TF activity analysis of cell types
   * High-scoring gene pathway enrichment analysis of cell types
 
 + Traits or diseases:
+
   * LD-based MAGMA analysis (Trait-relevant genes)
   * HOMER motif enrichment analysis (Trait-relevant TFs)
   * MAGMA-based trait-relevant gene pathway enrichment analysis
 
 + Integrated analysis:
+
   * ATAC-based Cicero analysis (Trait-relevant genes)
   * ATAC-based GimmeMotifs analysis (Trait-relevant genes)
   * Gene hub regulatory network analysis
