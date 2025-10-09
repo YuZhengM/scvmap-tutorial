@@ -18,3 +18,4 @@ The detailed manual is as follows:
     usage/statistics
     usage/download
     usage/contact
+    usage/online
