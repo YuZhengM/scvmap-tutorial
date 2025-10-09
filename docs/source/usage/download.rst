@@ -326,7 +326,7 @@ scVMAP provides variant coordinates under different reference genomes.
 
 Here is the complete download for Part ``2.7.2 Download fine-mapping result data for each sample``.
 
- | Fine-mapping result data (source): ``txt`` file (``Download`` field)
+ | Fine-mapping result data (FINEMAP/SuSiE) (source): ``txt`` file (``Download`` field)
 
  | Repeat display once:
 
@@ -355,7 +355,7 @@ Here is the complete download for Part ``2.7.2 Download fine-mapping result data
 20   index                Unique index identifiers based on trait or disease variants are meaningless and can be used to identify the uniqueness of variants.
 ==== ==================== ====================================================================================================
 
- | Fine-mapping result data (hg19/hg38): ``bed`` file (``Download (LiftOver)`` field)
+ | Fine-mapping result data (FINEMAP/SuSiE) (hg19/hg38): ``bed`` file (``Download (LiftOver)`` field)
 
  | Repeat display once:
 
@@ -374,6 +374,8 @@ Here is the complete download for Part ``2.7.2 Download fine-mapping result data
 2.7.3.2 Differential gene data: ``txt`` file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+ | Differential Genes data (Cell type): ``tar.gz`` file
+
 This file contains differential gene data for all cell types of single-cell samples. Of course, it is after passing the threshold.
 
 ==== ==================== ====================================================================================================
@@ -386,6 +388,23 @@ This file contains differential gene data for all cell types of single-cell samp
 5    f_adjusted_p_value   adjusted p value
 6    f_log2_fold_change   Log2(Fold change)
 7    f_p_value            P-value
+==== ==================== ====================================================================================================
+
+ | Differential Genes data (Age/Sex/Drug resistance): ``txt`` file
+
+This file contains differential gene data for all cell types of single-cell samples. Of course, it is after passing the threshold.
+
+==== ==================== ====================================================================================================
+#    Column name          Description
+==== ==================== ====================================================================================================
+1    f_sample_id          unique identifier of scATAC-seq sample
+2    f_type_value         Corresponds to the values under the `f_type` field.
+3    f_gene               gene name
+4    f_score              score
+5    f_adjusted_p_value   adjusted p value
+6    f_log2_fold_change   Log2(Fold change)
+7    f_p_value            P-value
+7    f_type               Age, gender, or drug resistance information.
 ==== ==================== ====================================================================================================
 
 .. note::
@@ -467,7 +486,6 @@ Example: `sample_id_1 <https://bio.liclab.net/scvmap/detail?sampleId=sample_id_1
            [-16.56791496, -32.8029213 ,   2.89613366, ...,  38.49712753,
              32.102005  , -17.40989685]])
     >>>
-
 
 2.7.3.3 Differential TF data: ``txt`` file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -934,3 +952,74 @@ scVMAP provides gene regulation annotation data for five types of epigenome data
     chr1    100028493       100040305       SE_02_0707      SE_02_070700751 NCBI GEO/SRA    Cell line       Pancreas        BxPC3 WT
     chr1    100028934       100040097       SE_02_0022      SE_02_002200606 NCBI GEO/SRA    Primary cell    Blood   CD8donorA
     chr1    100033978       100061969       SE_02_1468      SE_02_146800857 NCBI GEO/SRA    Cell line       Blood   HUDEP-2_WT
+
+2.7.3.7.9 3D chromatin interaction: ``bed`` file (After decompression)
+*********************************************************************************
+
+==== ===================== ====================================================================================================
+#    Column name           Description
+==== ===================== ====================================================================================================
+1    None                  chromosome (Interaction1)
+2    None                  start position of enhancer (Interaction1)
+3    None                  end position of enhancer (Interaction1)
+4    None                  chromosome (Interaction2)
+5    None                  start position of enhancer (Interaction2)
+6    None                  end position of enhancer (Interaction2)
+7    None                  Source/Interaction ID
+8    None                  Method
+9    None                  Tissue/cell type
+10   None                  Cell line
+==== ===================== ====================================================================================================
+
+.. code-block:: shell
+    :linenos:
+
+    $ head 3D_hg19.bed
+    chr1    37883731        37885731        chr1    38374488        38376488        3D_4DGenome_001 3C      Kidney  293Trex
+    chr1    68019395        68021395        chr1    68444820        68446820        3D_4DGenome_001 3C      Kidney  293Trex
+    chr1    94005332        94007332        chr1    94477646        94479646        3D_4DGenome_001 3C      Kidney  293Trex
+    chr1    9762548 9762685 chr1    9882283 9883893 3D_OncoBase_084 EpiTensor       Kidney  Kidney
+    chr1    9848832 9851345 chr1    9882283 9883893 3D_OncoBase_084 EpiTensor       Kidney  Kidney
+    chr1    98991643        98992662        chr1    99114108        99115246        3D_OncoBase_084 EpiTensor       Kidney  Kidney
+    chr1    99114108        99115246        chr1    99125090        99125899        3D_OncoBase_084 EpiTensor       Kidney  Kidney
+    chr1    98991643        98992662        chr1    99125090        99125899        3D_OncoBase_084 EpiTensor       Kidney  Kidney
+    chr1    99181550        99181760        chr1    99182450        99183081        3D_OncoBase_084 EpiTensor       Kidney  Kidney
+    chr1    99125090        99125899        chr1    99193746        99195271        3D_OncoBase_084 EpiTensor       Kidney  Kidney
+
+2.7.3.7.10 MPRA: ``csv`` file
+*********************************************************************************
+
+> Download source: https://mpravardb.rc.ufl.edu/
+
+==== ================== ====================================================================================================
+#    Column name        Description
+==== ================== ====================================================================================================
+1    chr                chromosome
+2    pos                position of variant
+3    ref                reference allele in the reference genome coordinate of the source cohort
+4    alt                alternative allele in the reference genome coordinate of the source cohort. (This allele is the effect allele.)
+5    genome             reference genome
+6    rsid               rsID identifier
+7    disease            trait/disease
+8    cellline           cell line
+9    Description        description
+10   log2FC             Log2(Fold change)
+11   pvalue             P value
+12   fdr                FDR
+13   MPRA_study         MPRA study
+==== ================== ====================================================================================================
+
+.. code-block:: shell
+    :linenos:
+
+    $ head All_MPRA_Data.csv
+    "chr","pos","ref","alt","genome","rsid","disease","cellline","Description","log2FC","pvalue","fdr","MPRA_study"
+    "1",2440958,"A","G","hg38","rs6688934","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.108571634,0.341634497,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
+    "1",2441515,"A","G","hg38","rs6673661","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.057599896,0.234108669,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
+    "1",2443319,"A","G","hg38","rs4648844","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.014320564,0.115533569,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
+    "1",2444405,"T","G","hg38","rs6687012","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.258798019,0.530956548,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
+    "1",2448266,"A","G","hg38","rs942820","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.077694104,0.275581292,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
+    "1",2455662,"C","T","hg38","rs4648845","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.453624774,0.700344436,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
+    "1",8362616,"T","C","hg38","rs2252865","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.551078425,0.775862448,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
+    "1",8363450,"A","G","hg38","rs10779702","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.295545372,0.575535724,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
+    "1",8372076,"C","T","hg38","rs894875","Schizophrenia","SH-SY5Y","1,049 SZ and 30 AD variants in 64 SZ loci and 9 AD loci, respectively",NA,0.543395748,0.774441451,"A screen of 1049 schizophrenia and 30 Alzheimer's-associated variants for regulatory potential (Myint et al., 2020)"
