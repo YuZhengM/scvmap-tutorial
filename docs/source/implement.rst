@@ -4,7 +4,7 @@
  | scVMAP: https://bio.liclab.net/scvmap/
  | scVMAP front-end: https://github.com/YuZhengM/scvmap_web
  | scVMAP back-end: https://github.com/YuZhengM/scvmap
- | scVMAP API: https://bio.liclab.net/scvmap_service/swagger-ui/index.html
+ | scVMAP API: https://bio.liclab.net/scvmap_service/scvmap.html
 
 The latest version of the scVMAP tool database operates on CentOS 7.7.1908.
 We deploy and release the project to the remote server via a Dockerfile

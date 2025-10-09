@@ -6,7 +6,7 @@ User Manual for scVMAP platform
  | scVMAP tutorial: https://scvmap.readthedocs.io/en/latest/
  | scVMAP front-end: https://github.com/YuZhengM/scvmap_web
  | scVMAP back-end: https://github.com/YuZhengM/scvmap
- | scVMAP API: https://bio.liclab.net/scvmap_service/swagger-ui/index.html
+ | scVMAP API: https://bio.liclab.net/scvmap_service/scvmap.html
 
 A comprehensive platform for **integrating** ``single-cell chromatin accessibility regions`` with ``causal variants``.
 

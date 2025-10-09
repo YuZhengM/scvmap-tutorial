@@ -1,7 +1,7 @@
 3. scVMAP API
 ===========================
 
- | scVMAP API: https://bio.liclab.net/scvmap_service/swagger-ui/index.html
+ | scVMAP API: https://bio.liclab.net/scvmap_service/scvmap.html
 
 `scVMAP <https://bio.liclab.net/scvmap/>`_ provides backend API interface information,
 and researchers in need can obtain data directly through API interfaces.
@@ -60,7 +60,7 @@ We provide Python code to retrieve data from API interfaces.
         time.sleep(3)
         print("----------------------------------------------------------------------------------")
 
-        # Variant information https://bio.liclab.net/scvmap_service/swagger-ui/index.html#/Detail-API/listTraitInfoData
+        # Variant information https://bio.liclab.net/scvmap_service/scvmap.html#/Detail-API/listTraitInfoData
         response = requests.post(
             f"{base_url}/detail/trait_info/{trait_id}/{genome}/{fine_mapping_method}",
             json={
@@ -95,7 +95,7 @@ We provide Python code to retrieve data from API interfaces.
         time.sleep(3)
         print("----------------------------------------------------------------------------------")
 
-        # MAGMA https://bio.liclab.net/scvmap_service/swagger-ui/index.html#/Detail-API/listMagmaGeneByTraitId
+        # MAGMA https://bio.liclab.net/scvmap_service/scvmap.html#/Detail-API/listMagmaGeneByTraitId
         response = requests.get(f"{base_url}/detail/magma_gene/{trait_id}/{genome}")
         magma_data = get_result_data(response)
         magma_df = pd.DataFrame(magma_data)
