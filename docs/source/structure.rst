@@ -279,11 +279,11 @@ Other path details:
 1.1.3.4 Execute command
 """""""""""""""""""""""""""""""""""""
 
-The command is as follows ::
+The command is as follows: ::
 
     /bin/Rscript $basePath/code/run.R $basePath $identifier $scFile $variantFile $genome $layer
 
-For example ::
+For example: ::
 
     /bin/Rscript /project/scVMAP/code/run.R /project/scVMAP 7627190552 26286db074_GSE139369_ELM_sim_0.7_ATAC.rds 4880d7db5c_BBJ_RBC_64.bed hg19 counts
 
@@ -293,7 +293,7 @@ Parameter description:
 
   Command-line Parameter Description
 
-  :param string $basePath: The string to be cleaned.
+  :param string $basePath: The root path for processing.
   :param string $identifier: A unique ID used as the filename to save the results.
   :param string $scFile: The filename of the scATAC-seq data.
   :param string $variantFile: The filename of the trait file.
