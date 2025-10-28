@@ -247,12 +247,12 @@ We have consolidated the SCAVENGE workflow into a single command. You can view t
 
 The specific implementation process is as follows:
 
-1.1.3.1 Install R Packages
+1.2.3.1 Install R Packages
 """""""""""""""""""""""""""""""""""""
 
 Refer to file `scVMAP-install_R_packages <https://github.com/YuZhengM/scvmap_reproducibility/blob/main/R/R_code/install.R>`_ for installation.
 
-1.1.3.2 Download files
+1.2.3.2 Download files
 """""""""""""""""""""""""""""""""""""
 
 The following two files need to be downloaded through link `scVMAP-exec_R_code <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R/exec_R_code>`_:
@@ -264,7 +264,7 @@ The following two files need to be downloaded through link `scVMAP-exec_R_code <
 
     The `online analysis function <https://bio.liclab.net/scvmap/on_line>`_ of scVMAP uses this script command.
 
-1.1.3.3 Create formatted directories
+1.2.3.3 Create formatted directories
 """""""""""""""""""""""""""""""""""""
 
 Create a root path: ``/project/scVMAP``.
@@ -276,7 +276,7 @@ Other path details:
  - ``/project/scVMAP/scATAC``: This path stores the input scATAC-seq data in RDS format. File example: `scATAC-seq-example <https://bio.liclab.net/scvmap_static/download/example/GSE139369_ELM_sim_0.6_ATAC.rds>`_.
  - ``/project/scVMAP/variant``: This path stores the input phenotype data in BED or TXT format. File example: `Trait-example <https://bio.liclab.net/scvmap_static/download/variant/hg19/BBJ_Mono_55.bed>`_.
 
-1.1.3.4 Execute command
+1.2.3.4 Execute command
 """""""""""""""""""""""""""""""""""""
 
 The command is as follows: ::
