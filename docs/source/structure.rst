@@ -283,13 +283,11 @@ The command is as follows ::
 
     /bin/Rscript $basePath/code/run.R $basePath $identifier $scFile $variantFile $genome $layer
 
-
 For example ::
 
     /bin/Rscript /project/scVMAP/code/run.R /project/scVMAP 7627190552 26286db074_GSE139369_ELM_sim_0.7_ATAC.rds 4880d7db5c_BBJ_RBC_64.bed hg19 counts
 
-
- | Parameter description:
+Parameter description:
 
 .. py:function:: core_process($basePath, $identifier, $scFile, $variantFile, $genome, $layer);
 
