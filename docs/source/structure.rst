@@ -271,29 +271,23 @@ Create a root path: ``/project/scVMAP``.
 
 Other path details:
 
- | /project/scVMAP:
- | | /code: Path for the ``integration.R`` and ``run.R`` files.
- | | /result: Path for saving intermediate files and result files.
- | | /scATAC: This path stores the input scATAC-seq data in RDS format. File example: `scATAC-seq-example <https://bio.liclab.net/scvmap_static/download/example/GSE139369_ELM_sim_0.6_ATAC.rds>`_.
- | | /variant: This path stores the input phenotype data in BED or TXT format. File example: `Trait-example <https://bio.liclab.net/scvmap_static/download/variant/hg19/BBJ_Mono_55.bed>`_.
+ - ``/project/scVMAP/code``: Path for the ``integration.R`` and ``run.R`` files.
+ - ``/project/scVMAP/result``: Path for saving intermediate files and result files.
+ - ``/project/scVMAP/scATAC``: This path stores the input scATAC-seq data in RDS format. File example: `scATAC-seq-example <https://bio.liclab.net/scvmap_static/download/example/GSE139369_ELM_sim_0.6_ATAC.rds>`_.
+ - ``/project/scVMAP/variant``: This path stores the input phenotype data in BED or TXT format. File example: `Trait-example <https://bio.liclab.net/scvmap_static/download/variant/hg19/BBJ_Mono_55.bed>`_.
 
 1.1.3.4 Execute command
 """""""""""""""""""""""""""""""""""""
 
- | The command is as follows:
-
-.. code-block:: shell
-    :linenos:
+The command is as follows ::
 
     /bin/Rscript $basePath/code/run.R $basePath $identifier $scFile $variantFile $genome $layer
 
 
- | For example:
-
-.. code-block:: shell
-    :linenos:
+For example ::
 
     /bin/Rscript /project/scVMAP/code/run.R /project/scVMAP 7627190552 26286db074_GSE139369_ELM_sim_0.7_ATAC.rds 4880d7db5c_BBJ_RBC_64.bed hg19 counts
+
 
  | Parameter description:
 
@@ -308,4 +302,3 @@ Other path details:
   :param string $genome: The reference genome (hg19 or hg38).
   :param string $layer: The name of the layer for the counts matrix in the RDS file, e.g., "counts".
   :rtype: None
-
