@@ -2,7 +2,7 @@
 ==============================================
 
  | scVMAP: https://bio.liclab.net/scvmap/
- | scVMAP reproducibility:: https://github.com/YuZhengM/scvmap_reproducibility
+ | scVMAP reproducibility: https://github.com/YuZhengM/scvmap_reproducibility
  | scVMAP tutorial: https://scvmap.readthedocs.io/en/latest/
  | scVMAP front-end: https://github.com/YuZhengM/scvmap_web
  | scVMAP back-end: https://github.com/YuZhengM/scvmap
@@ -167,7 +167,7 @@ sample_id_1-30    8
 sample_id_31-183  5
 ================= ===============
 
-The scATAC-seq data is obtained through `download <https://bio.liclab.net/scvmap/download>`_ page. Once read, the ``adata.obs['tsse']`` information can be accessed.
+The scATAC-seq data is obtained through `download <https://bio.liclab.net/scvmap/download>`_ page.
 
 Cell type annotations were directly assigned from their original articles, whereas the scATAC-seq samples obtained from scBlood were annotated using the SingleR software.
 
@@ -213,4 +213,99 @@ For the disease category, we annotated diseases according to ICD-10, encompassin
 Please see `scVMAP-reproducibility-Trait <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/variant>`_ for the detailed workflow code.
 
 It can be viewed via the `browser <https://bio.liclab.net/scvmap/data_browse>`_ page.
+
+1.2 Variant-function-mapping at single cell resolution
+------------------------------------------------------
+
+Our preferred method for calculating trait relevance scores (TRSs) is `SCAVENGE <https://doi.org/10.1038/s41587-022-01341-y>`_.
+Since the `SCAVENGE <https://doi.org/10.1038/s41587-022-01341-y>`_ method utilizes the `g-chromVAR <https://doi.org/10.1038/s41588-019-0362-6>`_ approach, scVMAP supports both `g-chromVAR <https://doi.org/10.1038/s41588-019-0362-6>`_ and `SCAVENGE <https://doi.org/10.1038/s41587-022-01341-y>`_ for computing TRSs.
+
+Specific process code: `scVMAP-R <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R>`_
+
+1.2.1 g-chromVAR
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Building upon the original `g-chromVAR <https://doi.org/10.1038/s41588-019-0362-6>`_ codebase, we have addressed the issues caused by ``NA/INF`` values and refined the corresponding implementation.
+
+1.2.2 SCAVENGE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The values of some parameter settings.
+
+========================================================= ===============
+Hyper parameter                                           Value
+========================================================= ===============
+Dimensionality of latent semantic indexing (LSI)          30
+Number of neighbors in mutual k-nearest neighbors (M-kNN) 30
+Restart value for random walk                             0.05
+========================================================= ===============
+
+1.2.3 Code for using scVMAP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We have consolidated the SCAVENGE workflow into a single command. You can view the code here: `scVMAP-exec_R_code <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R/exec_R_code>`_
+
+The specific implementation process is as follows:
+
+1.1.3.1 Install R Packages
+"""""""""""""""""""""""""""""""""""""
+
+Refer to file `scVMAP-install_R_packages <https://github.com/YuZhengM/scvmap_reproducibility/blob/main/R/R_code/install.R>`_ for installation.
+
+1.1.3.2 Download files
+"""""""""""""""""""""""""""""""""""""
+
+The following two files need to be downloaded through link `scVMAP-exec_R_code <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R/exec_R_code>`_:
+ - ``integration.R``: A file for g-chromVAR and SCAVENGE algorithm code.
+ - ``run.R``: An R script for executing the g-chromVAR and SCAVENGE algorithms via ``Rscript`` in the Linux terminal.
+
+
+.. tip::
+
+    The `online analysis function <https://bio.liclab.net/scvmap/on_line>`_ of scVMAP uses this script command.
+
+1.1.3.3 Create formatted directories
+"""""""""""""""""""""""""""""""""""""
+
+Create a root path: ``/project/scVMAP``.
+
+Other path details:
+
+ | /project/scVMAP:
+ | | /code: Path for the ``integration.R`` and ``run.R`` files.
+ | | /result: Path for saving intermediate files and result files.
+ | | /scATAC: This path stores the input scATAC-seq data in RDS format. File example: `scATAC-seq-example <https://bio.liclab.net/scvmap_static/download/example/GSE139369_ELM_sim_0.6_ATAC.rds>`_.
+ | | /variant: This path stores the input phenotype data in BED or TXT format. File example: `Trait-example <https://bio.liclab.net/scvmap_static/download/variant/hg19/BBJ_Mono_55.bed>`_.
+
+1.1.3.4 Execute command
+"""""""""""""""""""""""""""""""""""""
+
+ | The command is as follows:
+
+.. code-block:: shell
+    :linenos:
+
+    /bin/Rscript $basePath/code/run.R $basePath $identifier $scFile $variantFile $genome $layer
+
+
+ | For example:
+
+.. code-block:: shell
+    :linenos:
+
+    /bin/Rscript /project/scVMAP/code/run.R /project/scVMAP 7627190552 26286db074_GSE139369_ELM_sim_0.7_ATAC.rds 4880d7db5c_BBJ_RBC_64.bed hg19 counts
+
+ | Parameter description:
+
+.. py:function:: core_process($basePath, $identifier, $scFile, $variantFile, $genome, $layer);
+
+  Command-line Parameter Description
+
+  :param string $basePath: The string to be cleaned.
+  :param string $identifier: A unique ID used as the filename to save the results.
+  :param string $scFile: The filename of the scATAC-seq data.
+  :param string $variantFile: The filename of the trait file.
+  :param string $genome: The reference genome (hg19 or hg38).
+  :param string $layer: The name of the layer for the counts matrix in the RDS file, e.g., "counts".
+  :rtype: None
 
