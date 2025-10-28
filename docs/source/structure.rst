@@ -247,7 +247,7 @@ We have consolidated the SCAVENGE workflow into a single command. You can view t
 
 The specific implementation process is as follows:
 
-1.2.3.1 Install R Packages
+1.2.3.1 Install R packages
 """""""""""""""""""""""""""""""""""""
 
 Refer to file `scVMAP-install_R_packages <https://github.com/YuZhengM/scvmap_reproducibility/blob/main/R/R_code/install.R>`_ for installation.
