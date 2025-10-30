@@ -989,7 +989,7 @@ scVMAP provides gene regulation annotation data for five types of epigenome data
 2.7.3.7.10 MPRA: ``csv`` file
 *********************************************************************************
 
-> Download source: https://mpravardb.rc.ufl.edu/
+ | Download source: https://mpravardb.rc.ufl.edu/
 
 ==== ================== ====================================================================================================
 #    Column name        Description
