@@ -1,4 +1,4 @@
-5. FAQ (Frequently Asked Questions)
+5. FAQs (Frequently Asked Questions)
 ===================================
 
 Here we will answer common questions.
@@ -41,10 +41,6 @@ We have released the full stack development code for the scVMAP database, which 
 Users can directly download and use them to develop bioinformatics database websites.
 
 At least mastering ``Vue`` and ``Spring Boot`` frameworks is necessary to start practical application.
-
-.. note::
-
-    If you discover any unmodified privacy content, please contact us. We greatly appreciate your kindness.
 
 5.4 Difficulties encountered in searching for trait or disease data
 --------------------------------------------------------------------
