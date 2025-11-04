@@ -1,7 +1,7 @@
 Welcome to scVMAP's documentation!
 ==================================
 
-A comprehensive platform for integrating **single-cell chromatin accessibility regions** with **causal variants**.
+A comprehensive platform for **integrating** ``single-cell chromatin accessibility regions`` with ``causal variants``.
 
 `scVMAP <https://doi.org/10.1093/nar/gkaf1112>`_ database access link: `https://bio.liclab.net/scvmap/ <https://bio.liclab.net/scvmap/>`_
 
@@ -20,7 +20,10 @@ scVMAP is a user-centric database that offers intuitive workflows, customizable 
 9. Publishes the full-stack development code for the web application.
 10. Provides API interfaces for programmatic data access.
 
-.. [#Cite] Zheng-Min Yu, Feng-Cui Qian, Qiao-Li Fang, Xiang-Yang Meng, Yan-Yu Li, Chen-Chen Feng, Li-Dong Li, Bing-Long Li, Yu-Rong Feng, Hui Jiang, Qiu-Yu Wang, Xuan Fan, Jin-Cheng Guo, Chun-Quan Li, scVMAP: a comprehensive platform for integrating single-cell chromatin accessibility regions with causal variants, Nucleic Acids Research, 2025;, gkaf1112, https://doi.org/10.1093/nar/gkaf1112
+Cite
+--------
+
+ | Zheng-Min Yu, Feng-Cui Qian, Qiao-Li Fang, Xiang-Yang Meng, Yan-Yu Li, Chen-Chen Feng, Li-Dong Li, Bing-Long Li, Yu-Rong Feng, Hui Jiang, Qiu-Yu Wang, Xuan Fan, Jin-Cheng Guo, Chun-Quan Li, scVMAP: a comprehensive platform for integrating single-cell chromatin accessibility regions with causal variants, Nucleic Acids Research, 2025;, gkaf1112, https://doi.org/10.1093/nar/gkaf1112
 
 .. raw:: html
 
