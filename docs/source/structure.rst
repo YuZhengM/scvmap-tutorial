@@ -56,7 +56,7 @@ In conclusion, (scVMAP, https://bio.liclab.net/scvmap/) is a user-centric databa
 1.1 Data collection and curation
 --------------------------------
 
-The scVMAP platform collects scATAC seq data and fine mapping result data.
+The scVMAP platform collects scATAC-seq data and fine-mapping result data.
 
 1.1.1 Collection of scATAC-seq data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,7 +69,7 @@ A total of ``183`` single-cell sample data were collected, with detailed informa
 
 .. note::
 
-    When preprocessing scATAC-seq data through `SnapATAC2 <https://scverse.org/SnapATAC2/>`_, only the ``min_tsse`` parameter varies for different samples. (Excluding input files and reference genome information.)
+    When preprocessing scATAC-seq data through `SnapATAC2 <https://scverse.org/SnapATAC2/>`_, only the ``min_tsse`` parameter varies for different samples (Excluding input files and reference genome information).
 
 1.1.1.1 scATAC-Ref
 """"""""""""""""""""""""""
