@@ -58,3 +58,7 @@ The SuSiE fine-mapping result data can be filtered by "Type", "Category (ICD-10)
 .. note::
 
     The first step is to select the column that needs to be searched, then you can choose the search mode, add the search content, and click the ``Search`` button to get the search results. Click button ``Refresh`` to obtain the original table without any retrieved information.
+
+.. tip::
+
+    Currently, SuSiE fine-mapping results can only be viewed through the "Data-browse" interface. Other interfaces, such as "Search" and "Analysis", do not retrieve SuSiE data and are limited to ``FINEMAP`` results. Support for ``SuSiE`` data in these interfaces will be added in a future update.

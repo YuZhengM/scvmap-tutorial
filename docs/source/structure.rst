@@ -214,6 +214,10 @@ Please see `scVMAP-reproducibility-Trait <https://github.com/YuZhengM/scvmap_rep
 
 It can be viewed via the `browser <https://bio.liclab.net/scvmap/data_browse>`_ page.
 
+.. tip::
+
+    Currently, SuSiE fine-mapping results can only be viewed through the "Data-browse" interface. Other interfaces, such as "Search" and "Analysis", do not retrieve SuSiE data and are limited to ``FINEMAP`` results. Support for ``SuSiE`` data in these interfaces will be added in a future update. In addition, we will gradually expand the data of SuSiE method and other fine mapping methods.
+
 1.2 Variant-function-mapping at single cell resolution
 ------------------------------------------------------
 
