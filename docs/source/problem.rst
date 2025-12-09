@@ -9,13 +9,13 @@ Alternatively, you can ask questions on Github `scVMAP-reproducibility <https://
 5.1 Discovering issues on the website
 ----------------------------------------------
 
-We have diligently completed the process of improving the website.
+The latest website improvements are complete.
 
 If you discover any issues or areas that need improvement, please contact us promptly. Thank you for your contribution.
 
 .. note::
 
-    If you find any minor issues that are inconvenient to disturb us, you can leave a message on `GitHub <https://github.com/YuZhengM/scvmap-tutorial>`_. Thank you for your effort and time.
+    If you find any minor issues that are inconvenient to disturb us, you can leave a message on `GitHub <https://github.com/YuZhengM/scvmap_reproducibility>`_. Thank you for your effort and time.
 
 5.2 There is a problem accessing the website
 ----------------------------------------------
