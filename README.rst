@@ -24,3 +24,8 @@ scVMAP is a user-centric database that offers intuitive workflows, customizable 
 10. Provides API interfaces for programmatic data access.
 
 .. image:: docs/source/img/overview.png
+
+Cite
+===============================
+
+Yu ZM, Qian FC, Fang QL, Meng XY, Li YY, Feng CC, Li LD, Li BL, Feng YR, Jiang H, Wang QY, Fan X, Guo JC, Li CQ. scVMAP: a comprehensive platform for integrating single-cell chromatin accessibility regions with causal variants. *Nucleic Acids Res*. 2025 Oct 31:gkaf1112. doi: `10.1093/nar/gkaf1112 <http://doi.org/10.1093/nar/gkaf1112>`_. Epub ahead of print. PMID: `41171141 <https://pubmed.ncbi.nlm.nih.gov/41171141/>`_.
