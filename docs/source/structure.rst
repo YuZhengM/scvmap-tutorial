@@ -314,6 +314,7 @@ We used SnapATAC2 to calculate gene activity data for single cells. Then, we cal
 Here is the SnapATAC2 code content:
 
 .. code-block:: python
+
     # Create the cell by gene activity matrix
     # The `adata` represents the result preprocessed by SnapATAC2.
     selected_list = np.array(list(adata.var["selected"]))
