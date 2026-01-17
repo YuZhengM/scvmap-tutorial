@@ -304,3 +304,127 @@ Parameter description:
   :param string $genome: The reference genome (hg19 or hg38).
   :param string $layer: The name of the layer for the counts matrix in the RDS file, e.g., "counts".
   :rtype: None
+
+
+1.3 Differential activity genes and TFs of cell types in single-cell samples
+----------------------------------------------------------------------------
+
+We used SnapATAC2 to calculate gene activity data for single cells. Then, we calculated differentially active genes across cell types using SCANPY.
+
+Here is the SnapATAC2 code content:
+
+.. code-block:: python
+    # Create the cell by gene activity matrix
+    # The `adata` represents the result preprocessed by SnapATAC2.
+    selected_list = np.array(list(adata.var["selected"]))
+    selected_adata = adata[:, selected_list]
+    gene_matrix = snap.pp.make_gene_matrix(selected_adata, genome_anno)
+
+    # normalize
+    sc.pp.filter_genes(gene_matrix, min_cells=min_cells)
+    sc.pp.normalize_total(gene_matrix)
+    sc.pp.log1p(gene_matrix)
+    sc.external.pp.magic(gene_matrix, solver="approximate")
+
+
+Here is the SCANPY code content:
+
+.. code-block:: python
+
+    def get_difference_genes(
+        adata: AnnData,
+        cluster: str,
+        method: _Method = "wilcoxon",
+        cell_anno: Optional[DataFrame] = None,
+        diff_genes_file: Optional[str] = None
+    ) -> AnnData:
+
+        import scanpy as sc
+
+        # add cell annotation information
+        adata.obs = add_cluster_info(adata.obs, cell_anno, cluster)
+
+        if "log1p" not in adata.uns_keys():
+            ul.log(__name__).info("The `log1p` not detected in `adata.uns_keys`, `log1p` operation needs to be performed.")
+            raise ValueError("The `log1p` not detected in `adata.uns_keys`, `log1p` operation needs to be performed.")
+
+        if "base" not in adata.uns["log1p"].keys():
+            adata.uns["log1p"].update({"base": None})
+
+        # gene
+        ul.log(__name__).info("Rank genes for characterizing groups.")
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            sc.tl.rank_genes_groups(adata=adata, groupby=cluster, method=method, use_raw=False)
+
+        # get difference genes for each `cluster`
+        diff_genes = adata.uns['rank_genes_groups']['names']
+
+        # gene names
+        gene_list: list = list(adata.var.index)
+        gene_list.sort()
+        gene_dict: dict = dict(zip(gene_list, range(len(gene_list))))
+
+        # obs
+        cluster_info: DataFrame = adata.obs.copy().groupby([cluster], as_index=False).size()
+        cluster_info.index = cluster_info[cluster].astype(str)
+
+        cluster_list: list = cluster_info.index.tolist()
+        cluster_list.sort()
+
+        _shape_ = (adata.shape[1], cluster_info.shape[0])
+        diff_genes_score_matrix: matrix_data = np.zeros(_shape_)
+        diff_genes_p_value_matrix: matrix_data = np.zeros(_shape_)
+        diff_genes_adjusted_p_value_matrix: matrix_data = np.zeros(_shape_)
+        diff_genes_log2_fold_change_matrix: matrix_data = np.zeros(_shape_)
+        del _shape_
+
+        # cluster
+        for _cluster_ in cluster_list:
+            ul.log(__name__).info(f"Obtaining differentially expressed genes for `cluster` ({_cluster_}).")
+            # obtain cluster difference gene data
+            _cluster_data_: DataFrame = sc.get.rank_genes_groups_df(adata, group=_cluster_)
+            _cluster_index_: int = cluster_list.index(_cluster_)
+
+            # Add data value
+            for _gene_name_, _score_, _p_value_, _adjusted_p_value_, _log2_fold_change_ in zip(
+                _cluster_data_["names"],
+                _cluster_data_["scores"],
+                _cluster_data_["pvals"],
+                _cluster_data_["pvals_adj"],
+                _cluster_data_["logfoldchanges"]
+            ):
+                _gene_index_: int = gene_dict[_gene_name_]
+                diff_genes_score_matrix[_gene_index_, _cluster_index_] = 0 if np.isnan(_score_) else _score_
+                diff_genes_p_value_matrix[_gene_index_, _cluster_index_] = 1 if np.isnan(_p_value_) else _p_value_
+                diff_genes_adjusted_p_value_matrix[_gene_index_, _cluster_index_] = 1 if np.isnan(_adjusted_p_value_) else _adjusted_p_value_
+                diff_genes_log2_fold_change_matrix[_gene_index_, _cluster_index_] = 0 if np.isnan(_log2_fold_change_) else _log2_fold_change_
+
+            del _cluster_data_, _cluster_index_
+
+        set_inf_value(diff_genes_score_matrix)
+        set_inf_value(diff_genes_p_value_matrix)
+        set_inf_value(diff_genes_adjusted_p_value_matrix)
+        set_inf_value(diff_genes_log2_fold_change_matrix)
+
+        diff_genes_p_value_matrix[diff_genes_p_value_matrix == 0] = np.min(diff_genes_p_value_matrix[diff_genes_p_value_matrix != 0])
+        diff_genes_adjusted_p_value_matrix[diff_genes_adjusted_p_value_matrix == 0] = np.min(diff_genes_adjusted_p_value_matrix[diff_genes_adjusted_p_value_matrix != 0])
+
+        # create
+        diff_genes_adata: AnnData = AnnData(diff_genes_score_matrix, obs=adata.var, var=cluster_info)
+        diff_genes_adata.layers["p_value"] = diff_genes_p_value_matrix
+        diff_genes_adata.layers["adjusted_p_value"] = diff_genes_adjusted_p_value_matrix
+        diff_genes_adata.layers["log2_fold_change"] = diff_genes_log2_fold_change_matrix
+
+        # Add diff_genes
+        diff_genes_adata.uns["diff_genes"] = diff_genes
+
+        if diff_genes_file is not None:
+            save_h5ad(diff_genes_adata, diff_genes_file)
+
+        return diff_genes_adata
+
+
+Please see `scVMAP-reproducibility-SnapATAC2 <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/SnapATAC2>`_ for the detailed workflow code.
+
+
