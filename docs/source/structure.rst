@@ -52,13 +52,34 @@ In conclusion, (scVMAP, https://bio.liclab.net/scvmap/) is a user-centric databa
 
     This section provides a comprehensive explanation of the entire pipeline for the scVMAP platform, encompassing the stages of data acquisition, curation, analysis, and the ultimate platform realization.
 
+1.1 Data processing methods
+--------------------------------
 
-1.1 Data collection and curation
+We provide the software and version information required for data processing in the scVMAP platform, along with the corresponding code to reproduce the results.
+
+================= =============== ===================================================================================
+Method            Version         Link
+================= =============== ===================================================================================
+g-chromVAR        0.3.2           https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R
+SCAVENGE          1.0.2           https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R
+LiftOver          -               https://github.com/YuZhengM/scvmap_reproducibility/tree/main/variant/liftOver
+SnapATAC2         2.7.1           https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/SnapATAC2
+SCANPY            1.11.5          https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/SnapATAC2
+GSEApy            1.1.9           https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/SnapATAC2
+chromVAR          1.24.0          https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/chromVAR
+Cicero            1.22.0          https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/cicero
+MAGMA             1.10            https://github.com/YuZhengM/scvmap_reproducibility/tree/main/variant/magma
+BEDTools          2.31.1          https://github.com/YuZhengM/scvmap_reproducibility/tree/main/variant/interaction
+HOMER             5.1             https://github.com/YuZhengM/scvmap_reproducibility/tree/main/variant/homer
+GimmeMotifs       0.18            https://github.com/YuZhengM/scvmap_reproducibility/tree/main/variant/gimme
+================= =============== ===================================================================================
+
+1.2 Data collection and curation
 --------------------------------
 
 The scVMAP platform collects scATAC-seq data and fine-mapping result data.
 
-1.1.1 Collection of scATAC-seq data
+1.2.1 Collection of scATAC-seq data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The collected scATAC-seq data mainly comes from ``scATAC-Ref``, ``scBlood``, ``GreenleafLab``, and ``PlaqView`` sources.
@@ -71,7 +92,7 @@ A total of ``183`` single-cell sample data were collected, with detailed informa
 
     When preprocessing scATAC-seq data through `SnapATAC2 <https://scverse.org/SnapATAC2/>`_, only the ``min_tsse`` parameter varies for different samples (Excluding input files and reference genome information).
 
-1.1.1.1 scATAC-Ref
+1.2.1.1 scATAC-Ref
 """"""""""""""""""""""""""
 
  | Source url: `https://bio.liclab.net/scATAC-Ref/ <https://bio.liclab.net/scATAC-Ref/>`_
@@ -124,7 +145,7 @@ Please see `scVMAP-reproducibility-SnapATAC2 <https://github.com/YuZhengM/scvmap
 For all single-cell samples except "sample_id_20" (Alzheimer’s Disease (AD)), we utilized the uniform manifold approximation and projection (UMAP) coordinates from their original collection sources for clustering. Due to the poor clustering performance of the original UMAP coordinates for "sample_id_20", we processed the binarized sparse counts matrix using SnapATAC2, converted it to a term frequency-inverse document frequency (TF-IDF) matrix, and subsequently extracted representative low-dimensional features through latent semantic indexing (LSI). Finally, we performed UMAP on this low-dimensional feature matrix to obtain the coordinates for "sample_id_20".
 
 
-1.1.1.2 scBlood
+1.2.1.2 scBlood
 """"""""""""""""""""""""""
 
  | Source url: `https://bio.liclab.net/scBlood/ <https://bio.liclab.net/scBlood/>`_
@@ -137,7 +158,7 @@ The processing pipeline is identical to that of scATAC-Ref.
 
     The cell type labels were annotated with SingleR. Their reliability should be treated as indicative.
 
-1.1.1.3 GreenleafLab
+1.2.1.3 GreenleafLab
 """"""""""""""""""""""""""
 
  | Source url: `https://github.com/GreenleafLab/MPAL-Single-Cell-2019 <https://github.com/GreenleafLab/MPAL-Single-Cell-2019>`_
@@ -146,7 +167,7 @@ We downloaded a scATAC-seq dataset for PBMC.
 
 The processing pipeline is identical to that of scATAC-Ref.
 
-1.1.1.4 PlaqView
+1.2.1.4 PlaqView
 """"""""""""""""""""""""""
 
  | Source url: `https://www.plaqview.com/ <https://www.plaqview.com/>`_
@@ -155,7 +176,7 @@ We downloaded a scATAC-seq dataset for coronary artery disease (CAD).
 
 The processing pipeline is identical to that of scATAC-Ref.
 
-1.1.1.5 Summary
+1.2.1.5 Summary
 """"""""""""""""""""""""""
 
 Here are the specific parameter settings for ``min_tsse``.
@@ -174,13 +195,13 @@ Cell type annotations were directly assigned from their original articles, where
 Besides cell type annotation, we also performed annotation for age, sex, and drug resistance, involving 24, 19, and 2 samples, respectively.
 It can be viewed via the `browser <https://bio.liclab.net/scvmap/data_browse>`_ page.
 
-1.1.2 Collection of trait data
+1.2.2 Collection of trait data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  | FINEMAP fine-mapping result download url (15805): `trait_info.xlsx <https://bio.liclab.net/scvmap_static/download/overview/trait_info.xlsx>`_
  | SuSiE fine-mapping result download url (79): `trait_info_susie.xlsx <https://bio.liclab.net/scvmap_static/download/overview/trait_info_susie.xlsx>`_
 
-1.1.2.1 FINEMAP
+1.2.2.1 FINEMAP
 """"""""""""""""""""""""""
 
 The collected FINEMAP fine-mapping result data comes from ``CAUSALdb2``, ``UKBB``, ``FinnGen``, and ``BJJ`` sources.
@@ -196,12 +217,12 @@ source_id_4  BBJ          Kanai, M. et al., 2021     BBJ fine-mapping results   
 
 For each trait, we retained the variants with a causal variant ``probability value (PP) > 0.001`` calculated by FINEMAP. As a result, we retained ``15,805`` traits from the initial ``16,445`` traits and used them for subsequent analysis.
 
-1.1.2.2 SuSiE
+1.2.2.2 SuSiE
 """"""""""""""""""""""""""
 
 The collected 79 SuSiE fine-mapping results (PP > 0.001) come from ``BJJ`` source.
 
-1.1.2.3 Summary
+1.2.2.3 Summary
 """"""""""""""""""""""""""
 
 The trait data is obtained through `download <https://bio.liclab.net/scvmap/download>`_ page.
@@ -218,7 +239,7 @@ It can be viewed via the `browser <https://bio.liclab.net/scvmap/data_browse>`_ 
 
     Currently, SuSiE fine-mapping results can only be viewed through the "Data-browse" interface. Other interfaces, such as "Search" and "Analysis", do not retrieve SuSiE data and are limited to ``FINEMAP`` results. Support for ``SuSiE`` data in these interfaces will be added in a future update. In addition, we will gradually expand the data of SuSiE method and other fine mapping methods.
 
-1.2 Variant-function-mapping at single cell resolution
+1.3 Variant-function-mapping at single cell resolution
 ------------------------------------------------------
 
 Our preferred method for calculating trait relevance scores (TRSs) is `SCAVENGE <https://doi.org/10.1038/s41587-022-01341-y>`_.
@@ -226,12 +247,12 @@ Since the `SCAVENGE <https://doi.org/10.1038/s41587-022-01341-y>`_ method utiliz
 
 Specific process code: `scVMAP-R <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R>`_
 
-1.2.1 g-chromVAR
+1.3.1 g-chromVAR
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Building upon the original `g-chromVAR <https://doi.org/10.1038/s41588-019-0362-6>`_ codebase, we have addressed the issues caused by ``NA/INF`` values and refined the corresponding implementation.
 
-1.2.2 SCAVENGE
+1.3.2 SCAVENGE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The values of some parameter settings.
@@ -244,19 +265,19 @@ Number of neighbors in mutual k-nearest neighbors (M-kNN) 30
 Restart value for random walk                             0.05
 ========================================================= ===============
 
-1.2.3 Code for using scVMAP
+1.3.3 Code for using scVMAP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We have consolidated the SCAVENGE workflow into a single command. You can view the code here: `scVMAP-exec_R_code <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R/exec_R_code>`_
 
 The specific implementation process is as follows:
 
-1.2.3.1 Install R packages
+1.3.3.1 Install R packages
 """""""""""""""""""""""""""""""""""""
 
 Refer to file `scVMAP-install_R_packages <https://github.com/YuZhengM/scvmap_reproducibility/blob/main/R/R_code/install.R>`_ for installation.
 
-1.2.3.2 Download files
+1.3.3.2 Download files
 """""""""""""""""""""""""""""""""""""
 
 The following two files need to be downloaded through link `scVMAP-exec_R_code <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/R/exec_R_code>`_:
@@ -268,7 +289,7 @@ The following two files need to be downloaded through link `scVMAP-exec_R_code <
 
     The `online analysis function <https://bio.liclab.net/scvmap/on_line>`_ of scVMAP uses this script command.
 
-1.2.3.3 Create formatted directories
+1.3.3.3 Create formatted directories
 """""""""""""""""""""""""""""""""""""
 
 Create a root path: ``/project/scVMAP``.
@@ -280,7 +301,7 @@ Other path details:
  - ``/project/scVMAP/scATAC``: This path stores the input scATAC-seq data in RDS format. File example: `scATAC-seq-example <https://bio.liclab.net/scvmap_static/download/example/GSE139369_ELM_sim_0.6_ATAC.rds>`_.
  - ``/project/scVMAP/variant``: This path stores the input phenotype data in BED or TXT format. File example: `Trait-example <https://bio.liclab.net/scvmap_static/download/variant/hg19/BBJ_Mono_55.bed>`_.
 
-1.2.3.4 Execute command
+1.3.3.4 Execute command
 """""""""""""""""""""""""""""""""""""
 
 The command is as follows: ::
@@ -306,12 +327,12 @@ Parameter description:
   :rtype: None
 
 
-1.3 Differential activity genes and TFs of cell types in single-cell samples
-----------------------------------------------------------------------------
+1.4 Differential gene activity and pathway enrichment analysis across cell types
+--------------------------------------------------------------------------------
 
 Please see `scVMAP-reproducibility-SnapATAC2 <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/SnapATAC2>`_ for the detailed workflow code.
 
-1.3.1 Differential activity genes of cell types
+1.4.1 Differential activity genes of cell types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We used SnapATAC2 to calculate gene activity data for single cells. Then, we calculated differentially active genes across cell types using SCANPY.
@@ -430,7 +451,7 @@ Here is the SCANPY code content:
         return diff_genes_adata
 
 
-1.3.2 Gene pathway enrichment analysis
+1.4.2 Gene pathway enrichment analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We performed gene pathway enrichment analysis (GPEA) using the top ``50`` genes ranked by ``scores`` within the differentially activity genes of each cell type.
@@ -558,6 +579,8 @@ This pipeline was implemented using the GSEApy package, with annotated gene sets
         data = pd.concat(enrichr_data_list, axis=0)
 
         return data
+
+
 
 
 
