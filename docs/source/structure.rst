@@ -309,6 +309,11 @@ Parameter description:
 1.3 Differential activity genes and TFs of cell types in single-cell samples
 ----------------------------------------------------------------------------
 
+Please see `scVMAP-reproducibility-SnapATAC2 <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/SnapATAC2>`_ for the detailed workflow code.
+
+1.3.1 Differential activity genes of cell types
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 We used SnapATAC2 to calculate gene activity data for single cells. Then, we calculated differentially active genes across cell types using SCANPY.
 
 Here is the SnapATAC2 code content:
@@ -346,8 +351,7 @@ Here is the SCANPY code content:
         adata.obs = add_cluster_info(adata.obs, cell_anno, cluster)
 
         if "log1p" not in adata.uns_keys():
-            ul.log(__name__).info("The `log1p` not detected in `adata.uns_keys`, `log1p` operation needs to be performed.")
-            raise ValueError("The `log1p` not detected in `adata.uns_keys`, `log1p` operation needs to be performed.")
+            adata.uns["log1p"] = {}
 
         if "base" not in adata.uns["log1p"].keys():
             adata.uns["log1p"].update({"base": None})
@@ -426,6 +430,134 @@ Here is the SCANPY code content:
         return diff_genes_adata
 
 
-Please see `scVMAP-reproducibility-SnapATAC2 <https://github.com/YuZhengM/scvmap_reproducibility/tree/main/scATAC/SnapATAC2>`_ for the detailed workflow code.
+1.3.2 Gene pathway enrichment analysis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We performed gene pathway enrichment analysis (GPEA) using the top ``50`` genes ranked by ``scores`` within the differentially activity genes of each cell type.
+
+
+This pipeline was implemented using the GSEApy package, with annotated gene sets including Gene Ontology, KEGG pathways, and GWAS Catalog.
+
+.. code-block:: python
+
+    # -*- coding: UTF-8 -*-
+
+    import warnings
+    from typing import Optional, Union, Literal
+
+    import numpy as np
+    import pandas as pd
+    from tqdm import tqdm
+    from anndata import AnnData
+    from pandas import DataFrame
+
+    from .. import util as ul
+    from ..util import check_adata_get, to_dense
+
+    __name__: str = "preprocessing_gsea"
+
+    _Datasets = Optional[Literal['Human', 'Mouse', 'Yeast', 'Fly', 'Fish', 'Worm']]
+
+
+    def gsea_enrichr(
+        gene_list: list[str],
+        gene_sets: Union[list[str], set] = (
+            "GO_Biological_Process_2023",
+            "GO_Cellular_Component_2023",
+            "GO_Molecular_Function_2023",
+            "GWAS_Catalog_2023",
+            "KEGG_2016"
+        ),
+        organism: _Datasets = "human",
+        is_verbose: bool = True,
+        output_dir: Optional[str] = None
+    ) -> DataFrame:
+
+        import gseapy as gp
+
+        # noinspection PyTypeChecker
+        names = gp.get_library_name(organism)
+
+        if not set(gene_sets).issubset(set(names)):
+            ul.log(__name__).error(f"The set of the {gene_sets} needs to include `gp.get_library_name(organism)`")
+            raise ValueError(f"The set of the {gene_sets} needs to include `gp.get_library_name(organism)`")
+
+        if output_dir is not None:
+            ul.file_method(__name__).makedirs(output_dir)
+
+        if is_verbose:
+            ul.log(__name__).info("GSEA enrichr.")
+
+        # noinspection PyTypeChecker
+        gsea = gp.enrichr(gene_list=gene_list, gene_sets=list(gene_sets), organism=organism, outdir=output_dir)
+        return gsea.results
+
+
+    def get_gene_enrichment(
+        adata: AnnData,
+        top_number: int = 50,
+        threshold: float = 0.01,
+        layer: Optional[str] = None,
+        is_order_or_lt: bool = True,
+        is_top: bool = True,
+        gene_sets: Union[list[str], set] = (
+            "GO_Biological_Process_2023",
+            "GO_Cellular_Component_2023",
+            "GO_Molecular_Function_2023",
+            "GWAS_Catalog_2023",
+            "KEGG_2016"
+        ),
+        organism: _Datasets = "human",
+        output_dir: Optional[str] = None,
+    ) -> DataFrame:
+        ul.log(__name__).info("Gene enrichment analysis.")
+        # get data
+        new_adata = check_adata_get(adata, layer=layer)
+
+        enrichr_data_list = []
+
+        cluster_list: list[str] = list(new_adata.var.index)
+        gene_list: list = list(new_adata.obs_names)
+
+        if is_top and len(gene_list) < top_number:
+            ul.log(__name__).warning(f"The number of parameters `top_number` ({top_number}) is greater than the number of genes ({len(gene_list)}).")
+            top_number = len(gene_list)
+
+        # Add data
+        for cluster in tqdm(cluster_list):
+
+            # get index
+            _values_ = to_dense(new_adata[:, cluster].X, is_array=True).flatten()
+
+            if is_top:
+                _index_ = np.argsort(_values_)[0:top_number] if is_order_or_lt else np.argsort(_values_)[-top_number:]
+                _cluster_gene_list_: list[str] = list(np.array(gene_list)[_index_])
+            else:
+                _index_ = _values_ <= threshold if is_order_or_lt else _values_ >= threshold
+                _cluster_gene_list_: list[str] = list(np.array(gene_list)[_index_])
+
+            if len(_cluster_gene_list_) == 0:
+                ul.log(__name__).warning(f"The gene list for cluster {cluster} is empty.")
+                continue
+
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                enrichr_data: DataFrame = gsea_enrichr(
+                    gene_list=_cluster_gene_list_,
+                    gene_sets=gene_sets,
+                    organism=organism,
+                    is_verbose=False,
+                    output_dir=output_dir
+                )
+
+            enrichr_data["cluster"] = cluster
+            enrichr_data_list.append(enrichr_data)
+
+            del _values_, _index_, _cluster_gene_list_
+
+        data = pd.concat(enrichr_data_list, axis=0)
+
+        return data
+
 
 

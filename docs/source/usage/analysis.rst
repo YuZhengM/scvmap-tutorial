@@ -6,9 +6,9 @@
 scVMAP provides four analysis tools with multi-level genetic regulation research,
 
 Different analysis functions correspond to different analysis perspectives, meeting the needs of different analysis
-users. The first analysis method combines scATAC seq samples with causal mutation data from the perspective of input
-data. The second analysis explored the regulatory process of integrating input data centered around genes and
-transcription factors. The third item is comparative analysis between samples.
+users. The first analysis method combines scATAC-seq samples with causal variant data from the perspective of input
+data. The second analysis explored the regulatory process of integrating input data centered around genes and TFs.
+The third item is comparative analysis between samples.
 
 ------------
 
